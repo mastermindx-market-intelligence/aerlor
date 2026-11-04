@@ -31,7 +31,7 @@ menuButton.addEventListener('click', () => {
 });
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu()));
 window.addEventListener('keydown', e => { if (e.key === 'Escape' && !mobileMenu.hidden) closeMenu(true); });
-window.matchMedia('(min-width: 761px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
+window.matchMedia('(min-width: 961px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
 
 function showDialog(dialog: HTMLDialogElement, opener?: HTMLElement): void {
   const focus = opener ?? (document.activeElement instanceof HTMLElement ? document.activeElement : undefined);
@@ -60,7 +60,7 @@ document.querySelectorAll<HTMLButtonElement>('[data-inquiry]').forEach(button =>
 document.querySelector('[data-privacy]')?.addEventListener('click', () => showDialog(privacy));
 
 const productContent = {
-  pro: { name:'PRO', image:'champagne', description:'The signature AERLOR expression. A sculpted form and a proposed brushed-metal finish, imagined for properties where every object has a point of view.', rows:[['Expression','Signature'],['Proposed finish','Brushed metal'],['Design studies','Champagne / Graphite'],['Availability','In development']] },
+  pro: { name:'PREMIUM', image:'champagne', description:'The signature AERLOR expression. A sculpted form and a proposed brushed-metal finish, imagined for properties where every object has a point of view.', rows:[['Expression','Signature'],['Proposed finish','Brushed metal'],['Design studies','Champagne / Graphite'],['Availability','In development']] },
   lite: { name:'LITE', image:'pearl', description:'The essential AERLOR expression. A proposed soft-matte shell and a pared-back silhouette, imagined to make a more considered guest experience accessible to more properties.', rows:[['Expression','Everyday'],['Proposed finish','Soft-matte polymer'],['Design study','Pearl'],['Availability','In development']] }
 };
 document.querySelectorAll<HTMLButtonElement>('[data-product]').forEach(button => button.addEventListener('click', () => {
@@ -84,7 +84,7 @@ document.querySelectorAll<HTMLButtonElement>('[data-product]').forEach(button =>
 document.querySelector('#detail-inquiry')?.addEventListener('click', () => {
   const opener = returnFocus.get(productDialog);
   productDialog.close();
-  const choice = document.querySelector<HTMLInputElement>(`#inquiry-form input[name="interest"][value="${currentProduct.toUpperCase()}"]`);
+  const choice = document.querySelector<HTMLInputElement>(`#inquiry-form input[name="interest"][value="${currentProduct==='pro'?'PREMIUM':'LITE'}"]`);
   if (choice) choice.checked = true;
   showDialog(inquiry, opener);
 });

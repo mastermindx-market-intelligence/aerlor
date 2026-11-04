@@ -1,0 +1,73 @@
+{
+  "revision": "hospitality-commerce-r3",
+  "base": "/aerlor/",
+  "pages": [
+    "index.html",
+    "collection/index.html",
+    "collection/hairdryers/index.html",
+    "collection/mirrors/index.html",
+    "collection/curlers/index.html",
+    "products/hairdryer-lite/index.html",
+    "products/hairdryer-premium/index.html",
+    "products/makeup-mirror-lite/index.html",
+    "products/makeup-mirror-premium/index.html",
+    "products/curler-lite/index.html",
+    "products/curler-premium/index.html",
+    "compare/index.html",
+    "hospitality/index.html",
+    "hospitality/wholesale/index.html",
+    "hospitality/groups/index.html",
+    "hospitality/designers/index.html",
+    "pricing/index.html",
+    "resources/index.html",
+    "resources/hospitality-collection/index.html",
+    "resources/hotel-upgrade-guide/index.html",
+    "resources/procurement-guide/index.html",
+    "resources/pilot-toolkit/index.html",
+    "journal/the-getting-ready-gap/index.html",
+    "about/index.html",
+    "contact/index.html",
+    "support/index.html",
+    "shipping-returns/index.html",
+    "privacy/index.html",
+    "terms/index.html",
+    "accessibility/index.html",
+    "cart/index.html",
+    "checkout/index.html",
+    "order/index.html"
+  ],
+  "documents": [
+    {
+      "slug": "hospitality-collection",
+      "file": "aerlor-hospitality-collection.pdf",
+      "title": "The hospitality collection",
+      "category": "Lookbook",
+      "pages": 8,
+      "desc": "The AERLOR point of view, three product families and two room expressions."
+    },
+    {
+      "slug": "hotel-upgrade-guide",
+      "file": "aerlor-hotel-upgrade-guide.pdf",
+      "title": "The considered-room business case",
+      "category": "Hotel guide",
+      "pages": 6,
+      "desc": "Guest perspectives, room-level economics and a persuasive, measurable pilot proposal."
+    },
+    {
+      "slug": "procurement-guide",
+      "file": "aerlor-procurement-guide.pdf",
+      "title": "Procurement, without the guesswork",
+      "category": "Procurement",
+      "pages": 5,
+      "desc": "Compare configurations, define the technical evidence and prepare a decision-ready brief."
+    },
+    {
+      "slug": "pilot-toolkit",
+      "file": "aerlor-pilot-toolkit.pdf",
+      "title": "The hotel pilot toolkit",
+      "category": "Operations",
+      "pages": 5,
+      "desc": "A room audit, evaluation scorecard and rollout checklist for your team."
+    }
+  ]
+}

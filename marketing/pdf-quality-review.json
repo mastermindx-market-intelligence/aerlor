@@ -1,0 +1,300 @@
+{
+  "documents": 10,
+  "pages": 36,
+  "renderer": "pdftoppm",
+  "textInspection": "PyMuPDF",
+  "status": "rendered-machine-checked-and-visually-reviewed",
+  "visualReviewRequired": false,
+  "results": [
+    {
+      "file": "aerlor-hospitality-collection.pdf",
+      "pages": 8,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 353,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 835,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 3,
+          "textCharacters": 898,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 4,
+          "textCharacters": 931,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 5,
+          "textCharacters": 967,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 6,
+          "textCharacters": 1227,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 7,
+          "textCharacters": 996,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 8,
+          "textCharacters": 1049,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "aerlor-hotel-upgrade-guide.pdf",
+      "pages": 6,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 311,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1152,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 3,
+          "textCharacters": 1357,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 4,
+          "textCharacters": 1139,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 5,
+          "textCharacters": 1116,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 6,
+          "textCharacters": 1969,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "aerlor-procurement-guide.pdf",
+      "pages": 5,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 315,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1180,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 3,
+          "textCharacters": 1097,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 4,
+          "textCharacters": 1064,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 5,
+          "textCharacters": 851,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "aerlor-pilot-toolkit.pdf",
+      "pages": 5,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 816,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1256,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 3,
+          "textCharacters": 1004,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 4,
+          "textCharacters": 468,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 5,
+          "textCharacters": 1135,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "hairdryer-lite-specification-brief.pdf",
+      "pages": 2,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 1078,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1237,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "hairdryer-premium-specification-brief.pdf",
+      "pages": 2,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 1058,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1298,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "makeup-mirror-lite-specification-brief.pdf",
+      "pages": 2,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 1012,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1287,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "makeup-mirror-premium-specification-brief.pdf",
+      "pages": 2,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 1001,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1371,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "curler-lite-specification-brief.pdf",
+      "pages": 2,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 1062,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1323,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "file": "curler-premium-specification-brief.pdf",
+      "pages": 2,
+      "layoutSourceCheck": "passed",
+      "pdfInspection": [
+        {
+          "page": 1,
+          "textCharacters": 998,
+          "outOfBoundsText": 0,
+          "rendered": true
+        },
+        {
+          "page": 2,
+          "textCharacters": 1342,
+          "outOfBoundsText": 0,
+          "rendered": true
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "scope": "All 36 pages reviewed in three contact sheets; no clipped body text, overlapping sections, broken images or unexpected blank pages observed.",
+    "screenshots": "Actual PDF pages rendered by pdftoppm, not HTML previews."
+  }
+}
