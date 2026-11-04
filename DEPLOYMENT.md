@@ -1,42 +1,61 @@
 # Deployment / AERLOR
 
-## Verified targets
+## Live targets
 
-- Repository: `mastermindx-market-intelligence/aerlor`, production source branch `main`.
-- Existing public preview: https://aerlor.vercel.app/.
-- Native design: https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0.
-- GitHub Pages: **not provisioned or live**. The organization denies public Pages creation.
+- Source repository: `mastermindx-market-intelligence/aerlor`; release branch: `main`.
+- **GitHub Pages:** https://mastermindx-market-intelligence.github.io/aerlor/.
+- Existing Vercel preview: https://aerlor.vercel.app/.
+- Editable native design: https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0.
 
-## GitHub Pages policy boundary
+GitHub Pages is provisioned with `build_type=workflow` and the repository variable `AERLOR_ENABLE_GITHUB_PAGES=true`. On November 4, 2026, the public homepage returned HTTP 200 and `build-info.json` identified source commit `74ab4b9046c3ff0e9e1861b361d2db10ec07f525`, design revision `native-paper-r2`, and the native Paper file above. The corresponding initial Pages workflow is [41794688107](https://github.com/mastermindx-market-intelligence/aerlor/actions/runs/41794688107). Current release evidence must be checked against the current source commit; this dated observation is not a claim that an older commit remains deployed.
 
-The live organization read returned `members_can_create_public_pages: false`. Creating a workflow-backed Pages site returned HTTP 422: `GitHub organization administrators disabled Pages creation.` A workflow, a branch, or a successful build cannot override this policy.
+The previous organization-level creation denial is historical. No global policy, repository visibility, account, or deployment-protection change is performed by this release workflow or its verification scripts.
 
-An organization owner must review the **organization Settings > Pages** policy and explicitly permit public Pages creation. If enterprise policy governs the setting, the enterprise owner must resolve that restriction. This project does not change a global security policy, switch accounts, transfer the repository, or change repository visibility as a workaround.
+## Normal releases
 
-Once public Pages creation is approved:
+A push to `main` starts `.github/workflows/site.yml`. The pipeline:
+
+1. Installs pinned dependencies, builds the site, runs contract checks and the desktop/mobile browser suite.
+2. Uploads only the tested `dist/` output as the Pages artifact.
+3. Deploys through the `github-pages` environment, only on main and only when the repository enablement variable is true.
+4. Runs a separate read-only browser check against the public deployment URL returned by GitHub.
+
+Pull requests are verified but never deployed. To redeploy the existing main revision:
 
 ```sh
-sh scripts/enable-github-pages.sh
+gh workflow run site.yml --ref main --repo mastermindx-market-intelligence/aerlor
 ```
 
-The helper verifies the policy, creates the repo's Pages site with GitHub Actions as the build source when absent, sets `AERLOR_ENABLE_GITHUB_PAGES=true`, and dispatches `site.yml`. It refuses to change an existing non-workflow Pages source silently. It does not wait or claim publication success.
+Inspect the run's `verify`, `deploy`, and `verify-public` results before calling the release complete. A successful build is not proof of a public deployment.
 
-Verify the workflow's returned page URL, HTTP status, images, dialogs, base paths, and `build-info.json`, then run:
+## Live verification
+
+The post-deployment script requires the actual public URL and exact expected source SHA:
 
 ```sh
-TEST_URL=<actual-returned-Pages-URL> npm test
+TEST_URL=https://mastermindx-market-intelligence.github.io/aerlor/ \
+  EXPECTED_COMMIT=$(git rev-parse HEAD) npm run verify:deployment
+
+# Full functional and automated-accessibility suite against the public site:
+TEST_URL=https://mastermindx-market-intelligence.github.io/aerlor/ npm test
 ```
 
-Do not announce a constructed `github.io` address as live before this succeeds.
+The deployment check verifies public `build-info.json` provenance, deployment base path, native design identity, homepage status, a single main heading, artwork loading, 44-pixel finish controls, JavaScript exceptions, and horizontal overflow at 320/390/768/1440 pixels. Desktop WebGL must initialize. It also verifies that a missing route returns HTTP 404 with a link to the correct `/aerlor/` base.
 
-## Build and release behavior
+The exact build-info check has a bounded CDN-propagation retry window. It never changes the expected SHA, treats an older release as success, disables authentication, or retries writes. The checks do not submit forms, transmit lead data, or use credentials.
 
-GitHub Actions uses Node 26 and pinned action commits. Builds and tests run before the Pages artifact is uploaded. The deployment job runs only on main, outside PRs, when the enablement flag is true. Its permissions are limited to `pages:write` and `id-token:write`; ordinary verification has `contents:read`.
+Local output is saved to `test-results/deployment/receipt.json` and viewport screenshots. CI prints the receipt into the `verify-public` job log. The dated initial Pages evidence is in `design/previews/r2/pages-verification-20261104.json`; the associated live functional run passed 29 tests, with one intentionally skipped desktop duplicate of a mobile-only test.
 
-The default asset base is `/aerlor/`. Vercel uses `BASE_PATH=/ npm run build` through `vercel.json`. Both builds generate a matching 404 return link and `build-info.json`. Only `dist/` is deployed; native design references, screenshots, source, private receipts, and developer files are not web-root assets.
+## Build and security boundaries
 
-The public Vercel alias is an existing authorized preview target. Unique deployment URLs may require Vercel authentication. Do not disable deployment protection merely to make a test pass.
+The default asset base is `/aerlor/`. Vercel uses `BASE_PATH=/ npm run build` through `vercel.json`. Both builds produce a matching 404 return link and `build-info.json`. Native design references, screenshots, source, and developer files are not included in the deployed web root.
+
+Actions are pinned to commit hashes. Ordinary verification and the public-browser check have only `contents:read`; the deployment job has `pages:write` and `id-token:write`. No tokens are added to client code or required by the public verification script.
+
+`scripts/enable-github-pages.sh` is an initial-provisioning helper for use after organization-owner approval. It refuses creation while policy is disabled and does not modify that policy. An already live site should use the normal release workflow above, not be reprovisioned.
+
+The Vercel alias remains an alternate preview. Unique Vercel deployment URLs can be protected; do not disable protection to make a test pass.
 
 ## Commercial activation is separate
 
-The site is intentionally `noindex`. Its form makes a private local brief, not a network request. Connecting a verified inquiry service requires endpoint-side validation, abuse protection, delivery/retention policies, and end-to-end error/receipt tests. See `LAUNCH.md`.
+The site remains `noindex`. Product visuals are concepts, and the planner creates a local file rather than sending an inquiry. A verified contact identity, operational lead endpoint, server-side validation, abuse protection, delivery/retention policies, real product specifications, and a custom domain remain separate commercial-launch work. See `LAUNCH.md`.

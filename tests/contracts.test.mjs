@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {buildPilotBrief} from '../src/pilot.ts';
 const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
 test('brief is a local draft, never a false submission receipt',()=>{
@@ -41,5 +43,19 @@ test('native design references are complete and do not expose local machine path
   assert.ok(board.id);assert.ok(existsSync(new URL('../design/paper/native/'+board.screenshot,import.meta.url)));
   const jsx=read('design/paper/native/'+board.jsx);
   assert.ok(jsx.includes('export default function'));assert.ok(!/\/Users\/|paper-asset:\/\//.test(jsx));
+ }
+});
+test('deployment verification rejects ambiguous or credential-bearing targets before network work',()=>{
+ const cases=[
+  {TEST_URL:'',EXPECTED_COMMIT:'a'.repeat(40),message:/Set TEST_URL/},
+  {TEST_URL:'https://user:password@example.com/aerlor/',EXPECTED_COMMIT:'a'.repeat(40),message:/without embedded credentials/},
+  {TEST_URL:'https://example.com/aerlor/?preview=1',EXPECTED_COMMIT:'a'.repeat(40),message:/without query or fragment/},
+  {TEST_URL:'https://example.com/aerlor/',EXPECTED_COMMIT:'main',message:/exact 40-character source commit/}
+ ];
+ for(const {message,...env} of cases){
+  const result=spawnSync(process.execPath,['scripts/verify-deployment.mjs'],{
+   cwd:fileURLToPath(new URL('../',import.meta.url)),env:{...process.env,...env},encoding:'utf8',timeout:10000
+  });
+  assert.equal(result.status,1);assert.match(result.stderr,message);
  }
 });

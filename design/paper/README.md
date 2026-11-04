@@ -1,6 +1,6 @@
 # AERLOR / Native Paper design
 
-[Open the editable Paper file](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) | [Live website](https://aerlor.vercel.app/)
+[Open the editable Paper file](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) | [Live GitHub Pages website](https://mastermindx-market-intelligence.github.io/aerlor/) | [Vercel preview](https://aerlor.vercel.app/)
 
 The native implementation is complete: **15 artboards, three pages, and 28 design tokens**. This replaces the earlier unimported HTML handoff. The file contains editable frames and text, with original artwork used as image assets rather than flattening entire pages.
 

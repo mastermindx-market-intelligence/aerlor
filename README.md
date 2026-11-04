@@ -2,7 +2,7 @@
 
 **The art of a better stay.** A hospitality collection preview with editorial design, original product studies, and a responsive interactive website.
 
-[Live preview](https://aerlor.vercel.app/) | [Native Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) | [Design handoff](design/paper/README.md) | [Launch gates](LAUNCH.md)
+[Live GitHub Pages website](https://mastermindx-market-intelligence.github.io/aerlor/) | [Native Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) | [Vercel preview](https://aerlor.vercel.app/) | [Design handoff](design/paper/README.md) | [Launch gates](LAUNCH.md)
 
 > Product imagery is conceptual, not production photography or validated CAD. No certification, measured performance, approved hotel partnership, price, stock, or sample availability is represented. The pilot planner produces a local text file; it does not send inquiries or collect leads.
 
@@ -48,22 +48,26 @@ The browser suite covers content, finish controls, product dialogs, focus return
 npm run build
 npm run test:contracts
 npm test
-TEST_URL=https://aerlor.vercel.app/ npm test
+TEST_URL=https://mastermindx-market-intelligence.github.io/aerlor/ npm test
+TEST_URL=https://mastermindx-market-intelligence.github.io/aerlor/ \
+  EXPECTED_COMMIT=$(git rev-parse HEAD) npm run verify:deployment
 ```
 
-Release evidence is stored under `design/previews/`; the R2 receipt distinguishes local, GitHub, and deployed-site verification.
+The live GitHub Pages run passed 29 browser tests; the desktop copy of a mobile-only test is intentionally skipped. The four-width deployment check also passed. Historical release evidence is stored under `design/previews/r2/`; new deployment checks write `test-results/deployment/receipt.json` and viewport screenshots. The CI post-deployment log binds each check to the exact released commit.
 
 ## Publishing
 
-The source is in GitHub; the public preview is hosted on Vercel. **GitHub Pages has not been published**: the organization's public-Pages policy denies creation. No organization policy, repository visibility, or deployment protection was weakened.
+**GitHub Pages is live at https://mastermindx-market-intelligence.github.io/aerlor/.** The existing Vercel preview remains available. Both were observed serving the native-Paper-aligned R2 implementation. The earlier Pages creation blocker is historical; the repository's workflow-backed Pages site now exists and `AERLOR_ENABLE_GITHUB_PAGES=true`.
 
-The pinned GitHub Actions workflow builds and tests main/PR changes. It uploads the verified Pages artifact on main, but publication remains gated by `AERLOR_ENABLE_GITHUB_PAGES`. After an organization owner permits public Pages, run the documented enablement helper:
+The pinned GitHub Actions workflow builds and tests main/PR changes, uploads only the verified `dist/` artifact on main, and publishes it through the `github-pages` environment. Publication still respects the repository enablement flag; PRs never publish. A separate read-only post-deployment job verifies the exact source commit from the public `build-info.json`, artwork, WebGL, touch targets, responsive widths (320/390/768/1440), and the custom 404 return path.
+
+Normal releases happen on a successful main-branch push. To redeploy the current main revision without changing code:
 
 ```sh
-sh scripts/enable-github-pages.sh
+gh workflow run site.yml --ref main --repo mastermindx-market-intelligence/aerlor
 ```
 
-That helper refuses to proceed while the policy is disabled. It does not change organization policy or repository visibility. A successful deployment and live browser check are still required after dispatch. See [Pages deployment details](DEPLOYMENT.md).
+The provisioning helper remains available for initial setup after owner approval; it never changes organization policy or repository visibility. See [Pages deployment details](DEPLOYMENT.md) for verification commands and evidence.
 
 The preview deliberately remains `noindex`. No custom domain is configured and no operational inquiry inbox has been connected.
 
