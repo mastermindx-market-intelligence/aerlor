@@ -1,0 +1,20 @@
+{
+  "status": "UNMEASURED_CONCEPT",
+  "length_unit": "mm",
+  "mass_unit": "kg",
+  "sku_reference": null,
+  "measurement_record": null,
+  "module_length": null,
+  "module_width": null,
+  "module_height": null,
+  "module_mass": null,
+  "divider_thickness": null,
+  "interlayer_thickness": null,
+  "clearance_length_total": null,
+  "clearance_width_total": null,
+  "clearance_height_total": null,
+  "wall_allowance_per_side": null,
+  "case_tare_6": null,
+  "case_tare_12": null,
+  "note": "All dimensions and masses require exact-SKU measurements and converter review. No fixture or image-derived dimensions are approved. Tare includes case, dividers, shelves, closure and case-level documentation; module mass includes each unit's complete contents."
+}
