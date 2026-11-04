@@ -2,7 +2,7 @@
 
 **The art of a better stay.** A hospitality-focused collection preview with original visual studies, responsive editorial design, and an interactive product experience.
 
-[Design handoff](design/paper/README.md) · [Launch gates](LAUNCH.md)
+[Live website preview](https://aerlor.vercel.app/) · [Design handoff](design/paper/README.md) · [Launch gates](LAUNCH.md)
 
 > This is a prelaunch design preview. Product imagery is conceptual, not production photography or validated CAD. No certification, measured performance, approved hotel partnership, stock, price, or sample availability is represented.
 
@@ -43,14 +43,14 @@ npm run build
 npm run test:contracts
 npm test
 # Test an actual deployed site:
-TEST_URL=https://your-verified-preview-host/ npm test
+TEST_URL=https://aerlor.vercel.app/ npm test
 ```
 
-`design/previews/` contains browser observations and screenshots. The initial verified local run passed 23 browser checks and five contract checks; one desktop copy of the mobile-only check was intentionally skipped.
+`design/previews/` contains browser observations and screenshots. Both the local run and the deployed website passed 23 browser checks. Five contract checks also passed; one desktop copy of the mobile-only check was intentionally skipped. GitHub Actions verification and CodeQL completed successfully for the released commit. See `design/previews/production-verification.json` for the release receipt.
 
 ## Publishing
 
-`.github/workflows/site.yml` verifies the build, contracts and browser behavior on every main-branch push and pull request. Optional GitHub Pages publication is disabled unless the repository variable `AERLOR_ENABLE_GITHUB_PAGES` is set to `true` after organization approval. The organization currently blocks Pages creation; that policy has not been changed. A Vercel deployment configuration is included as the separate website hosting target. Actions are pinned to commit hashes. The site is intentionally `noindex` until the commercial launch gates are satisfied. No custom domain has been configured.
+`.github/workflows/site.yml` verifies the build, contracts and browser behavior on every main-branch push and pull request. Optional GitHub Pages publication is disabled unless the repository variable `AERLOR_ENABLE_GITHUB_PAGES` is set to `true` after organization approval. The organization currently blocks Pages creation; that policy has not been changed. The website is hosted separately on Vercel at https://aerlor.vercel.app/. The released deployment was created from the exact tested Git commit. No organization or deployment-protection policies were weakened. Actions are pinned to commit hashes. The site is intentionally `noindex` until the commercial launch gates are satisfied. No custom domain has been configured.
 
 ## Paper status
 

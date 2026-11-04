@@ -1,0 +1,19 @@
+{
+  "url": "https://aerlor.vercel.app/",
+  "deploymentId": "dpl_A4ewKc41ZfnGxBU8fkg39Cgo7GM8",
+  "commit": "5a1c20621b47d7bdc1174c230857975bbe043132",
+  "httpStatus": 200,
+  "scene": "ready",
+  "overflow": false,
+  "javascriptErrors": [],
+  "consoleErrors": [],
+  "browserTests": {
+    "passed": 23,
+    "intentionallySkipped": 1
+  },
+  "contractTests": {
+    "passed": 5
+  },
+  "githubVerificationRun": 41761238579,
+  "codeQLRun": 41761248809
+}
