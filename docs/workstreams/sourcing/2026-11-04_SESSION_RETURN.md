@@ -29,6 +29,7 @@ The [source register](2026-11-04_SOURCE_REGISTER.csv) contains **24 dated public
 - Branch: `work/sourcing/exact-model-evidence-20261104`.
 - **Draft [PR #19](https://github.com/mastermindx-market-intelligence/aerlor/pull/19)** targets `main`; no merge or deployment action is authorized by this return.
 - Initial three-file checkpoint: `022b8c4e72ac7c839d6365cacfedd4f36c003c56`. All three files were fetched at that exact commit and matched the submitted contents.
+- Four-file checkpoint: `5fdb1e4f6f75b12e46f42cf0df9749af8bf12807`. All four files were fetched at that exact commit and matched; the PR contained only the four sourcing additions, with no deletions. The final revision records the independent audit and corrected bounded search retry.
 - Final package: [qualification dossier](2026-11-04_EXACT_MODEL_QUALIFICATION.md), [20-question evidence request and cost-request schedule](2026-11-04_EVIDENCE_REQUEST_PACK.md), [source register](2026-11-04_SOURCE_REGISTER.csv), and this return. All four paths are within the owned sourcing directory.
 - This return accompanies the final content commit. Its immutable SHA, final four-file readback and final-commit CI result are recorded after publication in PR #19 and the issue #6 return receipt; this file does not assert a future verification result.
 
@@ -49,9 +50,10 @@ The [source register](2026-11-04_SOURCE_REGISTER.csv) contains **24 dated public
 
 - **Ownership and scope:** read live issue/PR state, posted the claim and fetched it back; checked the newer main delta before advancing the empty branch. No sourcing overlap was identified.
 - **Document consistency:** 24 unique source IDs, 11-column CSV integrity, dated access and limitations, sequential Q01–Q20, source-ID resolution and local Markdown crosslinks passed the local checks. No copied email addresses were found. These are document checks, not product tests.
-- **Checkpoint readback:** all three files at `022b8c4e72ac7c839d6365cacfedd4f36c003c56` matched the submitted text; PR scope contained only the three sourcing files then committed.
+- **Checkpoint readback:** all three files at `022b8c4e72ac7c839d6365cacfedd4f36c003c56` and all four at `5fdb1e4f6f75b12e46f42cf0df9749af8bf12807` matched the respective submitted text. PR scope contained only the sourcing files at each check.
 - **Checkpoint CI:** [Actions run 41815681516](https://github.com/mastermindx-market-intelligence/aerlor/actions/runs/41815681516) completed its verification job successfully: install, build, contract tests, server tests, browser tests and showcase build. Artifact upload and both deployment/release jobs were skipped. This result applies to the initial checkpoint only; final-commit verification belongs in the publication receipt.
 - **Independent source cross-checks:** separate read-only researchers corroborated the YEY-GS8 regional claim and identified the current eCFR paragraph correction. The session owner directly read the cited primary pages and applied that correction. Consult PR #19's publication receipt for the separate document audit's final scope and outcome; none of these reviews is a product approval.
+- **Independent document audit: PASS, bounded scope.** Reviewer inspected AGENTS, the complete qualification dossier and the request pack through Q18, finding no material defect. It did not complete a row-by-row CSV audit, Q19–Q20/later-stage review, or all primary-page reopens; it did not review this return. The session owner's separate checks cover document counts, links and publication. The review's minor query-syntax observation was addressed with three correctly formed, domain-restricted model searches; the service returned empty results, which are explicitly not negative certification findings.
 - **Not performed:** physical inspection, specimen/nameplate verification, supplier audit, lab safety test, independent model-listing verification, broker opinion, FTO opinion or hotel trial.
 
 ## Contact/action status
