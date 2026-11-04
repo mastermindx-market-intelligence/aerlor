@@ -1,26 +1,24 @@
 # AERLOR
 
-**The art of a better stay.** A hospitality collection preview with editorial design, original product studies, and a responsive interactive website.
+**The art of a better stay.** An editorial hospitality website for hairdryers, illuminated makeup mirrors and curling tools, each in Lite and Premium expressions.
 
-[Live GitHub Pages website](https://mastermindx-market-intelligence.github.io/aerlor/) | [Native Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) | [Vercel preview](https://aerlor.vercel.app/) | [Design handoff](design/paper/README.md) | [Launch gates](LAUNCH.md)
+[Storefront](https://aerlor.vercel.app/) · [Native Paper foundation](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) · [Commerce operations](docs/commerce/OPERATIONS.md) · [Commercial launch gates](LAUNCH.md)
 
-> Product imagery is conceptual, not production photography or validated CAD. No certification, measured performance, approved hotel partnership, price, stock, or sample availability is represented. The pilot planner produces a local text file; it does not send inquiries or collect leads.
+## R3 implementation
 
-## Website experience
+- **33 semantic HTML routes**: collection/family pages, six complete product pages, comparison, hospitality, wholesale, groups, designers, pricing, resources, journal, company, support, policies, project bag, checkout and order verification.
+- Story-led hotel copy, attributed independent guest anecdotes and a room-level investment calculator. No fabricated testimonials, hotel partnerships or revenue uplift.
+- **Ten downloadable PDFs / 36 pages**: collection lookbook, hotel business-case guide, procurement guide, pilot toolkit and six product briefs. Guides are embedded in dedicated resource pages with direct-download alternatives.
+- Original product concept artwork, progressive Three.js hairdryer, finish selection, responsive navigation and accessible product/brief interactions.
+- Product-only project bag with quantity/finish editing, bundles and local persistence. Personal inquiry and payment details are not saved in browser storage.
+- Genuine user-reviewed business-email drafts and complete local brief downloads. Optional direct inquiry adapter returns success only after its provider accepts delivery.
+- Server-authoritative hosted checkout, provider price corroboration, durable stock reservation/idempotency, verified payment status and signed webhook processing. **Live checkout is disabled until commercial prerequisites are approved.**
 
-- Original procedural Three.js product study, three finish choices, pointer interaction, pausable motion, reduced-motion support, and static artwork fallback.
-- PRO and LITE product dialogs, a full hospitality narrative, accessible FAQ, mobile navigation, and keyboard focus management.
-- Private pilot-brief planner with visible field validation, accessible error feedback, local file download, and honest completion messaging.
-- Native Paper color and typography tokens used directly in `src/paper-tokens.css`. Readable body copy, 44-pixel finish controls, and responsive layouts down to 320 pixels.
-- No advertising, analytics pixels, lead-transmission API, or browser persistence. Google Fonts supplies presentation fonts; no font binaries are distributed.
+## What is not represented
 
-## Native Paper deliverable
+The six products are development concepts, not certified production units or ready-to-ship stock. Product specifications clearly distinguish the design identity, proposed direction and technical fields still requiring evidence. No commercial prices are invented. A project brief is not an order; a payment return URL is not proof of payment; payment is not shipment.
 
-The previously blocked native authoring is now implemented in a dedicated AERLOR file: **15 artboards, three organized pages, and 28 design tokens**.
-
-The file contains the full 1440-pixel desktop and 390-pixel mobile pages; PRO/LITE details at both sizes; the pilot planner's default, validation, and local-download states at both sizes; mobile navigation and privacy; and a foundations/components board. Frames and text are editable. Original product and architectural artwork remains artwork, not a flattened screenshot of the website.
-
-`design/paper/native/` contains exact IDs, native screenshots, exported tokens, and native JSX reference exports with local copies of the original imagery. The JSX is a design reference, not a replacement for semantic HTML, responsive CSS, or application behavior. The production implementation owns live 3D, focus, validation, motion, and responsive reflow.
+The transaction code is tested with dependency-injected provider fixtures. Real merchant, database, verification, email-delivery and fulfillment acceptance are separate gates. See the operations runbook; do not relabel mocked tests as live paid-order proof.
 
 ## Development
 
@@ -28,62 +26,60 @@ Use Node 26, matching CI and `.nvmrc`.
 
 ```sh
 npm ci
-npm run dev
 npm run build
 npm run preview
 npm run test:contracts
+npm run test:server
 npx playwright install chromium
 npm test
 ```
 
-Development runs at `http://127.0.0.1:5187/aerlor/`; production preview uses port 4187. `BASE_PATH=/aerlor/` is the default for GitHub Pages. Vercel builds with `BASE_PATH=/`. The 404 return link is generated for the selected base path. `build-info.json` records the source commit and native design revision.
-
-The 3D module is lazy-loaded. `?static` disables it for fallback review. Never put secrets in client-side variables.
-
-## Verification
-
-The browser suite covers content, finish controls, product dialogs, focus return, planner handoff, validation/recovery, local downloads, no-transmission/no-storage behavior, FAQ, privacy, mobile navigation, asset loading, overflow, reduced motion, motion-label transitions, touch-target sizes, and no-JavaScript fallback. Axe checks the homepage and planner against its WCAG A/AA rules. Automated checks do not constitute a complete manual accessibility audit.
+The isolated local preview runs at `http://127.0.0.1:4188/aerlor/` and includes the same Web Standard API handlers, in fail-closed development mode. `BASE_PATH=/` builds for Vercel; `/aerlor/` is the local/static default. HTML is generated deterministically from `scripts/build-storefront.mjs` and the catalog; do not hand-edit generated inner pages. The original R2 homepage template is retained under `templates/`.
 
 ```sh
-npm run build
-npm run test:contracts
-npm test
-TEST_URL=https://mastermindx-market-intelligence.github.io/aerlor/ npm test
-TEST_URL=https://mastermindx-market-intelligence.github.io/aerlor/ \
-  EXPECTED_COMMIT=$(git rev-parse HEAD) npm run verify:deployment
+node scripts/commerce-readiness.mjs
+# Read-only exact deployment proof:
+TEST_URL=https://aerlor.vercel.app/ EXPECTED_COMMIT=<40-character-sha> npm run verify:deployment
 ```
 
-The live GitHub Pages run passed 29 browser tests; the desktop copy of a mobile-only test is intentionally skipped. The four-width deployment check also passed. Historical release evidence is stored under `design/previews/r2/`; new deployment checks write `test-results/deployment/receipt.json` and viewport screenshots. The CI post-deployment log binds each check to the exact released commit.
+Never put credentials into client variables, source, screenshots, issues or generated documents. `.env.example` contains blank secrets and disabled activation flags.
 
-## Publishing
-
-**GitHub Pages is live at https://mastermindx-market-intelligence.github.io/aerlor/.** The existing Vercel preview remains available. Both were observed serving the native-Paper-aligned R2 implementation. The earlier Pages creation blocker is historical; the repository's workflow-backed Pages site now exists and `AERLOR_ENABLE_GITHUB_PAGES=true`.
-
-The pinned GitHub Actions workflow builds and tests main/PR changes, uploads only the verified `dist/` artifact on main, and publishes it through the `github-pages` environment. Publication still respects the repository enablement flag; PRs never publish. A separate read-only post-deployment job verifies the exact source commit from the public `build-info.json`, artwork, WebGL, touch targets, responsive widths (320/390/768/1440), and the custom 404 return path.
-
-Normal releases happen on a successful main-branch push. To redeploy the current main revision without changing code:
+## Documents and evidence
 
 ```sh
-gh workflow run site.yml --ref main --repo mastermindx-market-intelligence/aerlor
+node scripts/build-marketing-documents.mjs
+python3 scripts/verify-marketing-pdfs.py
 ```
 
-The provisioning helper remains available for initial setup after owner approval; it never changes organization policy or repository visibility. See [Pages deployment details](DEPLOYMENT.md) for verification commands and evidence.
+The document generator uses Playwright and authored HTML. PDF QA needs `pdftoppm`, PyMuPDF and Pillow. The repository includes final PDFs, source documents, a page manifest and a visual-review receipt. Generated render scratch files remain under ignored `test-results/`.
 
-The preview deliberately remains `noindex`. No custom domain is configured and no operational inquiry inbox has been connected.
+`src/evidence.json` records the attributed sources and limitations. Anecdotes are self-selected public discussions, not AERLOR endorsements or representative surveys. Operator examples are explicitly historical/category context where appropriate.
 
-## Source layout
+## Design continuity
+
+The R2 native Paper file contains 15 editable artboards, three pages and 28 tokens. Its palette and type exports remain the shared foundation in `src/paper-tokens.css`, guarded by a drift test. R3 expands the production codebase; its 33 routes are not falsely described as 33 newly exported native Paper boards. Native references and screenshots remain in `design/paper/native/`.
+
+## Deployment architecture
+
+The storefront and same-origin APIs run on Vercel. GitHub Pages publishes only `showcase-dist/`, a non-transactional design/engineering case study with no checkout or inquiry collection. It does not host the commercial application. This respects GitHub's published Pages ecommerce restrictions.
+
+The pinned workflow runs type/build checks, contracts, server/domain tests and desktop/mobile browser checks before publishing the separate Pages showcase. The post-deployment check binds the public build to the exact commit. Vercel releases must also be checked against `build-info.json`, live API configuration, routes, PDFs and actual browser journeys. See `DEPLOYMENT.md`.
+
+## Source map
 
 ```text
-index.html              Semantic homepage and dialogs
-src/paper-tokens.css    Exported native Paper tokens used by the site
-src/style.css           Responsive layouts and component states
-src/main.ts             Accessible interactions and local brief workflow
-src/scene.ts            Original procedural 3D study
-src/pilot.ts            Bounded text-brief builder
-public/images/          Original local SVG artwork
-design/paper/native/    Native IDs, JSX references, tokens, and screenshots
-design/previews/        Browser verification and release receipts
-tests/                  Browser, accessibility, and contract tests
+src/catalog.json                 Product concepts and specification status
+src/storefront.ts                Product bag, filters, forms and hosted-checkout handoff
+src/storefront.css               Responsive editorial interface
+src/main.ts, src/scene.ts         Existing homepage interactions and progressive 3D
+shared/domain.mjs                Pure rules shared by browser/server/tests
+server/                          Payment, inquiry, validation and durable-ledger adapters
+api/                             Web Standard Vercel entry points
+scripts/build-storefront.mjs      Deterministic multi-page authoring source
+scripts/build-design-showcase.mjs Non-transactional GitHub Pages artifact
+marketing/                       Authored PDF sources, manifest and quality review
+public/documents/                Ten finished PDFs
+public/images/                   Original concept artwork
 ```
 
-Custom brand visuals and code are reserved to the project owner. Dependencies retain their own licenses. Trademark clearance, product engineering, regulatory approval, fulfillment, and operational lead handling remain separate commercial-launch requirements.
+Custom visuals and code are reserved to the project owner. Dependencies retain their licenses. No standalone font binaries are distributed. The website remains `noindex` while product release and commercial activation are pending.

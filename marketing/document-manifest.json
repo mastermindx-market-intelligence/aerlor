@@ -1,0 +1,66 @@
+{
+  "revision": "R3",
+  "generatedAt": "2026-11-04T10:01:09.720Z",
+  "documents": [
+    {
+      "file": "aerlor-hospitality-collection.pdf",
+      "title": "AERLOR — The hospitality collection",
+      "pages": 8,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "aerlor-hotel-upgrade-guide.pdf",
+      "title": "AERLOR — The considered-room business case",
+      "pages": 6,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "aerlor-procurement-guide.pdf",
+      "title": "AERLOR — Procurement, without the guesswork",
+      "pages": 5,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "aerlor-pilot-toolkit.pdf",
+      "title": "AERLOR — The hotel pilot toolkit",
+      "pages": 5,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "hairdryer-lite-specification-brief.pdf",
+      "title": "AERLOR — Hairdryer Lite specification brief",
+      "pages": 2,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "hairdryer-premium-specification-brief.pdf",
+      "title": "AERLOR — Hairdryer Premium specification brief",
+      "pages": 2,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "makeup-mirror-lite-specification-brief.pdf",
+      "title": "AERLOR — Makeup Mirror Lite specification brief",
+      "pages": 2,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "makeup-mirror-premium-specification-brief.pdf",
+      "title": "AERLOR — Makeup Mirror Premium specification brief",
+      "pages": 2,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "curler-lite-specification-brief.pdf",
+      "title": "AERLOR — Curler Lite specification brief",
+      "pages": 2,
+      "layoutCheck": "passed"
+    },
+    {
+      "file": "curler-premium-specification-brief.pdf",
+      "title": "AERLOR — Curler Premium specification brief",
+      "pages": 2,
+      "layoutCheck": "passed"
+    }
+  ]
+}

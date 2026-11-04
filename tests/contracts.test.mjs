@@ -26,7 +26,7 @@ test('all production visuals are local and explicitly conceptual',()=>{
  }
  assert.match(read('index.html'),/DESIGN CONCEPT/);
 });
-test('public client has no tracking, storage or transmission API',()=>{
+test('legacy offline brief controller has no tracking, storage or transmission API',()=>{
  const source=read('src/main.ts');
  assert.ok(!/\b(fetch|XMLHttpRequest|sendBeacon|localStorage|sessionStorage)\b/.test(source));
  assert.ok(!source.includes('innerHTML'));
@@ -58,4 +58,22 @@ test('deployment verification rejects ambiguous or credential-bearing targets be
   });
   assert.equal(result.status,1);assert.match(result.stderr,message);
  }
+});
+
+test('R3 storefront has all routes, six product pages and actual PDF assets',()=>{
+ const manifest=JSON.parse(read('storefront-pages.json'));assert.equal(manifest.pages.length,33);
+ for(const page of manifest.pages)assert.ok(existsSync(new URL('../'+page,import.meta.url)),page);
+ const catalog=JSON.parse(read('src/catalog.json'));assert.equal(catalog.products.length,6);
+ const documents=JSON.parse(read('marketing/document-manifest.json'));assert.equal(documents.documents.length,10);
+ assert.equal(documents.documents.reduce((sum,doc)=>sum+doc.pages,0),36);
+ for(const doc of documents.documents)assert.equal(readFileSync(new URL('../public/documents/'+doc.file,import.meta.url)).subarray(0,5).toString(),'%PDF-');
+});
+test('GitHub Pages deploys only a non-transactional design showcase',()=>{
+ const workflow=read('.github/workflows/site.yml');assert.match(workflow,/path: showcase-dist/);assert.ok(!workflow.includes('path: dist'));assert.match(workflow,/npm run test:server/);
+ const source=read('scripts/build-design-showcase.mjs');assert.ok(!source.includes('<form'));assert.ok(!source.includes('data-add'));assert.match(source,/design-showcase/);
+});
+test('client storage and checkout remain separate from personal data and provider secrets',()=>{
+ const source=read('src/storefront.ts');assert.match(source,/JSON.stringify\(\{version:CART_VERSION,items\}\)/);
+ for(const key of ['STRIPE_SECRET_KEY','RESEND_API_KEY','UPSTASH_REDIS_REST_TOKEN','TURNSTILE_SECRET_KEY'])assert.ok(!source.includes(key));
+ assert.match(read('server/services.mjs'),/price_mismatch/);assert.match(read('server/services.mjs'),/reconciliation_required/);
 });

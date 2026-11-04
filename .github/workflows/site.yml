@@ -1,4 +1,4 @@
-name: Verify AERLOR and gated Pages release
+name: Verify AERLOR and publish design showcase
 on:
   push:
     branches: [main]
@@ -27,13 +27,16 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run test:contracts
+      - run: npm run test:server
       - run: npx playwright install --with-deps chromium
       - run: npm test
-      - name: Upload verified site
+      - name: Build non-transactional Pages showcase
+        run: npm run build:showcase
+      - name: Upload verified design showcase
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         with:
-          path: dist
+          path: showcase-dist
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.AERLOR_ENABLE_GITHUB_PAGES == 'true'
     needs: verify
@@ -77,3 +80,4 @@ jobs:
         env:
           TEST_URL: ${{ needs.deploy.outputs.page_url }}
           EXPECTED_COMMIT: ${{ github.sha }}
+          VERIFY_KIND: design-showcase

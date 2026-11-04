@@ -22,7 +22,7 @@ test('finish choices update accessible selection and original fallback',async({p
  await expect(page.locator('[data-finish][aria-pressed="true"]')).toHaveCount(1);
 });
 test('PRO and LITE have working detail dialogs and close returns focus',async({page})=>{
- for(const product of ['PRO','LITE']){
+ for(const product of ['PREMIUM','LITE']){
   const button=page.getByRole('button',{name:`Explore AERLOR ${product}`,exact:true});
   await button.click();
   await expect(page.locator('#product-dialog')).toBeVisible();
@@ -68,12 +68,11 @@ test('planner downloads an honest brief without transmitting personal data',asyn
  expect(await page.evaluate(()=>localStorage.length+sessionStorage.length)).toBe(0);
 });
 test('FAQ and privacy disclosure are keyboard operable',async({page})=>{
- const question=page.locator('summary').first();await question.focus();await page.keyboard.press('Enter');
- await expect(page.locator('details').first()).toHaveAttribute('open','');
- await page.getByRole('button',{name:'Privacy & preview notice'}).click();
- await expect(page.locator('#privacy-dialog')).toBeVisible();
- await expect(page.locator('#privacy-dialog')).toContainText('No certification');
- await page.keyboard.press('Escape');await expect(page.locator('#privacy-dialog')).not.toBeVisible();
+ const question=page.locator('.faq summary').first();await question.focus();await page.keyboard.press('Enter');
+ await expect(page.locator('.faq details').first()).toHaveAttribute('open','');
+ await page.locator('.footer-bottom').getByRole('link',{name:'Privacy',exact:true}).click();
+ await expect(page.locator('h1')).toHaveText('Privacy');
+ await expect(page.locator('.legal-page')).toContainText('project bag');
 });
 test('mobile navigation opens, navigates and closes',async({page,isMobile})=>{
  test.skip(!isMobile,'Mobile-specific interaction');

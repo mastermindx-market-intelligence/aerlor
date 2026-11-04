@@ -1,8 +1,32 @@
 {
-  "name":"aerlor","version":"0.1.0","private":true,"type":"module",
-  "description":"AERLOR - considered essentials for exceptional stays. Hospitality collection preview.",
-  "scripts":{"dev":"vite --host 127.0.0.1","build":"tsc --noEmit && vite build","preview":"vite preview --host 127.0.0.1","typecheck":"tsc --noEmit","test":"playwright test","test:contracts":"node --test tests/contracts.test.mjs","verify:deployment":"node scripts/verify-deployment.mjs"},
-  "engines":{"node":">=22.12.0"},
-  "dependencies":{"three":"0.187.0"},
-  "devDependencies":{"@playwright/test":"1.64.1","@types/three":"0.187.0","@axe-core/playwright":"4.14.0","typescript":"7.0.2","vite":"8.3.5"}
+  "name": "aerlor",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "AERLOR hospitality collection, project procurement and gated secure commerce.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "node scripts/preview-server.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:contracts": "node --test tests/contracts.test.mjs",
+    "verify:deployment": "node scripts/verify-deployment.mjs",
+    "prebuild": "node scripts/create-collection-assets.mjs && node scripts/build-storefront.mjs",
+    "test:server": "node --test tests/domain.test.mjs tests/server.test.mjs",
+    "build:showcase": "node scripts/build-design-showcase.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/three": "0.187.0",
+    "@axe-core/playwright": "4.14.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
 }

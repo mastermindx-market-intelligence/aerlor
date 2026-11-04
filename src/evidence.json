@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-04",
+  "scope": "Qualitative category evidence; not AERLOR customer testimonials or proof of revenue impact.",
+  "sources": [
+    {
+      "id": "hair-routine",
+      "title": "Packing hair products",
+      "publisher": "r/HerOneBag",
+      "url": "https://www.reddit.com/r/HerOneBag/comments/1h1vp94/packing_hair_products/",
+      "type": "First-person public discussion",
+      "note": "Contributors describe choosing between packing familiar tools and relying on hotel dryers. Other contributors are happy to use the hotel dryer or simplify their routine. These are self-selected anecdotes, not a representative survey."
+    },
+    {
+      "id": "styling-bulk",
+      "title": "What hair styling tools do you take traveling?",
+      "publisher": "r/HerOneBag",
+      "url": "https://www.reddit.com/r/HerOneBag/comments/1iz75yy/what_hair_styling_tools_do_you_take_traveling/",
+      "type": "First-person public discussion",
+      "note": "The original poster describes a familiar styling tool as too bulky for travel. Replies differ on whether and what to pack."
+    },
+    {
+      "id": "mirror-position",
+      "title": "Travel mirror recommendations please",
+      "publisher": "Mumsnet, 5 May 2024",
+      "url": "https://www.mumsnet.com/talk/style_and_beauty/5068902-travel-mirror-recommendations-please",
+      "type": "First-person public discussion",
+      "note": "A traveller asks about a mirror for use while the bathroom is occupied, then explains that room mirrors can be poorly lit or difficult to approach."
+    },
+    {
+      "id": "hyatt-drybar",
+      "title": "Hyatt Centric announces Drybar collaboration",
+      "publisher": "Hyatt Newsroom, 10 May 2016",
+      "url": "https://newsroom.hyatt.com/051016Hyatt-Centric-Steps-Up-Its-Style-With-First-Ever-Drybar-Collaboration",
+      "type": "Historical operator announcement",
+      "note": "Hyatt announced an in-room premium dryer rollout in 2016. This is category precedent, not evidence about current availability at every hotel or AERLOR performance."
+    },
+    {
+      "id": "lighted-mirror",
+      "title": "Services & amenities",
+      "publisher": "Four Seasons Resort Oahu",
+      "url": "https://www.fourseasons.com/oahu/accommodations/shared-services/",
+      "type": "Operator amenity listing",
+      "note": "The operator lists a lighted makeup and shaving mirror. It is not an AERLOR customer or endorsement."
+    },
+    {
+      "id": "borrowing",
+      "title": "Hyatt Has It",
+      "publisher": "Hyatt",
+      "url": "https://www.hyatt.com/info/hyatt-has-it-program",
+      "type": "Operator service description",
+      "note": "Hyatt describes essentials guests can buy or borrow. This supports an on-request service model, not any AERLOR partnership."
+    }
+  ]
+}
