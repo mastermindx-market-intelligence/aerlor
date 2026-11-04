@@ -24,3 +24,13 @@ Coordination required with DESIGN-03 for actual original packaging/industrial co
 
 ## Stop
 Blocked by product verification, legal identity, server endpoint requirements or restricted tool access: produce source-ready design spec, not a fake functioning contact form.
+
+## R3 implemented release frontier — 4 November 2026
+
+The 33-route hospitality storefront is live on Vercel. Verified release source: `2d6d5fe47c9036d311622e0436ed0ca6878cf61c`, identical tree to the reviewed SITE-04 branch. Six Lite/Premium product pages, hotel/wholesale/group/designer content, ten PDFs (36 pages), corporate/support/policy pages, a product-only project bag and server-gated checkout/inquiry integrations are implemented. See `docs/commerce/OPERATIONS.md` and `design/previews/r3/live-verification-20261104.json`.
+
+Actual public runtime verification passed for routes, all ten PDFs, API configuration and the configured business-email draft. No email was sent and no charge or shipment was initiated. Chromium and WebKit browser evidence is recorded separately; provider fixture tests are not live merchant acceptance.
+
+GitHub Pages now hosts the separate non-transactional design/engineering showcase, not the commercial application. A final QA patch improves the 320px showcase heading and makes geometry checks wait for actual stylesheet application; it does not change commerce eligibility.
+
+Commercial activation remains gated on the approved exact supplier models/specifications/market evidence, legal seller and correct merchant account, real prices/stock, tax/shipping/support terms, durable service credentials and real provider test-mode acceptance. Do not invent these facts or mark products released to make checkout appear active.

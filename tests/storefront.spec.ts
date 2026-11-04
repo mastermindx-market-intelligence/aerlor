@@ -4,7 +4,14 @@ import {readFile} from 'node:fs/promises';
 import catalog from '../src/catalog.json' with {type:'json'};
 import pagesManifest from '../storefront-pages.json' with {type:'json'};
 const config={checkoutEnabled:false,inquiryEnabled:false,mode:'development',contactEmail:'contact@example.com',turnstileSiteKey:null,prices:[]};
-const navigate=async(page:Page,path:string)=>{await page.goto('./'+path,{waitUntil:'domcontentloaded'});await expect(page.locator('body')).toHaveAttribute('data-runtime-ready','true');};
+const navigate=async(page:Page,path:string)=>{
+ await page.goto('./'+path,{waitUntil:'domcontentloaded'});
+ await expect(page.locator('body')).toHaveAttribute('data-runtime-ready','true');
+ // A cached module can finish before WebKit applies the route's render-blocking CSS.
+ // Assert the real presentation boundary before taking geometry measurements.
+ await page.waitForFunction(()=>Array.from(document.querySelectorAll<HTMLLinkElement>('link[rel=stylesheet]')).filter(link=>new URL(link.href).origin===location.origin).every(link=>Boolean(link.sheet))&&getComputedStyle(document.body).marginTop==='0px');
+ await page.evaluate(async()=>{await document.fonts.ready;await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));});
+};
 async function fillProject(page:Page){
  await page.getByLabel('Your name',{exact:true}).fill('Alex Morgan');await page.getByLabel('Work email',{exact:true}).fill('alex@example.com');await page.getByLabel('Hotel, group or studio',{exact:true}).fill('Example Hotel');await page.getByLabel('Country',{exact:true}).selectOption('CA');await page.getByLabel('Number of rooms',{exact:true}).fill('120');await page.getByLabel('Your role',{exact:true}).selectOption('Procurement');await page.getByLabel('Project timing',{exact:true}).selectOption('Exploring options');await page.getByLabel('Hairdryers',{exact:true}).check();await page.locator('[name=message]').fill('A coordinated guestroom pilot.');await page.locator('[name=consent]').check();
 }
@@ -68,4 +75,9 @@ test('all inner pages reflow at 320 pixels without horizontal scrolling',async({
 });
 test('hotel anecdotes are attributed and do not masquerade as AERLOR customer outcomes',async({page})=>{
  await navigate(page,'journal/the-getting-ready-gap/');await expect(page.locator('.source-notes article')).toHaveCount(6);await expect(page.locator('.editorial-article')).toContainText('not AERLOR customers or partners');await expect(page.locator('.evidence-caption')).toContainText('not AERLOR reviews');
+});
+
+test('fallback typography stays usable when external fonts are blocked',async({page})=>{
+ test.setTimeout(90000);await page.route('https://fonts.googleapis.com/**',route=>route.abort());await page.route('https://fonts.gstatic.com/**',route=>route.abort());
+ for(const path of ['hospitality/groups/','products/makeup-mirror-premium/','hospitality/wholesale/','pricing/']){await navigate(page,path);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),path).toBe(true);}
 });

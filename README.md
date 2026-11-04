@@ -32,6 +32,9 @@ npm run test:contracts
 npm run test:server
 npx playwright install chromium
 npm test
+# Optional Safari-engine regression suite:
+npx playwright install webkit
+npm run test:webkit
 ```
 
 The isolated local preview runs at `http://127.0.0.1:4188/aerlor/` and includes the same Web Standard API handlers, in fail-closed development mode. `BASE_PATH=/` builds for Vercel; `/aerlor/` is the local/static default. HTML is generated deterministically from `scripts/build-storefront.mjs` and the catalog; do not hand-edit generated inner pages. The original R2 homepage template is retained under `templates/`.
