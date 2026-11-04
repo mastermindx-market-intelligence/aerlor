@@ -1,0 +1,35 @@
+{
+  "status": "PREPARED_NOT_IMPORTED",
+  "nativePaperFileId": null,
+  "nativePaperArtboardIds": [],
+  "reason": "The existing guarded Paper adapter reported its live catalog incompatible with the approved catalog. No AERLOR document was present. No native writes were performed.",
+  "designSource": "Browser implementation and original vector assets",
+  "proposedArtboards": [
+    {
+      "name": "AERLOR / Home / Desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "AERLOR / Home / Mobile",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "AERLOR / Collection / Desktop",
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "fragments": [
+    "01-navigation.desktop.html",
+    "02-hero-copy.desktop.html",
+    "03-product-stage.desktop.html",
+    "01-navigation.mobile.html",
+    "02-hero-copy.mobile.html",
+    "03-product-stage.mobile.html",
+    "04-collection-heading.desktop.html",
+    "05-pro-card.desktop.html",
+    "06-lite-card.desktop.html"
+  ]
+}

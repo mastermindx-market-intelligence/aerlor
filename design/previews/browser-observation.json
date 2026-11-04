@@ -1,0 +1,23 @@
+[
+  {
+    "label": "desktop",
+    "width": 1440,
+    "scene": "ready",
+    "horizontalOverflow": false,
+    "errors": []
+  },
+  {
+    "label": "mobile",
+    "width": 390,
+    "scene": "ready",
+    "horizontalOverflow": false,
+    "errors": []
+  },
+  {
+    "label": "narrow",
+    "width": 320,
+    "scene": "ready",
+    "horizontalOverflow": false,
+    "errors": []
+  }
+]

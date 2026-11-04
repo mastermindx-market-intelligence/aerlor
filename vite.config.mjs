@@ -1,0 +1,2 @@
+import {defineConfig} from 'vite';
+export default defineConfig({base:process.env.BASE_PATH || '/aerlor/',plugins:[{name:'aerlor-static-base',async closeBundle(){const {readFile,writeFile}=await import('node:fs/promises');const path='dist/404.html';const source=await readFile(path,'utf8');await writeFile(path,source.replace('href="/aerlor/"','href="'+(process.env.BASE_PATH||'/aerlor/')+'"'));}}],build:{target:'es2022',sourcemap:false},server:{port:5187,strictPort:true},preview:{port:4187,strictPort:true}});

@@ -1,0 +1,1 @@
+.will-reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.65,.3,1)}.will-reveal.is-visible{opacity:1;transform:translateY(0)}.product-card:nth-child(2).will-reveal{transition-delay:.1s}@media(prefers-reduced-motion:reduce){.will-reveal{opacity:1;transform:none;transition:none}}
