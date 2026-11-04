@@ -7,7 +7,7 @@ test.beforeEach(async({page})=>{await page.emulateMedia({reducedMotion:'reduce'}
 test('essential content is real HTML with a single main heading',async({page})=>{
  await expect(page).toHaveTitle('AERLOR — The art of a better stay');
  await expect(page.locator('h1')).toHaveCount(1);
- await expect(page.locator('h1')).toContainText('better stay.');
+ await expect(page.locator('h1')).toContainText('The everyday ritual.');
  await expect(page.locator('#collection h3')).toHaveCount(2);
  await expect(page.locator('.collection-disclosure')).toContainText('certifications');
  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content','noindex,nofollow');
