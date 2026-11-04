@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-11-04T11:02:15.384895+00:00",
+  "completedAt": "2026-11-04T11:02:21.463239+00:00",
+  "baseline": "68f0ba1a3ed6746551460d772cb791eb050ee988",
+  "initialBaseline": "632c79717d8bd0657ac8c93fa6397533cbe16ce0",
+  "observedPublicR3Commit": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+  "branch": "work/site/prelaunch-assurance-20261104",
+  "issue": "https://github.com/mastermindx-market-intelligence/aerlor/issues/17",
+  "nodeVersion": "v24.22.1",
+  "commands": [
+    {
+      "command": "npm ci --no-audit --no-fund",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:contracts",
+      "exitCode": 0,
+      "counts": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "command": "npm run test:server",
+      "exitCode": 0,
+      "counts": {
+        "tests": 39,
+        "pass": 39,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "command": "node --test tests/site04/release-boundary.test.mjs tests/site04/source-policy.test.mjs",
+      "exitCode": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "releaseBoundary": {
+    "syntheticModes": [
+      "test",
+      "live"
+    ],
+    "variantsPerMode": 9,
+    "totalRejectedCheckouts": 18,
+    "providerCalls": 0,
+    "storeAccesses": 0,
+    "positiveControl": "Configuration only; released catalog copy exists only in memory."
+  },
+  "browserAutomation": {
+    "status": "blocked-before-application-assertions",
+    "attemptBaseline": "632c79717d8bd0657ac8c93fa6397533cbe16ce0",
+    "pinnedInstall": "Archive extraction failed; executable unavailable.",
+    "supplementalCachedBrowser": "Socket and ptrace restrictions blocked startup; path stopped.",
+    "r3LocalSuite": "not executed",
+    "currentAccessibilityPass": false
+  },
+  "browserObservations": {
+    "publicBuildCommit": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+    "robots": "noindex,nofollow",
+    "runtimeReady": true,
+    "mobileMenuPlannerTriggers": 0,
+    "offlinePlannerOpened": true,
+    "closedPlanner": {
+      "plannerOpen": false,
+      "activeTag": "BUTTON",
+      "activeText": "Plan a pilot for your property \u2197",
+      "viewport": {
+        "width": 1585,
+        "height": 1088
+      }
+    },
+    "downloadBytesVerified": false,
+    "whitespaceFormCheck": "incomplete after browser connection timeout",
+    "viewportReset": "attempted; not confirmed due detached older tab"
+  },
+  "historicalR2FocusFinding": {
+    "commit": "632c79717d8bd0657ac8c93fa6397533cbe16ce0",
+    "activeTag": "BODY",
+    "menuHidden": true,
+    "plannerOpen": false,
+    "currentStatus": "Historical; invoking mobile-menu planner path absent in R3."
+  },
+  "fileSha256": {
+    "tests/site04/release-boundary.test.mjs": "4128053b9858efb85b58e570766c6f7705455c9c5b0e7a4baae41a0e9a5a71c2",
+    "tests/site04/source-policy.test.mjs": "8db015c26753032ebed57983834c494ecd37290ed631e704ba4894e2e4095661",
+    "tests/site04/README.md": "7ae2562fc992b885c2d6b0abcee1f649b6d7c6668aa8689c6055a5733e453495",
+    "tests/site04/evidence/node-checks.txt": "3fd208c36f9dfb71c630ba91f1d673a746192256948296b041162ab85b494f57",
+    "tests/site04/evidence/r3-planner.jpg": "9d372691256c80cce502822e7c941adc80bc76d73b1847d635d06f0a1e0b1b85",
+    "tests/site04/evidence/mobile-focus.jpg": "cd3323fad8b87b66708a82b126eb57046dbc4d832c692f6afa2f6c663d498cf9",
+    "vercel.json": "231c89d9d75b0c3531a403fef60a7ce9eee5758091cd5a7304f74c48f7b702a6"
+  },
+  "limitations": [
+    "Opt-in new tests; existing package scripts and CI are unchanged.",
+    "Source checks do not establish deployed headers.",
+    "Synthetic service tests are not provider acceptance or product approvals.",
+    "Node 26 was not available in this execution; Node 24.22.1 was used."
+  ],
+  "externalActions": {
+    "emailSent": false,
+    "realPayment": false,
+    "mergePerformed": false,
+    "deploymentRequested": false,
+    "restrictedMaterialCreated": false
+  },
+  "logNormalization": "Trailing line whitespace removed; command output text and exit statuses otherwise preserved."
+}
