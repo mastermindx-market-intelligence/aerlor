@@ -1,0 +1,189 @@
+{
+  "releaseCommit": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+  "storefront": {
+    "url": "https://aerlor.vercel.app/",
+    "expectedCommit": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+    "checkedAt": "2026-11-04T10:38:46.573Z",
+    "checks": [
+      {
+        "name": "desktop",
+        "status": "passed",
+        "width": 1440,
+        "horizontalOverflow": false,
+        "mainHeadings": 1,
+        "scene": "ready",
+        "brokenImages": [],
+        "forms": 1,
+        "touchTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "javascriptErrors": [],
+        "sameOriginFailures": []
+      },
+      {
+        "name": "tablet",
+        "status": "passed",
+        "width": 768,
+        "horizontalOverflow": false,
+        "mainHeadings": 1,
+        "scene": "ready",
+        "brokenImages": [],
+        "forms": 1,
+        "touchTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "javascriptErrors": [],
+        "sameOriginFailures": []
+      },
+      {
+        "name": "mobile",
+        "status": "passed",
+        "width": 390,
+        "horizontalOverflow": false,
+        "mainHeadings": 1,
+        "scene": "ready",
+        "brokenImages": [],
+        "forms": 1,
+        "touchTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "javascriptErrors": [],
+        "sameOriginFailures": []
+      },
+      {
+        "name": "narrow",
+        "status": "passed",
+        "width": 320,
+        "horizontalOverflow": false,
+        "mainHeadings": 1,
+        "scene": "ready",
+        "brokenImages": [],
+        "forms": 1,
+        "touchTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "javascriptErrors": [],
+        "sameOriginFailures": []
+      }
+    ],
+    "kind": "storefront",
+    "build": {
+      "commit": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+      "base": "/",
+      "designRevision": "hospitality-commerce-r3",
+      "paperFileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+      "pages": 33,
+      "commerceMode": "server-gated"
+    },
+    "services": {
+      "configStatus": 200,
+      "checkoutEnabled": false,
+      "directInquiryEnabled": false,
+      "contactConfigured": true,
+      "mode": "development"
+    },
+    "routesChecked": 9,
+    "documentsChecked": 10,
+    "custom404": {
+      "status": 404,
+      "returnPath": "/"
+    },
+    "status": "passed"
+  },
+  "actualContactWorkflow": {
+    "checkedAt": "2026-11-04T10:40:26.379Z",
+    "commit": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+    "kind": "actual-public-runtime-not-mocked",
+    "contactAddressMatchesConfiguredInbox": true,
+    "emailDraftPrepared": true,
+    "emailSent": false,
+    "personalDataPersisted": false,
+    "postRequests": [],
+    "checkoutEnabled": false,
+    "directInquiryEnabled": false,
+    "methodChecks": [
+      {
+        "path": "/api/checkout",
+        "method": "GET",
+        "status": 405
+      },
+      {
+        "path": "/api/inquiry",
+        "method": "GET",
+        "status": 405
+      },
+      {
+        "path": "/api/webhook",
+        "method": "GET",
+        "status": 405
+      }
+    ],
+    "status": "passed"
+  },
+  "browserVerification": {
+    "chromium": {
+      "passed": 61,
+      "skipped": 1,
+      "scope": "Full live suite; two additional external-font-failure checks also passed after readiness hardening."
+    },
+    "webkit": {
+      "passed": 63,
+      "skipped": 1,
+      "scope": "Full live suite including external-font failure fallback, after waiting for actual stylesheet application.",
+      "physicalDeviceTest": false
+    }
+  },
+  "commercialActivation": {
+    "livePayments": false,
+    "directServerEmail": false,
+    "shipmentAutomation": false
+  },
+  "notes": [
+    "Product/server tests use provider fixtures, not real charges or delivery.",
+    "This is historical proof of the specified source commit; use build-info.json for the current release."
+  ]
+}
