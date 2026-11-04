@@ -1,0 +1,1610 @@
+{
+  "schema": "aerlor.market.buying_routes.v1",
+  "accessed_date": "2026-11-04",
+  "status": "PUBLIC_RESEARCH_NOT_QUALIFIED_PIPELINE",
+  "lane": "MARKET-01",
+  "issue_url": "https://github.com/mastermindx-market-intelligence/aerlor/issues/2",
+  "claim_url": "https://github.com/mastermindx-market-intelligence/aerlor/issues/2#issuecomment-6628348937",
+  "baseline_sha": "632c79717d8bd0657ac8c93fa6397533cbe16ce0",
+  "submission_base_sha": "2d6d5fe47c9036d311622e0436ed0ca6878cf61c",
+  "prior_research_pr": {
+    "number": 1,
+    "state_at_read": "OPEN_UNMERGED",
+    "head_sha": "22554c76f5468c02a138e12c5a008b5598bf8258"
+  },
+  "branch": "work/market/buying-routes-20261104",
+  "method": {
+    "documented": "The original source states the fact; company self-descriptions are not independent audits.",
+    "inferred": "Analyst routing or prioritization, not confirmed buyer delegation or demand.",
+    "unknown": "No observed evidence establishes the field; null does not mean zero or no.",
+    "rank": "Proposed research sequence, not a conversion probability.",
+    "room_counts": "Hotel units and residential units are separate; counts are not accessible orders and are not summed.",
+    "dates": "Published/event dates are distinguished from access date; undated pages retain null published_date.",
+    "deduplication": "Twenty distinct organization/project records are separate research routes, not twenty independent purchasing entities. Four Seasons projects share a flag gate; owner/operator, agent, GPO and distributor routes can converge on one order."
+  },
+  "category_legend": {
+    "D": "Direct dryer category listing; no AERLOR eligibility implied",
+    "O": "OS&E service; dryer delegation not established",
+    "P": "General procurement or partner contracting; exact category not established",
+    "R": "Referral route only",
+    "U": "Project known; category buyer not established"
+  },
+  "tier_legend": {
+    "A": "First five discovery briefs",
+    "B": "Secondary queue",
+    "C": "Prerequisites or further evidence first"
+  },
+  "global_gaps": [
+    "No contact, interview, accepted AERLOR supplier application, product approval or purchase commitment.",
+    "No buyer-issued dryer budget, confirmed alternate permission or exact specification-freeze date.",
+    "Project construction/finance evidence does not establish an available OS&E category budget.",
+    "Restricted CRM was not created: dedicated Aerlor Drive root returned 404 NOT_FOUND; access path stopped."
+  ],
+  "records": [
+    {
+      "record_id": "M01",
+      "name": "Concord Hospitality",
+      "record_type": "organization",
+      "rank": 1,
+      "tier": "A",
+      "mechanism": "Operator project procurement",
+      "region": "US project discovery focus (proposed)",
+      "owner_developer": "Not established for a specific property",
+      "operator": "Concord Hospitality",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "O",
+      "category_evidence": "Dedicated buying group and FF&E/OS&E purchasing; owner–brand liaison documented.",
+      "role_entry": "Corporate procurement / assigned OS&E project buyer via the official management-services contact route.",
+      "entry_url": "https://www.concordhotels.com/expertise/management/",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which owner-approved opening or renovation has a funded guestroom electrical OS&E line, who signs its PO, and can its flag consider an alternate dryer before specification freeze?",
+      "falsifier": "No accessible funded project, or owner/brand rules require an incumbent with no alternate review.",
+      "documented": [
+        "The service page describes owner–brand liaison, budget review, FF&E/OS&E purchasing and delivery coordination."
+      ],
+      "inferred": [
+        "A project buyer could connect product qualification to an owner-approved room event."
+      ],
+      "unknowns": [
+        "Dryer category owner, specific property/owner, current approved model, budget, alternate authority and dates."
+      ],
+      "source_urls": [
+        "https://www.concordhotels.com/expertise/management/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O01"
+      ]
+    },
+    {
+      "record_id": "M02",
+      "name": "Benjamin West",
+      "record_type": "organization",
+      "rank": 2,
+      "tier": "A",
+      "mechanism": "Owner-appointed OS&E purchasing agent",
+      "region": "US/global project services",
+      "owner_developer": "Not established for a specific property",
+      "operator": "Project-specific; not established",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "O",
+      "category_evidence": "OS&E negotiation on an owner's behalf is expressly described; dryer scope is not identified.",
+      "role_entry": "OS&E project purchasing lead through the corporate contact route.",
+      "entry_url": "https://www.benjaminwest.com/",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "For a retained project, is the dryer in your delegated OS&E scope, and can the owner and brand review a new alternate before the submittal cutoff?",
+      "falsifier": "No retained eligible project, no delegated dryer scope, or owner/brand rejection of new alternates.",
+      "documented": [
+        "The firm describes itself as an owner's fiduciary purchasing agent compensated by a disclosed client fee."
+      ],
+      "inferred": [
+        "A product submittal should be tied to an actual client project rather than a reseller-margin pitch."
+      ],
+      "unknowns": [
+        "Retained 2027–29 project, dryer buyer, brand standard, budget and substitution deadline."
+      ],
+      "source_urls": [
+        "https://www.benjaminwest.com/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O02"
+      ]
+    },
+    {
+      "record_id": "M08",
+      "name": "The Sutton Place Hotel Kelowna",
+      "record_type": "project",
+      "rank": 3,
+      "tier": "A",
+      "mechanism": "Owner/developer project OS&E referral",
+      "region": "Kelowna, British Columbia, Canada",
+      "owner_developer": "Northland Properties owns and operates the Sutton Place brand; exact project legal owner and leaseholding entity not established. Northland Properties is identified through the airport partnership and its project portfolio.",
+      "operator": "Northland Properties/Sutton Place brand operation; exact project operating agreement not examined.",
+      "flag": "The Sutton Place Hotels",
+      "hotel_rooms": 245,
+      "residential_units": null,
+      "room_count_scope": "No residence count stated in reviewed sources; do not infer zero.",
+      "project_status": "Airport announcement planned construction commencement in 2025; actual start not independently established in reviewed current evidence.",
+      "project_date": null,
+      "expected_opening": "2028",
+      "budget_status": "No buyer-issued dryer budget or OS&E allocation verified",
+      "category_grade": "U",
+      "category_evidence": "Project and participant roles identified; guestroom electrical category authority not established.",
+      "role_entry": "Northland hotel development or procurement function, then the appointed project OS&E/category buyer.",
+      "entry_url": "https://northland.ca/projects/",
+      "entry_status": "Proposed project-team routing; no direct buyer intake or contact established",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Who owns guestroom appliance specification and OS&E purchasing for the airport hotel, and what review deadline applies? Is the hotel appliance scope already funded, and which entity signs its purchase order?",
+      "falsifier": "Hairdryer selection already awarded, approved-vendor process unavailable to AERLOR, or required certification date preceding AERLOR readiness.",
+      "documented": [
+        "Northland currently lists 245 hotel guestrooms and 2028. The airport's January 2024 announcement identifies the Northland partnership and Sutton Place brand ownership/operation, but its planned 2025 construction start is not proof of actual start."
+      ],
+      "inferred": [
+        "Northland publicly identifies the project and controls the Sutton Place brand."
+      ],
+      "unknowns": [
+        "Exact purchasing entity, appointed OS&E agent, dryer category budget, brand-approved alternate and specification / mockup / RFQ / PO / delivery dates."
+      ],
+      "source_urls": [
+        "https://northland.ca/projects/",
+        "https://ylw.kelowna.ca/news-events/news/sutton-place-hotel-and-parkade-construction-commencing-ylw-2025"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "construction_finance_evidence": "No project financing or funded OS&E allocation established.",
+      "correlation_note": "A second Northland project would share decision exposure; no independent demand or volume aggregation with Sandman projects.",
+      "prior_pr1_delta": "245 guestrooms and 2028 are supported. A planned 2025 construction start must not be promoted to a verified actual start.",
+      "source_ids": [
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "record_id": "M17",
+      "name": "Guest Supply — category / New Hotel Opening Program",
+      "record_type": "organization",
+      "rank": 4,
+      "tier": "A",
+      "mechanism": "Distributor category decision tied to opening orders",
+      "region": "United States catalog; other market approvals separate",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "D",
+      "category_evidence": "Direct CHI dryer assortment, detailed item setup and an opening-order support program.",
+      "role_entry": "Dryer category purchasing / vendor-management function, then New Hotel Opening Program project support; item-setup instructions are not a supplier-admission guarantee.",
+      "entry_url": "https://www.guestsupply.com/vendor-item-setup",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Who accepts a new dryer supplier, and which actual opening order could consider it after the property's brand, budget and specification-window checks?",
+      "falsifier": "No eligible opening/replacement customer need or category owner sees insufficient value over current assortment; a listing alone is not sufficient.",
+      "documented": [
+        "The catalog contains CHI dryers. Item setup requests purchasing/product/logistics information; the opening program supports order planning, brand guidance and delivery coordination."
+      ],
+      "inferred": [
+        "Test category admission and a specific owner-approved opening order in the same discovery sequence."
+      ],
+      "unknowns": [
+        "Initial supplier acceptance, category buyer, property sponsor, approved alternate, stock model, warranty/returns, costs and purchasing dates."
+      ],
+      "source_urls": [
+        "https://www.guestsupply.com/brands/farouk/catalog/guestroom-accessories/in-room-appliances-and-electronics/hair-dryers",
+        "https://www.guestsupply.com/vendor-item-setup",
+        "https://www.guestsupply.com/Solutions/new-hotel-opening-program"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH09",
+        "CH07",
+        "CH08"
+      ]
+    },
+    {
+      "record_id": "M14",
+      "name": "DayBlink GPO",
+      "record_type": "organization",
+      "rank": 5,
+      "tier": "A",
+      "mechanism": "Voluntary hotel group agreement and activation",
+      "region": "US independent-hotel discovery focus; regional program scope to confirm",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "P",
+      "category_evidence": "Supplier intake and voluntary deal/category selection are documented; electrical category remit is not.",
+      "role_entry": "Supplier partnerships / category manager through the official supplier inquiry route.",
+      "entry_url": "https://www.dayblinkgpo.com/suppliers",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which participating hotel has a funded opening or replacement requirement for dryers, and who would approve and sign an order if the category accepted a new supplier?",
+      "falsifier": "No relevant category need or member willing to opt into a funded room event; roster-only interest without activation.",
+      "documented": [
+        "Supplier page describes group contracting and introductions; FAQ leaves category/deal selection with the participating hotel and describes supplier-funded compensation."
+      ],
+      "inferred": [
+        "Use the GPO to test active hotel demand and sponsorship, not to count its network as orders."
+      ],
+      "unknowns": [
+        "Dryer category coverage, regional demand, consenting property sponsor, PO issuer, actual fees and hotel/brand alternate rules."
+      ],
+      "source_urls": [
+        "https://www.dayblinkgpo.com/suppliers",
+        "https://www.dayblinkgpo.com/faq"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH01",
+        "CH02"
+      ]
+    },
+    {
+      "record_id": "M03",
+      "name": "Beyer Brown",
+      "record_type": "organization",
+      "rank": 6,
+      "tier": "B",
+      "mechanism": "Project OS&E purchasing service",
+      "region": "US hospitality project discovery focus (proposed)",
+      "owner_developer": "Not established for a specific property",
+      "operator": "Project-specific; not established",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "O",
+      "category_evidence": "OS&E sourcing and logistics service documented; page case studies primarily describe FF&E.",
+      "role_entry": "OS&E purchasing / assigned project manager through the service-page contact route.",
+      "entry_url": "https://www.beyerbrown.com/services/ose-purchasing/",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which live client has retained you for guestroom electrical OS&E, and is a dryer alternate still within your procurement scope and schedule?",
+      "falsifier": "Assignment is FF&E-only, the dryer package belongs to another buyer, or specifications are closed.",
+      "documented": [
+        "The OS&E service page describes sourcing against specified items and coordinating opening deliveries."
+      ],
+      "inferred": [
+        "The agent is a relevant scope-verification route; its named FF&E case studies do not establish current dryer tenders."
+      ],
+      "unknowns": [
+        "Electrical category scope, current client, owner/flag approvals, funds and specification dates."
+      ],
+      "source_urls": [
+        "https://www.beyerbrown.com/services/ose-purchasing/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O03"
+      ]
+    },
+    {
+      "record_id": "M09",
+      "name": "Hyatt Centric Victoria — Old Town / Broad Street Hotel Redevelopment",
+      "record_type": "project",
+      "rank": 7,
+      "tier": "B",
+      "mechanism": "Owner/developer project OS&E referral",
+      "region": "Victoria, British Columbia, Canada",
+      "owner_developer": "Hyatt identified Chard Development Ltd. as owner in November 2023; exact current legal ownership structure unverified. Chard Development; Durwest identifies Chard as its client. Knightstone Hotel Group lists the project, but its precise legal/development/operator role is not established by that listing.",
+      "operator": "Not established by reviewed primary project records.",
+      "flag": "Hyatt Centric",
+      "hotel_rooms": 167,
+      "residential_units": null,
+      "room_count_scope": "No residential unit count stated in reviewed current project source.",
+      "project_status": "Durwest describes the eight-storey project with anticipated completion in 2028 and expressly says the hotel is slated to open in 2028",
+      "project_date": null,
+      "expected_opening": "2028",
+      "budget_status": "No buyer-issued dryer budget or OS&E allocation verified",
+      "category_grade": "U",
+      "category_evidence": "Project and participant roles identified; guestroom electrical category authority not established.",
+      "role_entry": "Chard project development function; clarify Knightstone Hotel Group’s role, then identify the appointed procurement function and Hyatt category standards reviewer.",
+      "entry_url": "https://durwest.com/portfolio-item/broad-st-hotel-redevelopment/",
+      "entry_status": "Proposed project-team routing; no direct buyer intake or contact established",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "What is the current ownership/operator structure, who holds the OS&E package, and does the 167-room plan have an open appliance review window? Is the hotel appliance scope already funded, and which entity signs its purchase order?",
+      "falsifier": "Hyatt-required supply or an existing OS&E award closes the category, or the review deadline precedes certification readiness.",
+      "documented": [
+        "Durwest identifies Chard as client for the current 167-room project, with anticipated completion and stated opening in 2028. Hyatt's November 2023 announcement identified Chard ownership but an older 135-room/2026 plan. Knightstone lists the project without resolving its precise role."
+      ],
+      "inferred": [
+        "Chard is the contractor’s named client and historic brand-announced owner; Knightstone’s portfolio is additional role evidence requiring clarification."
+      ],
+      "unknowns": [
+        "Exact purchasing entity, appointed OS&E agent, dryer category budget, brand-approved alternate and specification / mockup / RFQ / PO / delivery dates.",
+        "Current legal ownership/operator arrangements and Knightstone role; do not use a residence, investor or contractor enquiry as verified supplier intake."
+      ],
+      "source_urls": [
+        "https://durwest.com/portfolio-item/broad-st-hotel-redevelopment/",
+        "https://newsroom.hyatt.com/canadagrowth",
+        "https://k-cap.com/projects/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "construction_finance_evidence": "No financing close or funded OS&E allocation established.",
+      "correlation_note": "Separate Chard/Knightstone route from Northland; project-level operating authority remains unverified.",
+      "prior_pr1_delta": "Current 167-room/2028 row gains primary contractor support. Preserve the 2023 Hyatt 135-room/2026 announcement as historical, not current scope.",
+      "source_ids": [
+        "P03",
+        "P04",
+        "P05"
+      ]
+    },
+    {
+      "record_id": "M04",
+      "name": "Crestline Hotels & Resorts",
+      "record_type": "organization",
+      "rank": 8,
+      "tier": "B",
+      "mechanism": "Operator sourcing and vendor management",
+      "region": "US portfolio",
+      "owner_developer": "Not established for a specific property",
+      "operator": "Crestline Hotels & Resorts",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "P",
+      "category_evidence": "Portfolio procurement leadership documented; no specific dryer delegation on the inspected page.",
+      "role_entry": "Corporate procurement and cost-management function via official corporate routing.",
+      "entry_url": "https://www.crestlinehotels.com/about-us/hospitality-executives",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Does corporate procurement specify guestroom dryers or only negotiate supply, and which property owner has approved an upgrade rather than failure-only replacements?",
+      "falsifier": "Corporate team cannot authorize the category and no property budget sponsor can be identified.",
+      "documented": [
+        "The leadership page describes portfolio sourcing strategy, supplier partnerships and vendor management."
+      ],
+      "inferred": [
+        "Corporate procurement is a better routing hypothesis than an unrelated marketing contact."
+      ],
+      "unknowns": [
+        "Specific owner/property/flag, dryer authority, funded event, incumbent contract and dates."
+      ],
+      "source_urls": [
+        "https://www.crestlinehotels.com/about-us/hospitality-executives"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O04"
+      ]
+    },
+    {
+      "record_id": "M05",
+      "name": "Noble House Hotels & Resorts",
+      "record_type": "organization",
+      "rank": 9,
+      "tier": "B",
+      "mechanism": "Operator purchasing through a collection supply program",
+      "region": "Property-specific; initial US discovery focus is proposed",
+      "owner_developer": "Not established for a specific property",
+      "operator": "Noble House Hotels & Resorts",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "P",
+      "category_evidence": "Purchasing department and collection supply program documented; dryer inclusion unknown.",
+      "role_entry": "Design and purchasing function via official corporate project routing.",
+      "entry_url": "https://www.noblehousehotels.com/about/our-company/management/property-management/",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Does the collection's single-supplier program cover hairdryers, and can an owner-funded renovation specify an alternate through that supplier?",
+      "falsifier": "Exclusive incumbent/category restrictions have no review window or the event is unfunded.",
+      "documented": [
+        "The property-management page describes manufacturer relationships and a single-supplier collection purchasing program."
+      ],
+      "inferred": [
+        "An incumbent supply arrangement may prevent a direct manufacturer sale even where design discretion exists."
+      ],
+      "unknowns": [
+        "Dryer category scope, supplier contract, participating property, owner, budget and review date."
+      ],
+      "source_urls": [
+        "https://www.noblehousehotels.com/about/our-company/management/property-management/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O05"
+      ]
+    },
+    {
+      "record_id": "M06",
+      "name": "InnVest Hotels",
+      "record_type": "organization",
+      "rank": 10,
+      "tier": "B",
+      "mechanism": "Owner/operator corporate tender and PO process",
+      "region": "Canada",
+      "owner_developer": "Not established for a specific property",
+      "operator": "InnVest or property-specific manager; to confirm",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "P",
+      "category_evidence": "A corporate buyer job description documents RFP, preferred-vendor and project-PO functions; no dryer category identified.",
+      "role_entry": "Director of Procurement / corporate purchasing via corporate routing; not the recruitment application.",
+      "entry_url": "https://innvesthotels.com/careers/buyer/",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which current procurement role owns guestroom electrical RFPs, and is there a funded Canadian property whose brand permits an alternate?",
+      "falsifier": "Job description is stale or not the category's process, or no currently eligible property/budget exists.",
+      "documented": [
+        "The undated job posting describes tender analysis, project POs, specification revisions and supplier evaluation."
+      ],
+      "inferred": [
+        "The posting is evidence of a designed procurement function, not proof that a particular buyer is in post or accepting suppliers."
+      ],
+      "unknowns": [
+        "Current incumbent role, actual dryer scope, owner/property/flag, budget, dates and Canadian SKU requirements."
+      ],
+      "source_urls": [
+        "https://innvesthotels.com/careers/buyer/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O06"
+      ]
+    },
+    {
+      "record_id": "M07",
+      "name": "Germain Hotels",
+      "record_type": "organization",
+      "rank": 11,
+      "tier": "B",
+      "mechanism": "Corporate purchasing referral",
+      "region": "Canada",
+      "owner_developer": "Not established for a specific property",
+      "operator": "Germain Hotels; property arrangement to confirm",
+      "flag": "Property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded project verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "R",
+      "category_evidence": "Official service-centre routing for purchasing/suppliers; no dryer decision authority established.",
+      "role_entry": "Corporate service centre, requesting the purchasing/procurement function.",
+      "entry_url": "https://www.germainhotels.com/en/contact",
+      "entry_status": "Proposed routing; no introduction or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Who sets the guestroom dryer standard for Le Germain, Alt or Escad, and is any owner-approved room event accepting a new model?",
+      "falsifier": "Referral never reaches the category owner, or group standards allow no alternate and no funded event exists.",
+      "documented": [
+        "The contact page sends procurement and supplier enquiries to corporate service centres rather than hotel reservations."
+      ],
+      "inferred": [
+        "This is a documented referral path only."
+      ],
+      "unknowns": [
+        "Specific buyer authority, property/owner, standard, budget, dates and Canadian approval pathway."
+      ],
+      "source_urls": [
+        "https://www.germainhotels.com/en/contact"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "O07"
+      ]
+    },
+    {
+      "record_id": "M10",
+      "name": "Signia by Hilton Savannah",
+      "record_type": "project",
+      "rank": 12,
+      "tier": "B",
+      "mechanism": "Owner/developer project OS&E referral",
+      "region": "Savannah, Georgia, United States",
+      "owner_developer": "Savannah-Georgia Convention Center Authority (SGCCA). Songy Highroads and Matthews Southwest Hospitality, identified as co-developers in the convention center’s groundbreaking release.",
+      "operator": "Hilton, identified as manager in the convention center’s release.",
+      "flag": "Signia by Hilton",
+      "hotel_rooms": 444,
+      "residential_units": null,
+      "room_count_scope": "No residential unit scope stated in reviewed hotel release.",
+      "project_status": "Topped out according to Hilton’s October 19, 2026 announcement; convention center groundbreaking release dated October 8, 2025.",
+      "project_date": "2026-10-19",
+      "expected_opening": "2028",
+      "budget_status": "No buyer-issued dryer budget or OS&E allocation verified",
+      "category_grade": "U",
+      "category_evidence": "Project and participant roles identified; guestroom electrical category authority not established.",
+      "role_entry": "SGCCA hotel project management and the co-developers, to establish the appointed OS&E purchasing agent and Hilton standards approval path.",
+      "entry_url": "https://stories.hilton.com/releases/signia-hilton-savannah-reaches-major-construction-milestone",
+      "entry_status": "Proposed project-team routing; no direct buyer intake or contact established",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Has the OS&E procurement package been appointed or awarded, and which role can verify the guestroom hairdryer specification and approval sequence? Is the hotel appliance scope already funded, and which entity signs its purchase order?",
+      "falsifier": "Category already specified or awarded, manager supply restrictions prevent evaluation, or the certification deadline cannot be met.",
+      "documented": [
+        "Hilton's October 19, 2026 release reports topping out, 444 rooms and expected 2028 opening. The convention center identifies SGCCA ownership, Hilton management and Songy / Matthews Southwest Hospitality co-development. August 10 committee minutes report on-schedule/on-budget construction and current payments, but no dryer-category award or available OS&E budget."
+      ],
+      "inferred": [
+        "Public owner, hotel manager and development roles are separately documented. None automatically identifies the category buyer."
+      ],
+      "unknowns": [
+        "Exact purchasing entity, appointed OS&E agent, dryer category budget, brand-approved alternate and specification / mockup / RFQ / PO / delivery dates."
+      ],
+      "source_urls": [
+        "https://stories.hilton.com/releases/signia-hilton-savannah-reaches-major-construction-milestone",
+        "https://www.savconventioncenter.com/2025/10/08/savannah-convention-center-breaks-ground-on-signia-by-hilton-hotel-expected-to-open-in-2028/",
+        "https://savconventioncenter.com/wp-content/uploads/2026/09/SGCCA-10-August-2026-Hotel-Development-Committee-Meeting-signed-minutes.pdf"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "construction_finance_evidence": "Signed August 10, 2026 owner committee minutes report construction schedule/budget status and payments current; this does not establish remaining appliance funds.",
+      "correlation_note": "Root owns the deeper government procurement and board-record search; this child verified project identity, scope and latest stage only.",
+      "prior_pr1_delta": "444 guestrooms and 2028 remain supported by the October 19, 2026 topping-out release. Add Matthews Southwest Hospitality alongside Songy; separate SGCCA ownership from Hilton management.",
+      "source_ids": [
+        "P06",
+        "P08",
+        "P07"
+      ]
+    },
+    {
+      "record_id": "M15",
+      "name": "Curator Hotel & Resort Collection",
+      "record_type": "organization",
+      "rank": 13,
+      "tier": "B",
+      "mechanism": "Optional preferred-vendor program",
+      "region": "United States independent lifestyle hotels",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "P",
+      "category_evidence": "Preferred-vendor contracting and member discretion documented; no direct dryer category verified.",
+      "role_entry": "Corporate partnerships / preferred-vendor program function; the hotel membership form is not a verified supplier application.",
+      "entry_url": "https://www.curatorhotelsandresorts.com/join-the-collection/",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Does the vendor program cover guestroom electrical equipment, and which member could sponsor a requirements discussion around a funded room event?",
+      "falsifier": "No appliance category or no member willing to own the buying decision, even if Curator would consider a partnership.",
+      "documented": [
+        "The membership page describes vendor agreements and property discretion. The June 15, 2026 Canary announcement is a concrete technology-vendor example, not appliance approval."
+      ],
+      "inferred": [
+        "A possible route needs an individual member sponsor and a separate electrical-category decision."
+      ],
+      "unknowns": [
+        "Supplier intake, dryer category scope, property owner and budget, contract requirements, hotel election and alternate permission."
+      ],
+      "source_urls": [
+        "https://www.curatorhotelsandresorts.com/join-the-collection/",
+        "https://www.curatorhotelsandresorts.com/news/curator-hotel-resort-collection-announces-strategic-partnership-with-canary-technologies-to-bring-ai-powered-guest-management-tools-to-independent-lifestyle-hotels/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH03",
+        "CH20"
+      ]
+    },
+    {
+      "record_id": "M12",
+      "name": "Four Seasons Resort and Private Residences Deer Valley",
+      "record_type": "project",
+      "rank": 14,
+      "tier": "B",
+      "mechanism": "Owner/developer project OS&E referral",
+      "region": "Deer Valley East Village / Park City area, Utah, United States",
+      "owner_developer": "Exact legal project owner not established. Extell Development Company.",
+      "operator": "Four Seasons planned hotel brand and services; exact operating contract not examined.",
+      "flag": "Four Seasons",
+      "hotel_rooms": 134,
+      "residential_units": 123,
+      "room_count_scope": "55 residences above the hotel and 68 in an adjacent residential building; separate from 134 hotel keys.",
+      "project_status": "ODA identifies in-progress work. MIDA’s November 2025 board-meeting highlights report progressing construction and nearly completed permitting.",
+      "project_date": "2025-11-17",
+      "expected_opening": "2028",
+      "budget_status": "No buyer-issued dryer budget or OS&E allocation verified",
+      "category_grade": "U",
+      "category_evidence": "Project and participant roles identified; guestroom electrical category authority not established.",
+      "role_entry": "Extell’s hotel project development/procurement function, then the appointed OS&E buyer and Four Seasons standards reviewer.",
+      "entry_url": "https://press.fourseasons.com/content/fourseasons_pressroom/printView.html?pageToPrint=/content/fourseasons_pressroom/en/news/corporate/2024/new_four_seasons_in__2032460453",
+      "entry_status": "Proposed project-team routing; no direct buyer intake or contact established",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which entity and agent own hotel OS&E procurement, is guestroom appliance review still open, and is the 134-key hotel scope distinct from residence furnishing packages? Is the hotel appliance scope already funded, and which entity signs its purchase order?",
+      "falsifier": "Hairdryer program awarded or specified, procurement requires a closed approved-vendor list, or certification timing cannot meet the project’s evaluation deadline.",
+      "documented": [
+        "Four Seasons and ODA agree on 134 hotel rooms/suites and 123 residences (55 above the resort and 68 in an adjacent building), with Extell as developer. The brand new-openings page lists 2028. MIDA's November 2025 staff summary reports financing complete and construction progressing; it is expressly unofficial, not approved minutes or proof of OS&E funds."
+      ],
+      "inferred": [
+        "Extell is named by the brand and architect. A financing milestone strengthens project-stage evidence without establishing category access."
+      ],
+      "unknowns": [
+        "Exact purchasing entity, appointed OS&E agent, dryer category budget, brand-approved alternate and specification / mockup / RFQ / PO / delivery dates."
+      ],
+      "source_urls": [
+        "https://press.fourseasons.com/content/fourseasons_pressroom/printView.html?pageToPrint=/content/fourseasons_pressroom/en/news/corporate/2024/new_four_seasons_in__2032460453",
+        "https://oda-architecture.com/projects/four-seasons-deer-valley/",
+        "https://www.midaut.org/meeting-summaries/november-17-2025-mida-board-meeting-highlights",
+        "https://www.fourseasons.com/residences/private_residences/deer-valley/",
+        "https://www.fourseasons.com/newopenings/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "construction_finance_evidence": "MIDA's November 2025 unofficial staff summary reports financing complete; no current buyer-issued category budget or procurement award established.",
+      "correlation_note": "Distinct physical project from Waldorf Astoria Deer Valley. Both involve Extell, so their purchasing exposure may be correlated; do not treat them as independent demand or combine rooms/residences.",
+      "prior_pr1_delta": "Adds convergent primary scope of 134 hotel keys and 123 residences, developer Extell, and qualified financing evidence. Keeps Four Seasons separate from Hilton/Waldorf.",
+      "source_ids": [
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P19"
+      ]
+    },
+    {
+      "record_id": "M11",
+      "name": "Four Seasons Hotel and Private Residences Telluride",
+      "record_type": "project",
+      "rank": 15,
+      "tier": "B",
+      "mechanism": "Owner/developer project OS&E referral",
+      "region": "Mountain Village / Telluride, Colorado, United States",
+      "owner_developer": "Exact legal owner unknown. RAL identifies its development-manager / owner-representative role. The Four Seasons residence page separately names Fort Partners & Merrimac Ventures as developer; the relationship among these roles is unresolved",
+      "operator": "Four Seasons Hotels and Resorts, identified as operator by RAL; operating contract not examined",
+      "flag": "Four Seasons",
+      "hotel_rooms": 52,
+      "residential_units": null,
+      "room_count_scope": "Conflict: RAL lists 43 hotel residences plus 26 private residences (69 total); Weitz lists 40 hotel residences plus 28 private residences (68 total). Both reviewed pages are undated. Do not choose one as final or count residences as hotel guestrooms.",
+      "project_status": "RAL states under construction; Weitz gives October 2028 construction completion.",
+      "project_date": null,
+      "expected_opening": "2028",
+      "budget_status": "No buyer-issued dryer budget or OS&E allocation verified",
+      "category_grade": "U",
+      "category_evidence": "Project and participant roles identified; guestroom electrical category authority not established.",
+      "role_entry": "RAL in its documented owner-representative/development-manager role, then the appointed hotel OS&E buyer and Four Seasons standards reviewer.",
+      "entry_url": "https://www.ralcompanies.com/projects/four-seasons-telluride/",
+      "entry_status": "Proposed project-team routing; no direct buyer intake or contact established",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which current schedule governs the 52 hotel keys, what is the reconciled residence scope, and who holds hotel versus residence OS&E purchasing? Is the hotel appliance scope already funded, and which entity signs its purchase order?",
+      "falsifier": "Hotel OS&E already awarded, residences have a separate closed furnishing program, or no approval route exists for an uncertified entrant.",
+      "documented": [
+        "RAL identifies 52 hotel rooms, construction in progress and 2028 opening; Weitz also gives 52 hotel keys and October 2028 construction completion. Residential scope conflicts: RAL 43 hotel residences plus 26 private; Weitz 40 plus 28. The brand page lists 69 residences and a separate developer attribution."
+      ],
+      "inferred": [
+        "RAL's documented representative role provides a project-routing hypothesis. It does not prove category purchasing authority or legal ownership."
+      ],
+      "unknowns": [
+        "Exact purchasing entity, appointed OS&E agent, dryer category budget, brand-approved alternate and specification / mockup / RFQ / PO / delivery dates.",
+        "Reconciled residence counts and purchasing packages; legal owner and relationship between RAL and the developer names on the brand page."
+      ],
+      "source_urls": [
+        "https://www.ralcompanies.com/projects/four-seasons-telluride/",
+        "https://www.weitz.com/projects/telluride-four-seasons/?_project_type=hospitality",
+        "https://www.fourseasons.com/residences/private_residences/telluride/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "construction_finance_evidence": "No financing close or funded OS&E allocation established.",
+      "correlation_note": "Keep hotel keys, furnished hotel residences and private residences separate; do not aggregate inconsistent residential counts.",
+      "prior_pr1_delta": "Primary developer and contractor records now establish construction and a 52-key hotel scope. Public OS&E authority remains unknown.",
+      "residential_count_alternatives": [
+        {
+          "source_id": "P09",
+          "hotel_residences": 43,
+          "private_residences": 26,
+          "total": 69
+        },
+        {
+          "source_id": "P10",
+          "hotel_residences": 40,
+          "private_residences": 28,
+          "total": 68
+        }
+      ],
+      "source_ids": [
+        "P09",
+        "P10",
+        "P11"
+      ]
+    },
+    {
+      "record_id": "M16",
+      "name": "SLX Hospitality",
+      "record_type": "organization",
+      "rank": 16,
+      "tier": "B",
+      "mechanism": "B2B wholesale dryer-category sale",
+      "region": "US hotel-supply discovery focus",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "D",
+      "category_evidence": "Actual T3, Conair and BaBylissPRO hairdryer assortment and case-quantity wholesale selling.",
+      "role_entry": "Hairdryer category purchasing / vendor-management role requested through the official general enquiry route; dedicated supplier application unverified.",
+      "entry_url": "https://www.slx-hospitality.com/contact/",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "What would justify admitting a new dryer for a quoted hotel requirement, and would fulfillment require stocked cases or an approved drop-ship arrangement?",
+      "falsifier": "Existing assortment satisfies demand or required delivery/service economics cannot be met.",
+      "documented": [
+        "The catalog lists established dryer brands; the contact page identifies hotel/lodging B2B wholesale and case-quantity selling."
+      ],
+      "inferred": [
+        "A new product must solve a category/customer requirement and fulfill the channel's service model."
+      ],
+      "unknowns": [
+        "New-vendor eligibility, active customer requirement, stocking versus drop-ship, returns, warranty, case pack and actual commercial terms."
+      ],
+      "source_urls": [
+        "https://www.slx-hospitality.com/product-category/bath-accessories/hair-dryers-flat-irons/",
+        "https://www.slx-hospitality.com/contact/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH04",
+        "CH06"
+      ]
+    },
+    {
+      "record_id": "M13",
+      "name": "Aman Beverly Hills / One Beverly Hills",
+      "record_type": "project",
+      "rank": 17,
+      "tier": "C",
+      "mechanism": "Owner/developer project OS&E referral",
+      "region": "Beverly Hills, California, United States",
+      "owner_developer": "Exact legal hotel ownership/JV structure not established in reviewed sources. Cain is identified as lead developer; Eldridge and Security Benefit appear in publicly described financing participation.",
+      "operator": "Aman brand and services; precise hotel operating-contract party not established.",
+      "flag": "Aman",
+      "hotel_rooms": 78,
+      "residential_units": null,
+      "room_count_scope": "Aman describes private residences but provides no count in the reviewed page. Keep the 78-suite hotel separate from residences and the broader mixed-use project.",
+      "project_status": "Cain’s November 2, 2026 progress update and VICI’s September 30, 2026 Form 10-Q describe progressing/commenced construction.",
+      "project_date": "2026-11-02",
+      "expected_opening": "2028",
+      "budget_status": "No buyer-issued dryer budget or OS&E allocation verified",
+      "category_grade": "U",
+      "category_evidence": "Project and participant roles identified; guestroom electrical category authority not established.",
+      "role_entry": "Cain’s hotel project development/procurement function, then the appointed Aman hotel OS&E buyer and brand standards reviewer.",
+      "entry_url": "https://cainint.com/news-and-insights/eldridge-provides-update-on-progress-at-1-beverly-hills/",
+      "entry_status": "Proposed project-team routing; no direct buyer intake or contact established",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Who holds the 78-suite hotel’s OS&E purchasing package, is its guestroom appliance program open to evaluation, and are residence furnishing requirements separate? Is the hotel appliance scope already funded, and which entity signs its purchase order?",
+      "falsifier": "Aman’s standards or an existing procurement award close the category, or required product readiness cannot match review timing.",
+      "documented": [
+        "Aman states 78 hotel suites and expected 2028 opening. Cain's November 2, 2026 update identifies its lead-development role. VICI's September-quarter SEC report documents project construction financing and construction commenced; the funds are for the wider mixed-use development, not a verified hotel appliance allocation."
+      ],
+      "inferred": [
+        "Cain’s development role and Aman’s hotel scope are primary-source facts; financing participants should not be treated as procurement owners."
+      ],
+      "unknowns": [
+        "Exact purchasing entity, appointed OS&E agent, dryer category budget, brand-approved alternate and specification / mockup / RFQ / PO / delivery dates.",
+        "Hotel legal owner and operating-contract party; no residence sales form or lender treated as a category-buyer route."
+      ],
+      "source_urls": [
+        "https://www.aman.com/aman-beverly-hills",
+        "https://cainint.com/news-and-insights/eldridge-provides-update-on-progress-at-1-beverly-hills/",
+        "https://www.sec.gov/Archives/edgar/data/1920791/000170569626000120/vici-20260930.htm"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "construction_finance_evidence": "VICI's SEC report documents a mezzanine loan and senior commitment for the wider One Beverly Hills development, with funding over time; no hotel dryer allocation established.",
+      "correlation_note": "Distinct Cain/Aman exposure from Northland, Chard/Knightstone, SGCCA/Hilton, RAL and Extell. This does not prove independent category demand.",
+      "prior_pr1_delta": "Additional in-window US project with original brand scope and current financing/construction evidence, replacing a correlated second Northland candidate.",
+      "source_ids": [
+        "P16",
+        "P17",
+        "P18"
+      ]
+    },
+    {
+      "record_id": "M18",
+      "name": "Hilton Supply Management",
+      "record_type": "organization",
+      "rank": 18,
+      "tier": "C",
+      "mechanism": "Managed OS&E sourcing and supplier roster",
+      "region": "US/Canada applicability requires regional category confirmation",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "O",
+      "category_evidence": "OS&E and supplier-agreement functions documented; no hairdryer-specific sourcing event verified.",
+      "role_entry": "Official Become a Supplier registration route, then a relevant regional OS&E category manager if invited.",
+      "entry_url": "https://www.hsm.com/become-a-supplier/",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Is there a current or planned guestroom hairdryer need, and what separates roster registration from an invited category review, brand approval and a property order?",
+      "falsifier": "No sourcing need or inability to meet the relevant brand, qualification, regional service or delivery conditions.",
+      "documented": [
+        "HSM describes supplier agreements against brand/project requirements. Registration creates a potential-supplier roster entry and may lead to sourcing invitations when needs arise."
+      ],
+      "inferred": [
+        "Separate registration, sourcing selection, brand approval and the property purchase."
+      ],
+      "unknowns": [
+        "Dryer remit, active category cycle, regional eligibility, exact linked-form requirements, selected supplier obligations and PO issuer."
+      ],
+      "source_urls": [
+        "https://www.hsm.com/become-a-supplier/",
+        "https://www.hsm.com/services-solutions/category-management/",
+        "https://www.hsm.com/services-solutions/category-management/operating-supplies-equipment/"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH12",
+        "CH13",
+        "CH14"
+      ]
+    },
+    {
+      "record_id": "M19",
+      "name": "Avendra International US",
+      "record_type": "organization",
+      "rank": 19,
+      "tier": "C",
+      "mechanism": "Procurement agreement / category sourcing inquiry",
+      "region": "United States",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "P",
+      "category_evidence": "Hotel procurement and a current sourcing calendar documented; no named dryer opportunity.",
+      "role_entry": "Official prospective supplier page and relevant room-operations category manager; only the page heading/introduction was inspectable.",
+      "entry_url": "https://www.avendra.com/en/us/supplier-form",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Which current US category and sourcing cycle covers guestroom hairdryers, and what funded customer requirement would justify evaluating a new supplier?",
+      "falsifier": "No relevant category/customer requirement or no feasible upcoming cycle; adjacent salon products do not establish an appliance tender.",
+      "documented": [
+        "The procurement page covers room operations. The parent-read sourcing calendar is updated October 22, 2026 despite its March filename; estimated deadlines extend into December 2026 and February 2027. No listed category explicitly names hairdryers."
+      ],
+      "inferred": [
+        "A category enquiry must resolve whether salon haircare includes appliances; building-services electrical repair is not dryer-category evidence."
+      ],
+      "unknowns": [
+        "Actual dryer category, next applicable cycle, readable form requirements, qualification, customer demand, agreement scope and PO issuer."
+      ],
+      "source_urls": [
+        "https://www.avendra.com/en/us/our-solutions/procurement-solutions",
+        "https://www.avendra.com/en/us/assets/sourcing-calendar-march-2026.pdf",
+        "https://www.avendra.com/en/us/supplier-form"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH15",
+        "CH16",
+        "CH17"
+      ]
+    },
+    {
+      "record_id": "M20",
+      "name": "Hunter Amenities",
+      "record_type": "organization",
+      "rank": 20,
+      "tier": "C",
+      "mechanism": "Personal-care partner referral; appliance scope unverified",
+      "region": "Canada corporate base; proposed US/Canada category enquiry",
+      "owner_developer": "Customer/property-specific; no buying entity established",
+      "operator": "Customer/property-specific; not established",
+      "flag": "Customer/property-specific; not established",
+      "hotel_rooms": null,
+      "residential_units": null,
+      "room_count_scope": "No qualified room count; portfolio totals excluded",
+      "project_status": "No named funded customer project or opening order verified",
+      "project_date": null,
+      "expected_opening": null,
+      "budget_status": "No buyer-issued dryer budget verified",
+      "category_grade": "R",
+      "category_evidence": "Personal-care manufacturing/licensing and corporate routing only; electrical appliance rights not verified.",
+      "role_entry": "Partnerships / licensing function through the official corporate enquiry route to establish scope first.",
+      "entry_url": "https://www.hunteramenities.com/contact",
+      "entry_status": "Research pointer only; no form submitted, introduction, account opened or contact",
+      "alternate_status": "UNKNOWN",
+      "spec_freeze_status": "UNKNOWN",
+      "first_question": "Does the relevant partnership have rights and an operating mandate for guestroom electrical hairdryers, or is it limited to personal-care formulations and accessories?",
+      "falsifier": "Applicable licenses or operating scope exclude electrical appliances.",
+      "documented": [
+        "The FAQ describes formulation, manufacturing, private label and brand licensing for personal care, with adjacent non-electrical accessories."
+      ],
+      "inferred": [
+        "Treat this as a boundary check; do not infer electrical appliance distribution or licensing from cosmetic haircare."
+      ],
+      "unknowns": [
+        "Electrical category mandate, brand-specific appliance rights, sales model, technical/service responsibility, buyer and demand."
+      ],
+      "source_urls": [
+        "https://www.hunteramenities.com/faq",
+        "https://www.hunteramenities.com/contact"
+      ],
+      "contact_status": "NOT_CONTACTED",
+      "qualified_order": false,
+      "source_ids": [
+        "CH18",
+        "CH19"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C01",
+      "url": "https://www.dyson.com/commercial/hair-care/supersonic",
+      "title": "Dyson Supersonic hair dryer for hotels and leisure",
+      "publisher": "Dyson US",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "manufacturer_commercial_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Dedicated hotel/light-use business offer with business support and a stated limited warranty.",
+      "limitations": "Marketing is not independent testing, negotiated hotel price, available inventory, or the exact contract warranty."
+    },
+    {
+      "source_id": "C02",
+      "url": "https://www.laifentech.com/pages/place-bulk-order",
+      "title": "Bulk Order Inquiry",
+      "publisher": "Laifen",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "manufacturer_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Regional wholesale applications include US/Canada corporate non-resale buyers; stated minimum order is ten units.",
+      "limitations": "Application and quote process do not prove hotel-use warranty, exact-model approval or buyer demand."
+    },
+    {
+      "source_id": "C03",
+      "url": "https://www.vanitygroup.com/en/hair-dryers/waves",
+      "title": "WAVES",
+      "publisher": "VANITY GROUP",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "manufacturer_category_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Hotel-positioned AirDay and AirLuxe dryers with display-box and dust-bag options.",
+      "limitations": "No independently verified performance, exact US/Canada SKU approval or hotel transaction price established."
+    },
+    {
+      "source_id": "C04",
+      "url": "https://www.dyson.com/inside-dyson/terms/the-dyson-warranty",
+      "title": "Dyson Limited Warranty Terms & Conditions",
+      "publisher": "Dyson US",
+      "published_date": "2025-12-16",
+      "accessed_date": "2026-11-04",
+      "source_type": "manufacturer_general_warranty",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "General warranty text limits ordinary coverage to domestic use and excludes commercial/rental use.",
+      "limitations": "This general consumer-facing policy must not be substituted for the contract terms of the separate business offer; no legal coverage opinion made.",
+      "date_note": "Last-updated date"
+    },
+    {
+      "source_id": "C05",
+      "url": "https://www.laifentech.com/pages/warranty",
+      "title": "Laifen Official Warranty & Guarantee Information",
+      "publisher": "Laifen",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "manufacturer_general_warranty",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Warranty varies by model and is restricted to the purchase jurisdiction.",
+      "limitations": "No explicit guestroom-use coverage determination or cross-border hotel warranty obtained."
+    },
+    {
+      "source_id": "P07",
+      "url": "https://savconventioncenter.com/wp-content/uploads/2026/09/SGCCA-10-August-2026-Hotel-Development-Committee-Meeting-signed-minutes.pdf",
+      "title": "SGCCA Hotel Development Committee minutes — August 10, 2026",
+      "publisher": "Savannah-Georgia Convention Center Authority",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "owner_governance_minutes",
+      "retrieval_status": "pdf_text_opened",
+      "observed_scope": "Minutes report construction on schedule and budget and administrative payments current; discuss Hilton opening/sales coordination.",
+      "limitations": "Does not name a dryer-category buyer, show an OS&E award, prove remaining appliance budget or establish an open substitution window. January 2029 presale discussion is not treated as opening-date guidance.",
+      "event_date": "2026-08-10",
+      "date_note": "Meeting held 2026-08-10; publication date not established"
+    },
+    {
+      "source_id": "O01",
+      "url": "https://www.concordhotels.com/expertise/management/",
+      "title": "Hotel Management Services — Procurement",
+      "publisher": "Concord Hospitality",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "operator_service_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Dedicated FF&E/OS&E buying group and owner/brand liaison.",
+      "limitations": "No particular hotel dryer mandate, approved alternate or current funded procurement event."
+    },
+    {
+      "source_id": "O02",
+      "url": "https://www.benjaminwest.com/",
+      "title": "Hospitality Purchasing",
+      "publisher": "Benjamin West",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "purchasing_agent_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Owner-side fiduciary FF&E/OS&E agency; disclosed fee as sole compensation.",
+      "limitations": "No named current project or exact dryer-category delegation."
+    },
+    {
+      "source_id": "O03",
+      "url": "https://www.beyerbrown.com/services/ose-purchasing/",
+      "title": "OS&E Purchasing Services",
+      "publisher": "Beyer Brown",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "purchasing_agent_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "OS&E purchasing and opening-delivery coordination.",
+      "limitations": "Illustrative FF&E projects are not proof of active electrical OS&E tenders."
+    },
+    {
+      "source_id": "O04",
+      "url": "https://www.crestlinehotels.com/about-us/hospitality-executives",
+      "title": "Hospitality Executives — Procurement function",
+      "publisher": "Crestline Hotels & Resorts",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "operator_leadership_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Corporate portfolio sourcing, supplier partnerships and vendor management.",
+      "limitations": "No appliance-specific budget or decision delegation established; personal details excluded."
+    },
+    {
+      "source_id": "O05",
+      "url": "https://www.noblehousehotels.com/about/our-company/management/property-management/",
+      "title": "Property Management",
+      "publisher": "Noble House Hotels & Resorts",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "operator_service_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Purchasing department and collection-wide single-supplier program.",
+      "limitations": "Does not establish whether dryers fall in the agreement or alternates are possible."
+    },
+    {
+      "source_id": "O06",
+      "url": "https://innvesthotels.com/careers/buyer/",
+      "title": "Buyer — Corporate Office Toronto",
+      "publisher": "InnVest Hotels",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "employer_job_description",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Corporate tender, preferred-vendor, project-PO and specification-change responsibilities.",
+      "limitations": "Undated role description is not evidence of a filled current position, dryer tender or supplier intake."
+    },
+    {
+      "source_id": "O07",
+      "url": "https://www.germainhotels.com/en/contact",
+      "title": "Contact — Corporate enquiries",
+      "publisher": "Germain Hotels",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "operator_contact_routing",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Purchasing and supplier enquiries routed to corporate service centres.",
+      "limitations": "Referral only; no category owner, budget or project scope established."
+    },
+    {
+      "source_id": "CH08",
+      "url": "https://www.guestsupply.com/Solutions/new-hotel-opening-program",
+      "title": "New Hotel Opening Program",
+      "publisher": "Guest Supply",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "distributor_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Opening order planning, brand-compliance guidance, delivery coordination and RoomKit program.",
+      "limitations": "Program availability does not prove a named active project, a new supplier's eligibility or any order."
+    },
+    {
+      "source_id": "P01",
+      "url": "https://northland.ca/projects/",
+      "title": "Projects — Northland Properties",
+      "publisher": "Northland Properties",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "The current project portfolio lists a 245-guestroom Sutton Place hotel in Kelowna with a 2028 opening target.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P02",
+      "url": "https://ylw.kelowna.ca/news-events/news/sutton-place-hotel-and-parkade-construction-commencing-ylw-2025",
+      "title": "Sutton Place Hotel and Parkade Construction Commencing at YLW in 2025",
+      "publisher": "Kelowna International Airport",
+      "published_date": "2024-01-25",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "The airport describes a six-storey, 245-room hotel, a Northland partnership, Sutton Place brand ownership and operation, and a long-term land lease.",
+      "limitations": "Announcement describes intended commencement, not proof of actual construction start."
+    },
+    {
+      "source_id": "P03",
+      "url": "https://durwest.com/portfolio-item/broad-st-hotel-redevelopment/",
+      "title": "Broad St. Hotel Redevelopment — Durwest",
+      "publisher": "Durwest Construction",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Durwest names Chard as client and describes an eight-storey, 167-room Hyatt hotel; both anticipated completion and stated opening are 2028.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P04",
+      "url": "https://newsroom.hyatt.com/canadagrowth",
+      "title": "Hyatt is on Track to Double its Brand Footprint in Canada by 2026",
+      "publisher": "Hyatt",
+      "published_date": "2023-11-01",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Hyatt’s original plan identified Chard ownership, 135 guestrooms and suites, and an expected 2026 opening for Hyatt Centric Victoria–Old Town.",
+      "limitations": "Historical announcement; current contractor scope differs."
+    },
+    {
+      "source_id": "P05",
+      "url": "https://k-cap.com/projects/",
+      "title": "Projects — Knightstone Capital",
+      "publisher": "Knightstone Capital",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Knightstone lists Hyatt Centric Victoria Old Town in its hotel group project portfolio.",
+      "limitations": "Portfolio inclusion alone does not establish the precise project role or purchasing authority."
+    },
+    {
+      "source_id": "P06",
+      "url": "https://stories.hilton.com/releases/signia-hilton-savannah-reaches-major-construction-milestone",
+      "title": "Signia Hilton Savannah Reaches Major Construction Milestone with Topping Out Ceremony",
+      "publisher": "Hilton",
+      "published_date": "2026-10-19",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Hilton reports the hotel’s topping out, 444 guestrooms, a 2028 opening target, and participation by the authority, Hilton, Songy and Brasfield & Gorrie.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P08",
+      "url": "https://www.savconventioncenter.com/2025/10/08/savannah-convention-center-breaks-ground-on-signia-by-hilton-hotel-expected-to-open-in-2028/",
+      "title": "Savannah Convention Center Breaks Ground on Signia by Hilton Hotel, Expected to Open in 2028",
+      "publisher": "Savannah Convention Center",
+      "published_date": "2025-10-08",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "The convention center identifies SGCCA as owner, Hilton as manager, and Songy Highroads with Matthews Southwest Hospitality as co-developers.",
+      "limitations": "Role evidence provided by parent’s direct source review."
+    },
+    {
+      "source_id": "P09",
+      "url": "https://www.ralcompanies.com/projects/four-seasons-telluride/",
+      "title": "Four Seasons Telluride — RAL Companies",
+      "publisher": "RAL Companies",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "RAL names its development-manager and owner-representative role, 52 hotel rooms, 43 hotel residences, 26 private residences, construction status and 2028 delivery.",
+      "limitations": "Residence split conflicts with Weitz; date not stated."
+    },
+    {
+      "source_id": "P10",
+      "url": "https://www.weitz.com/projects/telluride-four-seasons/?_project_type=hospitality",
+      "title": "Telluride Four Seasons — The Weitz Company",
+      "publisher": "The Weitz Company",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Weitz identifies RAL as client, itself as general contractor, 52 hotel keys, 40 hotel residences, 28 private residences and October 2028 completion.",
+      "limitations": "Residence split conflicts with RAL; date not stated."
+    },
+    {
+      "source_id": "P11",
+      "url": "https://www.fourseasons.com/residences/private_residences/telluride/",
+      "title": "Four Seasons Private Residences Telluride",
+      "publisher": "Four Seasons",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Telluride page states 69 residences, 2028 and Fort Partners & Merrimac Ventures as developer.",
+      "limitations": "Developer-role relationship with RAL is unresolved; do not silently dismiss the brand attribution as a template error or promote it to verified legal ownership."
+    },
+    {
+      "source_id": "P12",
+      "url": "https://press.fourseasons.com/content/fourseasons_pressroom/printView.html?pageToPrint=/content/fourseasons_pressroom/en/news/corporate/2024/new_four_seasons_in__2032460453",
+      "title": "Four Seasons and Extell Development Company Announce Plans for Luxury Resort and Residences at Deer Valley in Park City, Utah",
+      "publisher": "Four Seasons",
+      "published_date": "2024-12-10",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Four Seasons and Extell announce 134 guestrooms and suites plus 123 residences, comprising 55 above the hotel and 68 in an adjacent building.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P13",
+      "url": "https://oda-architecture.com/projects/four-seasons-deer-valley/",
+      "title": "Four Seasons Resort and Private Residences Deer Valley — ODA Architecture",
+      "publisher": "ODA Architecture",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "ODA lists the project as in progress, names Extell and Four Seasons, and repeats 134 hotel guestrooms and suites plus 123 residences.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P14",
+      "url": "https://www.midaut.org/meeting-summaries/november-17-2025-mida-board-meeting-highlights",
+      "title": "November 17, 2025 MIDA Board Meeting Highlights",
+      "publisher": "MIDA",
+      "published_date": "2025-11-20",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "MIDA staff report completed financing, progressing construction and nearly completed permits for the 134-room hotel and 123-residence development.",
+      "limitations": "Page expressly identifies itself as unofficial staff highlights, not approved board minutes. Financing completion is not evidence of OS&E purchasing authority or category availability.",
+      "date_note": "Staff summary published Nov 20 of Nov 17 meeting; expressly unofficial"
+    },
+    {
+      "source_id": "P15",
+      "url": "https://www.fourseasons.com/residences/private_residences/deer-valley/",
+      "title": "Four Seasons Private Residences Deer Valley",
+      "publisher": "Four Seasons",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "The residence page identifies Extell and 123 private residences.",
+      "limitations": "The parent retrieval did not show a 2028 date on this page; use the separate brand new-openings page for the hotel opening target."
+    },
+    {
+      "source_id": "P16",
+      "url": "https://www.aman.com/aman-beverly-hills",
+      "title": "Luxury Hotel and Residences in Los Angeles — Aman Beverly Hills",
+      "publisher": "Aman",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Aman describes a 78-suite hotel and private residences, with an opening target of 2028.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P17",
+      "url": "https://cainint.com/news-and-insights/eldridge-provides-update-on-progress-at-1-beverly-hills/",
+      "title": "Eldridge Provides Update on Progress at 1 Beverly Hills",
+      "publisher": "Cain / Eldridge",
+      "published_date": "2026-11-02",
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "The update identifies Cain as lead developer and reports construction, commercial and financing progress, with Eldridge, Security Benefit and third-party financing participation.",
+      "limitations": "Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window."
+    },
+    {
+      "source_id": "P18",
+      "url": "https://www.sec.gov/Archives/edgar/data/1920791/000170569626000120/vici-20260930.htm",
+      "title": "VICI Properties Inc. — Form 10-Q for the period ended September 30, 2026",
+      "publisher": "VICI Properties / SEC filing",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "primary_project_source",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "SEC-filed company report identifies construction financing for Cain's One Beverly Hills, construction commenced and 2028 completion expected.",
+      "limitations": "Reporting period ends 2026-09-30; exact filing publication date was not separately verified. Commitments and construction finance do not establish hotel OS&E funding or procurement authority.",
+      "date_note": "Report period ended 2026-09-30; filing publication date not separately verified"
+    },
+    {
+      "source_id": "P19",
+      "url": "https://www.fourseasons.com/newopenings/",
+      "title": "New Openings",
+      "publisher": "Four Seasons",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "brand_project_portfolio",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Brand portfolio lists 2028 for Deer Valley and Telluride.",
+      "limitations": "Expected hotel openings, not confirmed delivery dates or procurement windows."
+    },
+    {
+      "source_id": "CH01",
+      "url": "https://www.dayblinkgpo.com/suppliers",
+      "title": "Suppliers",
+      "publisher": "DayBlink GPO",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Supplier inquiry, group contracting, introductions, relationship support and SELECT discovery profiles.",
+      "limitations": "No guestroom dryer category mandate, named buying hotel or purchase commitment established."
+    },
+    {
+      "source_id": "CH02",
+      "url": "https://www.dayblinkgpo.com/faq",
+      "title": "FAQ",
+      "publisher": "DayBlink GPO",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Hotels authorize negotiations and select categories/deals; suppliers fund the program.",
+      "limitations": "Voluntary agreement use is not committed member volume or proof of resale purchasing."
+    },
+    {
+      "source_id": "CH03",
+      "url": "https://www.curatorhotelsandresorts.com/join-the-collection/",
+      "title": "Join the Collection",
+      "publisher": "Curator Hotel & Resort Collection",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Preferred vendor agreements, onboarding and property discretion in program participation.",
+      "limitations": "No dryer program verified. The membership application is for hotels, not a verified supplier application."
+    },
+    {
+      "source_id": "CH04",
+      "url": "https://www.slx-hospitality.com/product-category/bath-accessories/hair-dryers-flat-irons/",
+      "title": "Hair Dryers + Flat Irons",
+      "publisher": "SLX Hospitality",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "distributor_category_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Direct assortment includes T3, Conair and BaBylissPRO hairdryers.",
+      "limitations": "Category also includes accessories/flat irons; result count is not dryer-model count. Listing is not stock or transaction proof."
+    },
+    {
+      "source_id": "CH06",
+      "url": "https://www.slx-hospitality.com/contact/",
+      "title": "Contact Us",
+      "publisher": "SLX Hospitality",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "General inquiry form; B2B hotel wholesaler selling case quantities.",
+      "limitations": "No dedicated new-supplier intake or category acceptance requirement established."
+    },
+    {
+      "source_id": "CH07",
+      "url": "https://www.guestsupply.com/vendor-item-setup",
+      "title": "Vendor Item Setup",
+      "publisher": "Guest Supply",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Purchasing/item data, product documentation, warranty, imagery and case/logistics inputs.",
+      "limitations": "Item setup is not vendor admission, stock commitment or customer order."
+    },
+    {
+      "source_id": "CH09",
+      "url": "https://www.guestsupply.com/brands/farouk/catalog/guestroom-accessories/in-room-appliances-and-electronics/hair-dryers",
+      "title": "Farouk / Hair Dryers",
+      "publisher": "Guest Supply US",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "distributor_category_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Direct CHI dryer assortment with item and case-pack information.",
+      "limitations": "Catalog presence does not establish current inventory, transaction price, adoption or AERLOR eligibility."
+    },
+    {
+      "source_id": "CH12",
+      "url": "https://www.hsm.com/become-a-supplier/",
+      "title": "Become a Supplier",
+      "publisher": "Hilton Supply Management",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Registration places a company on a potential-supplier roster for possible future sourcing invitations.",
+      "limitations": "No specific dryer sourcing event or full linked-form field requirements verified."
+    },
+    {
+      "source_id": "CH13",
+      "url": "https://www.hsm.com/services-solutions/category-management/",
+      "title": "Category Management",
+      "publisher": "Hilton Supply Management",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Supplier agreements, brand/project specifications, regional supplier selection and distribution support.",
+      "limitations": "General sourcing mechanism does not identify a dryer buyer, merchant of record or participating property."
+    },
+    {
+      "source_id": "CH14",
+      "url": "https://www.hsm.com/services-solutions/category-management/operating-supplies-equipment/",
+      "title": "Operating Supplies & Equipment",
+      "publisher": "Hilton Supply Management",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Broad OS&E category service; inspected text includes wellness, fitness and spa sourcing.",
+      "limitations": "No explicit guestroom hairdryer mandate or exact supplier requirements in inspected text."
+    },
+    {
+      "source_id": "CH15",
+      "url": "https://www.avendra.com/en/us/our-solutions/procurement-solutions",
+      "title": "Procurement solutions for business",
+      "publisher": "Avendra International US",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Room operations and other hotel procurement categories, supplier relationships and quality-assurance service.",
+      "limitations": "Full page opened by parent; broad category coverage does not prove dryer remit or a specific PO issuer."
+    },
+    {
+      "source_id": "CH16",
+      "url": "https://www.avendra.com/en/us/assets/sourcing-calendar-march-2026.pdf",
+      "title": "2026 Sourcing Calendar — updated October 22, 2026",
+      "publisher": "Avendra International US",
+      "published_date": "2026-10-22",
+      "accessed_date": "2026-11-04",
+      "source_type": "company_sourcing_calendar",
+      "retrieval_status": "pdf_text_opened",
+      "observed_scope": "Parent-read one-page PDF is marked updated October 22, 2026 and lists estimated inquiry deadlines December 1, 2026 and February 1, 2027; includes salon haircare products, but no named hairdryer category.",
+      "limitations": "The March filename is not the current revision date. Adjacent salon products and building-services electrical repairs do not establish a dryer tender; estimated deadlines are not supplier acceptance.",
+      "date_note": "Updated date printed in PDF; filename retains March"
+    },
+    {
+      "source_id": "CH17",
+      "url": "https://www.avendra.com/en/us/supplier-form",
+      "title": "Supplier Form",
+      "publisher": "Avendra International US",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "partial_text_opened",
+      "observed_scope": "Rendered heading identifies a prospective-supplier partnership page.",
+      "limitations": "Only heading/introduction rendered; form fields and qualification requirements could not be inspected."
+    },
+    {
+      "source_id": "CH18",
+      "url": "https://www.hunteramenities.com/faq",
+      "title": "FAQ",
+      "publisher": "Hunter Amenities",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Personal-care formulation/manufacturing, brand licensing, private label and adjacent non-electrical accessories.",
+      "limitations": "No electrical dryer distribution, manufacture or appliance licensing rights established."
+    },
+    {
+      "source_id": "CH19",
+      "url": "https://www.hunteramenities.com/contact",
+      "title": "Contact",
+      "publisher": "Hunter Amenities",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_program_page",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Official corporate enquiry route.",
+      "limitations": "Routing only; no appliance category owner or purchasing mandate established."
+    },
+    {
+      "source_id": "CH20",
+      "url": "https://www.curatorhotelsandresorts.com/news/curator-hotel-resort-collection-announces-strategic-partnership-with-canary-technologies-to-bring-ai-powered-guest-management-tools-to-independent-lifestyle-hotels/",
+      "title": "Preferred Vendor Program partnership with Canary Technologies",
+      "publisher": "Curator Hotel & Resort Collection",
+      "published_date": "2026-06-15",
+      "accessed_date": "2026-11-04",
+      "source_type": "company_press_release",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Dated example of preferred-vendor contracting in hotel technology.",
+      "limitations": "Technology partnership is mechanism evidence only; no transfer of approval to electrical appliances."
+    }
+  ]
+}
