@@ -45,7 +45,7 @@ Each answer must include: `request ID | exact SKU/revision | answer | evidence i
 
 Use the dossier's model identifiers and evidence gaps alongside Q01–Q20. Do not silently substitute a different dryer with similar styling. If a supplier proposes a new SKU, create a new dossier row with its own evidence before comparing quotations.
 
-Apply the regulatory distinction recorded in the dossier's section 3. Ask the lab to map the exact construction to the provisions referenced by 16 CFR 1120.3(b), and identify other applicable obligations. Do not request a universal “CPSC certificate” or assume a GCC obligation solely from that rule. [CPSC FAQ](https://www.cpsc.gov/FAQ/Hand-Supported-Hair-Dryers)
+Apply the regulatory distinction recorded in the dossier's section 3. Ask the lab to map the exact construction to **16 CFR 1120.3(a)** and the editions incorporated by section 1120.4, alongside the appropriate current full-product certification scope. The FAQ's older paragraph reference must not be copied into the request. Do not request a universal “CPSC certificate” or assume a GCC obligation solely from the 15(j) rule; identify other applicable obligations separately. [Current regulation](https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1120/section-1120.3) · [Incorporated standards](https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1120/section-1120.4) · [CPSC certification distinction](https://www.cpsc.gov/FAQ/Hand-Supported-Hair-Dryers)
 
 ## 4. Sample and professional-service cost-request schedule
 
