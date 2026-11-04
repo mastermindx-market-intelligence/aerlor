@@ -37,6 +37,7 @@ function showToast(message:string):void {
 }
 function imageFor(id:string,finish:string):string {
   const p=products.find(p=>p.id===id);if(!p)return 'dryer-pearl.svg';
+  if(id==='dryer-premium')return finish==='Graphite'?'campaign/travel-case.webp':'campaign/studio-detail.webp';
   if(finish==='Graphite')return p.family==='hairdryers'?'dryer-graphite.svg':p.family==='mirrors'?'mirror-graphite.svg':'curler-graphite.svg';
   return p.image;
 }

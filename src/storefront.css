@@ -29,3 +29,52 @@ body{font-size:var(--body-copy)}main{min-height:40vh}a,button{-webkit-tap-highli
 @media print{.site-header,.mobile-menu,.site-footer,.toast,.button,.text-link,.filter-group{display:none!important}body{background:#fff;color:#222}main{min-height:0}.section-pad{padding:25px 0}.page-hero{padding:20px 0;min-height:0}.page-hero h1{font-size:46px}.page-hero-art{display:none}.product-page,.spec-section,.quote-section,.cart-layout{display:block}.product-gallery{position:static;min-height:250px}.product-gallery img{height:250px}.resource-card,.spec-table tr,.cart-line{break-inside:avoid}.will-reveal{opacity:1!important;transform:none!important}}
 
 .hospitality .local-planner-link{display:flex;color:#d4d7cb;border-bottom-color:#7a806f;margin-top:16px;font-size:11px;width:fit-content}.hospitality .local-planner-link:before{content:'Offline planner / ';font-size:10px}.product-info h3{flex-wrap:wrap}.product-info h3 span{max-width:210px}
+
+
+/* Concept campaign image system: restrained tech editorial, responsive and motion-safe. */
+.campaign-intro {position:relative; min-height:min(78svh,820px); display:grid; align-items:center; overflow:hidden; isolation:isolate; background:#e6dfd6; color:#282724}
+.campaign-intro-image {position:absolute; inset:0; z-index:-2; width:100%;height:100%;object-fit:cover;object-position:center 43%}
+.campaign-intro-wash {position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(246,241,236,.95) 0%,rgba(246,241,236,.82) 24%,rgba(246,241,236,.18) 51%,transparent 78%)}
+.campaign-intro-copy {padding:clamp(70px,9vw,130px) var(--gutter);max-width:750px}
+.campaign-intro .eyebrow {font-size:11px;letter-spacing:.23em;margin-bottom:28px;color:#676058}
+.campaign-intro h1{font:450 clamp(54px,6.3vw,105px)/1.02 var(--sans);letter-spacing:-.068em;text-wrap:balance;margin:0}
+.campaign-intro h1 em{font-style:normal;color:#8c715f}
+.campaign-intro-copy>p:not(.eyebrow){font-size:clamp(14px,1.15vw,17px);line-height:1.75;max-width:455px;margin:30px 0 0;color:#4f4b46}
+.campaign-actions{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-top:34px}
+.campaign-actions .button{background:#272a2c;color:#f8f7f4}
+.campaign-link{display:inline-flex;align-items:center;gap:15px;min-height:44px;border-bottom:1px solid #71665e;font-size:12px;font-weight:500}
+.campaign-disclaimer{display:block;margin-top:36px;letter-spacing:.12em;font-size:9px;color:#6c6760}
+body[data-page=home] .hero {min-height:680px;max-height:900px}
+body[data-page=home] .hero h2#hero-title{font:400 clamp(66px,7vw,112px)/.99 var(--serif);letter-spacing:-.045em;margin:0 0 25px}
+.campaign-story{background:#f5f3ef}.campaign-story-heading{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:45px}
+.campaign-story-heading .eyebrow{width:100%;color:#7f7064}
+.campaign-story-heading h2,.campaign-engineering-heading h2,.product-photo-heading h2{font:450 clamp(46px,4.8vw,78px)/1.05 var(--sans);letter-spacing:-.055em;margin:0}
+.campaign-story-heading h2 em,.campaign-engineering-heading h2 em,.product-photo-heading h2 em{color:#997862;font-style:normal}
+.campaign-story-heading>p:not(.eyebrow){max-width:400px;line-height:1.9;font-size:14px;color:var(--muted)}
+.campaign-story-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(22px,4vw,70px);align-items:stretch}
+.campaign-story figure,.campaign-engineering figure,.product-photo-story figure{margin:0;position:relative;overflow:hidden;background:#e9e4dc}
+.campaign-story figure img,.campaign-engineering figure img,.product-photo-story figure img{display:block;width:100%;height:100%;object-fit:cover}
+.campaign-story-main{min-height:690px;aspect-ratio:4/5}.campaign-story-main img{object-position:center 36%}
+.campaign-story-aside{display:grid;grid-template-rows:minmax(320px,1fr) auto;gap:35px}
+.campaign-story-aside>figure{min-height:320px;aspect-ratio:1.4/1;max-height:540px}.campaign-story-aside>figure img{object-position:50% 44%}
+.campaign-story figcaption,.campaign-engineering figcaption,.product-photo-story figcaption{position:absolute;left:18px;bottom:15px;color:#f8f6f2;background:#242424a8;backdrop-filter:blur(8px);padding:9px 12px;font-size:9px;letter-spacing:.14em;line-height:1.4}
+.campaign-story-note{padding:10px 0 25px}.campaign-story-note h3{font:450 clamp(28px,2.7vw,43px)/1.15 var(--sans);letter-spacing:-.035em;margin:15px 0}
+.campaign-story-note p{max-width:470px;color:var(--muted);font-size:14px;line-height:1.85}.campaign-story-note .text-link{margin-top:22px}
+.campaign-engineering{background:#27292a;color:#f5f2ed;display:grid;grid-template-columns:.8fr 1.35fr;gap:6%;align-items:center}
+.campaign-engineering-heading h2{margin:22px 0 24px}.campaign-engineering-heading p:not(.eyebrow){max-width:460px;color:#c9c5be;line-height:1.85;font-size:14px}
+.campaign-engineering-heading h2 em{color:#c8a994}
+.campaign-engineering-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.campaign-engineering-grid figure{aspect-ratio:3/4;background:#b9ada5}.campaign-engineering-grid figure img{object-fit:cover}.campaign-engineering-grid figure:first-child img{object-position:center}
+.photo-hero .page-hero-art{background:#e3d9ce;min-height:520px;isolation:isolate}.photo-hero .page-hero-art:before{display:none}.photo-hero .page-hero-art img{height:100%;min-height:520px;object-fit:cover;transform:none;padding:0}.photo-hero .art-label{right:15px;bottom:15px;color:#fff;background:#242424a8;padding:8px 10px}
+.category-hairdryers .category-image img{object-fit:cover;padding:0;transform:none}.category-hairdryers .category-image{background:#ded5ca}
+.category-hairdryers:hover .category-image img{transform:scale(1.025)}
+.catalog-card[data-family=hairdryers][data-tier=Premium] .catalog-art img{object-fit:cover;padding:0;filter:none}
+.catalog-card[data-family=hairdryers][data-tier=Premium] .catalog-art{background:#e9e1d9}
+.product-photo-story{background:#eeebe6}
+.product-photo-heading{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:end;margin-bottom:40px}.product-photo-heading .eyebrow{width:100%}.product-photo-heading>p:not(.eyebrow){max-width:420px;font-size:14px;line-height:1.85;color:var(--muted)}
+.product-photo-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;grid-template-rows:repeat(2,minmax(280px,1fr));gap:16px}.product-photo-grid figure{min-width:0;min-height:0;aspect-ratio:1.2/1}
+.product-photo-grid .product-photo-tall{grid-row:1/3;aspect-ratio:4/5}.product-photo-grid figure img{object-fit:cover}.product-photo-grid figure:nth-child(2) img{object-fit:cover}.product-photo-grid figure:nth-child(3) img{object-fit:cover}
+.product-photo-story>.fineprint{margin:24px 0 0;max-width:920px}
+@media(max-width:960px){.campaign-intro{min-height:660px}.campaign-intro-copy{max-width:620px}.campaign-intro-wash{background:linear-gradient(90deg,#f6f1ecf0 0%,#f6f1ecc4 37%,#f6f1ec33 68%,transparent 100%)}.campaign-story-main{min-height:520px}.campaign-engineering{grid-template-columns:1fr}.campaign-engineering-grid{max-width:900px}.product-photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.product-photo-grid .product-photo-tall{grid-row:span 2;min-height:600px}}
+@media(max-width:760px){.campaign-intro{display:flex;flex-direction:column;align-items:stretch;min-height:0}.campaign-intro-image{position:relative;height:auto;aspect-ratio:1/1.06;object-fit:cover;object-position:57% center;z-index:auto;order:2}.campaign-intro-wash{display:none}.campaign-intro-copy{order:1;padding:54px 24px 42px;max-width:none;background:#f4f0eb}.campaign-intro .eyebrow{font-size:9px;margin-bottom:24px}.campaign-intro h1{font-size:clamp(46px,9.6vw,72px)}.campaign-intro-copy>p:not(.eyebrow){margin-top:22px;font-size:15px}.campaign-actions{gap:18px;margin-top:27px}.campaign-disclaimer{font-size:8px;margin-top:24px}.campaign-story-heading h2,.campaign-engineering-heading h2,.product-photo-heading h2{font-size:clamp(40px,8.1vw,56px)}.campaign-story-grid{grid-template-columns:1fr;gap:22px}.campaign-story-main{min-height:0;aspect-ratio:4/5}.campaign-story-aside{grid-template-rows:auto auto;gap:24px}.campaign-story-aside>figure{min-height:0;aspect-ratio:1/1;max-height:none}.campaign-story-note{padding-bottom:0}.campaign-engineering-grid{gap:10px}.campaign-engineering-grid figure{aspect-ratio:3/4}.photo-hero .page-hero-art,.photo-hero .page-hero-art img{min-height:0}.photo-hero .page-hero-art{aspect-ratio:1/1}.photo-hero .page-hero-art img{height:100%;max-height:none}.product-photo-grid{grid-template-columns:1fr 1fr;gap:10px}.product-photo-grid figure{aspect-ratio:1/1;min-height:180px}.product-photo-grid .product-photo-tall{grid-column:1/-1;grid-row:auto;aspect-ratio:4/4.5;min-height:0}.product-photo-story figcaption{font-size:8px;left:8px;bottom:8px;padding:7px 8px}body[data-page=home] .hero{min-height:620px}body[data-page=home] .hero h2#hero-title{font-size:clamp(64px,11vw,90px)}}
+@media(max-width:370px){.campaign-intro h1{font-size:45px}.campaign-actions .button{width:100%}.campaign-story-heading h2,.campaign-engineering-heading h2,.product-photo-heading h2{font-size:40px}.campaign-story-grid{gap:18px}.campaign-intro-copy{padding-left:18px;padding-right:18px}}
+@media print{.campaign-intro{min-height:0}.campaign-intro-image{position:static;height:320px}.campaign-story-grid,.campaign-engineering,.product-photo-grid{display:block}.campaign-story figure,.campaign-engineering figure,.product-photo-story figure{height:250px;margin-bottom:12px}}
