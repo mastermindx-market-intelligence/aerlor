@@ -86,3 +86,17 @@ This public repository intentionally excludes internal buyer-specific bids, supp
 | Is consumer retail a viable growth channel? | Price credibility, CAC, return/warranty costs and independent demand experiment | Deferred |
 
 **Evidence boundary:** this is an informed targeted review of public first-party materials—not an exhaustive global supplier census, interview study, competitive price audit, legal opinion or customer research report. Recheck source dates/terms before purchasing or claiming a fact in customer-facing material.
+
+## 2026-11-04 official U.S. duty status checkpoint — requires broker confirmation
+
+**High-impact correction to stale trade-rate assumptions:**
+- [CBP CSMS #67834313, Feb 22, 2026](https://content.govdelivery.com/accounts/USDHSCBP/bulletins/40b11c9) states that specified **IEEPA extra duties stopped being collected for entries on/after Feb 24, 2026**, while Section 232/301 and other duties were unaffected. Do **not** blindly add obsolete 2025 IEEPA tariffs to current calculations.
+- [CBP CSMS #69326983, July 23, 2026](https://content.govdelivery.com/accounts/USDHSCBP/bulletins/421d887) describes **new Section 301 forced-labor-related duties** effective July 24, 2026 with exclusions; it specifies **12.5% for covered China-origin goods** under Chapter 99 heading 9903.05.31 (subject to exemption paragraphs). [USTR](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations) confirms the action.
+- The [official USITC HTS archive](https://www.usitc.gov/harmonized_tariff_information/hts/archive/list) shows **2026 Revision 22 dated October 30, 2026**. Hairdryers are normally examined under **8516.31.00.00**, with a **3.9% general duty** in the published tariff schedule, but that is **not** an all-in China-origin effective rate.
+- As of the snapshot, commercial calculators disagree on whether older Section 301 measures still attach to this precise line and whether various exemptions apply. Do not state that 16.4%, 41.4%, or any single number is **AERLOR's** lawful all-in import duty without a classification and entry-date analysis by a licensed broker. Other fees/freight still apply.
+
+**Action for CEO-07:** obtain a written broker worksheet showing classification, origin, planned entry date, base duty, each Chapter 99 heading, exemptions and legal citations, Section 301 overlap, merchandise-processing/harbor fees (if applicable), and final landed cost at quoted quantities. Update the **restricted** model only after verification.
+
+## Brand screening status
+
+General web queries do **not** constitute a trademark clearance. [USPTO](https://www.uspto.gov/trademarks/search/comprehensive-clearance-search-similar-trademarks) says to examine similar sounding/looking marks on related goods plus common-law, state, WIPO and national databases. [CIPO](https://www.ised-isde.canada.ca/site/canadian-intellectual-property-office/en/trademarks/introduction-canadian-trademarks-database) provides Canadian records, while [WIPO's Global Brand Database](https://www.wipo.int/en/web/global-brand-database) warns that national registers and counsel remain relevant. WIPO's terms prohibit automated database querying. **AERLOR has not undergone a full, competent US/Canadian/international clearance search.** Domain-name availability and a web search do not cure this.
