@@ -486,8 +486,8 @@
       "category_grade": "P",
       "category_evidence": "A corporate buyer job description documents RFP, preferred-vendor and project-PO functions; no dryer category identified.",
       "role_entry": "Director of Procurement / corporate purchasing via corporate routing; not the recruitment application.",
-      "entry_url": "https://innvesthotels.com/careers/buyer/",
-      "entry_status": "Proposed routing; no introduction or contact",
+      "entry_url": "https://innvesthotels.com/contact/",
+      "entry_status": "General corporate routing only; no procurement-specific selector verified and no contact",
       "alternate_status": "UNKNOWN",
       "spec_freeze_status": "UNKNOWN",
       "first_question": "Which current procurement role owns guestroom electrical RFPs, and is there a funded Canadian property whose brand permits an alternate?",
@@ -502,12 +502,14 @@
         "Current incumbent role, actual dryer scope, owner/property/flag, budget, dates and Canadian SKU requirements."
       ],
       "source_urls": [
-        "https://innvesthotels.com/careers/buyer/"
+        "https://innvesthotels.com/careers/buyer/",
+        "https://innvesthotels.com/contact/"
       ],
       "contact_status": "NOT_CONTACTED",
       "qualified_order": false,
       "source_ids": [
-        "O06"
+        "O06",
+        "O08"
       ]
     },
     {
@@ -700,7 +702,7 @@
       "contact_status": "NOT_CONTACTED",
       "qualified_order": false,
       "construction_finance_evidence": "MIDA's November 2025 unofficial staff summary reports financing complete; no current buyer-issued category budget or procurement award established.",
-      "correlation_note": "Distinct physical project from Waldorf Astoria Deer Valley. Both involve Extell, so their purchasing exposure may be correlated; do not treat them as independent demand or combine rooms/residences.",
+      "correlation_note": "Deer Valley and Telluride are distinct physical projects but share a Four Seasons brand gate. They are not independent evidence that the brand accepts a new dryer; hotel and residence purchasing scopes remain separate.",
       "prior_pr1_delta": "Adds convergent primary scope of 134 hotel keys and 123 residences, developer Extell, and qualified financing evidence. Keeps Four Seasons separate from Hilton/Waldorf.",
       "source_ids": [
         "P12",
@@ -1194,6 +1196,18 @@
       "retrieval_status": "full_text_opened",
       "observed_scope": "Opening order planning, brand-compliance guidance, delivery coordination and RoomKit program.",
       "limitations": "Program availability does not prove a named active project, a new supplier's eligibility or any order."
+    },
+    {
+      "source_id": "O08",
+      "url": "https://innvesthotels.com/contact/",
+      "title": "Contact Us",
+      "publisher": "InnVest Hotels",
+      "published_date": null,
+      "accessed_date": "2026-11-04",
+      "source_type": "company_contact_routing",
+      "retrieval_status": "full_text_opened",
+      "observed_scope": "Official general corporate enquiry form and corporate-office routing.",
+      "limitations": "No procurement-specific selector or assigned buyer was verified; the separate job advertisement is process evidence only."
     },
     {
       "source_id": "P01",

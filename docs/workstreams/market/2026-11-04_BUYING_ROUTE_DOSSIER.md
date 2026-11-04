@@ -58,7 +58,7 @@ Twenty distinct records: seven operator/agent routes, six projects, and seven ch
 | 7 / B | [Hyatt Centric Victoria — Old Town / Broad Street Hotel Redevelopment](#m09) | Owner/developer project OS&E referral | U — Project and participant roles identified; guestroom electrical category authority not established. [P03] [P04] [P05] |
 | 8 / B | [Crestline Hotels & Resorts](#m04) | Operator sourcing and vendor management | P — Portfolio procurement leadership documented; no specific dryer delegation on the inspected page. [O04] |
 | 9 / B | [Noble House Hotels & Resorts](#m05) | Operator purchasing through a collection supply program | P — Purchasing department and collection supply program documented; dryer inclusion unknown. [O05] |
-| 10 / B | [InnVest Hotels](#m06) | Owner/operator corporate tender and PO process | P — A corporate buyer job description documents RFP, preferred-vendor and project-PO functions; no dryer category identified. [O06] |
+| 10 / B | [InnVest Hotels](#m06) | Owner/operator corporate tender and PO process | P — A corporate buyer job description documents RFP, preferred-vendor and project-PO functions; no dryer category identified. [O06] [O08] |
 | 11 / B | [Germain Hotels](#m07) | Corporate purchasing referral | R — Official service-centre routing for purchasing/suppliers; no dryer decision authority established. [O07] |
 | 12 / B | [Signia by Hilton Savannah](#m10) | Owner/developer project OS&E referral | U — Project and participant roles identified; guestroom electrical category authority not established. [P06] [P08] [P07] |
 | 13 / B | [Curator Hotel & Resort Collection](#m15) | Optional preferred-vendor program | P — Preferred-vendor contracting and member discretion documented; no direct dryer category verified. [CH03] [CH20] |
@@ -222,11 +222,11 @@ For organization records, a property owner, flag, hotel-room quantity and buying
 
 ### 10. InnVest Hotels — tier B
 
-**Context:** Canada. No named funded project verified. [O06]
+**Context:** Canada. No named funded project verified. [O06] [O08]
 
-**Documented:** The undated job posting describes tender analysis, project POs, specification revisions and supplier evaluation. [O06]
+**Documented:** The undated job posting describes tender analysis, project POs, specification revisions and supplier evaluation. [O06] [O08]
 
-**Inferred entry:** Director of Procurement / corporate purchasing via corporate routing; not the recruitment application. [Official routing/source page](https://innvesthotels.com/careers/buyer/). Proposed routing; no introduction or contact. The posting is evidence of a designed procurement function, not proof that a particular buyer is in post or accepting suppliers.
+**Inferred entry:** Director of Procurement / corporate purchasing via corporate routing; not the recruitment application. [Official routing/source page](https://innvesthotels.com/contact/). General corporate routing only; no procurement-specific selector verified and no contact. The posting is evidence of a designed procurement function, not proof that a particular buyer is in post or accepting suppliers.
 
 **Unknown / qualification gate:** Current incumbent role, actual dryer scope, owner/property/flag, budget, dates and Canadian SKU requirements. No buyer-issued dryer budget verified. Alternate permission and specification freeze: **UNKNOWN**.
 
@@ -505,6 +505,7 @@ All sources were accessed **2026-11-04**. “Undated” means no publication dat
 | O06 | [InnVest Hotels: Buyer — Corporate Office Toronto](https://innvesthotels.com/careers/buyer/) | Undated | Corporate tender, preferred-vendor, project-PO and specification-change responsibilities. **Limit:** Undated role description is not evidence of a filled current position, dryer tender or supplier intake. |
 | O07 | [Germain Hotels: Contact — Corporate enquiries](https://www.germainhotels.com/en/contact) | Undated | Purchasing and supplier enquiries routed to corporate service centres. **Limit:** Referral only; no category owner, budget or project scope established. |
 | CH08 | [Guest Supply: New Hotel Opening Program](https://www.guestsupply.com/Solutions/new-hotel-opening-program) | Undated | Opening order planning, brand-compliance guidance, delivery coordination and RoomKit program. **Limit:** Program availability does not prove a named active project, a new supplier's eligibility or any order. |
+| O08 | [InnVest Hotels: Contact Us](https://innvesthotels.com/contact/) | Undated | Official general corporate enquiry form and corporate-office routing. **Limit:** No procurement-specific selector or assigned buyer was verified; the separate job advertisement is process evidence only. |
 | P01 | [Northland Properties: Projects — Northland Properties](https://northland.ca/projects/) | Undated | The current project portfolio lists a 245-guestroom Sutton Place hotel in Kelowna with a 2028 opening target. **Limit:** Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window. |
 | P02 | [Kelowna International Airport: Sutton Place Hotel and Parkade Construction Commencing at YLW in 2025](https://ylw.kelowna.ca/news-events/news/sutton-place-hotel-and-parkade-construction-commencing-ylw-2025) | 2024-01-25 | The airport describes a six-storey, 245-room hotel, a Northland partnership, Sutton Place brand ownership and operation, and a long-term land lease. **Limit:** Announcement describes intended commencement, not proof of actual construction start. |
 | P03 | [Durwest Construction: Broad St. Hotel Redevelopment — Durwest](https://durwest.com/portfolio-item/broad-st-hotel-redevelopment/) | Undated | Durwest names Chard as client and describes an eight-storey, 167-room Hyatt hotel; both anticipated completion and stated opening are 2028. **Limit:** Project statement does not establish the dryer buyer, funded appliance allocation or an open specification window. |
@@ -554,6 +555,7 @@ All sources were accessed **2026-11-04**. “Undated” means no publication dat
 [O06]: https://innvesthotels.com/careers/buyer/
 [O07]: https://www.germainhotels.com/en/contact
 [CH08]: https://www.guestsupply.com/Solutions/new-hotel-opening-program
+[O08]: https://innvesthotels.com/contact/
 [P01]: https://northland.ca/projects/
 [P02]: https://ylw.kelowna.ca/news-events/news/sutton-place-hotel-and-parkade-construction-commencing-ylw-2025
 [P03]: https://durwest.com/portfolio-item/broad-st-hotel-redevelopment/
