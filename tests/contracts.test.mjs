@@ -29,3 +29,17 @@ test('public client has no tracking, storage or transmission API',()=>{
  assert.ok(!/\b(fetch|XMLHttpRequest|sendBeacon|localStorage|sessionStorage)\b/.test(source));
  assert.ok(!source.includes('innerHTML'));
 });
+test('the website uses the actual native Paper token export',()=>{
+ const variables=css=>Object.fromEntries([...css.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(m=>[m[1],m[2].trim()]));
+ assert.deepEqual(variables(read('src/paper-tokens.css')),variables(read('design/paper/native/tokens.css')));
+ assert.match(read('src/style.css'),/paper-tokens\.css/);
+});
+test('native design references are complete and do not expose local machine paths',()=>{
+ const manifest=JSON.parse(read('design/paper/native/manifest.json'));
+ assert.equal(manifest.artboardCount,15);assert.equal(Object.keys(manifest.pages).length,3);
+ for(const board of Object.values(manifest.boards)){
+  assert.ok(board.id);assert.ok(existsSync(new URL('../design/paper/native/'+board.screenshot,import.meta.url)));
+  const jsx=read('design/paper/native/'+board.jsx);
+  assert.ok(jsx.includes('export default function'));assert.ok(!/\/Users\/|paper-asset:\/\//.test(jsx));
+ }
+});

@@ -1,4 +1,4 @@
-<div layer-name="AERLOR / Product Study Mobile" style="width:390px;height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#e5ddce 0%,#f3f0e9 72%);position:relative;"><svg xmlns="http://www.w3.org/2000/svg" width="360" height="420" viewBox="0 0 800 900" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900" fill="none">
 <defs>
 <linearGradient id="body" x1="400" y1="210" x2="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#a28b6d"/><stop offset=".15" stop-color="#e7decb"/><stop offset=".3" stop-color="#f5ebd7"/><stop offset=".56" stop-color="#e7decb"/><stop offset=".82" stop-color="#b8a589"/><stop offset="1" stop-color="#a28b6d"/></linearGradient>
 <linearGradient id="handle" x1="337" y1="550" x2="462" y2="550" gradientUnits="userSpaceOnUse"><stop stop-color="#a28b6d"/><stop offset=".2" stop-color="#e7decb"/><stop offset=".39" stop-color="#f5ebd7"/><stop offset=".7" stop-color="#e7decb"/><stop offset="1" stop-color="#b8a589"/></linearGradient>
@@ -45,4 +45,4 @@
 <ellipse cx="598" cy="308" rx="50" ry="82" stroke="#f5ebd7" stroke-opacity=".7" stroke-width="1.2"/>
 <text x="390" y="302" fill="#675d4b" font-family="Arial,sans-serif" font-size="10" letter-spacing="4">AERLOR</text>
 <text x="432" y="320" fill="#675d4b" font-family="Arial,sans-serif" font-size="5.5" letter-spacing="2">PRO</text>
-</g></svg><div style="display:flex;justify-content:space-between;width:342px;font-family:'DM Sans',Arial,sans-serif;font-size:10px;letter-spacing:1.3px;line-height:15px;font-size:8px;color:#625d54;"><div>01 / AERLOR PRO</div><div>DESIGN STUDY</div></div><div style="display:flex;align-items:center;gap:10px;padding-top:22px;width:342px;"><div style="width:18px;height:18px;border-radius:50%;background:#c5b292;border:1px solid #625d54;"></div><div style="width:18px;height:18px;border-radius:50%;background:#363d32;"></div><div style="width:18px;height:18px;border-radius:50%;background:#ddd8cb;border:1px solid #bdb7aa;"></div><div style="font-family:'DM Sans',Arial,sans-serif;font-size:10px;color:#625d54;">Champagne</div></div></div>
+</g></svg>

@@ -13,11 +13,11 @@ The current website is a public design preview, not an operational sales channel
 - Replace the preview privacy notice with the operational policy and appropriate company/contact details; review outreach compliance for each market separately.
 - Configure the approved custom domain and HTTPS. Update base paths, sharing metadata and the 404 page. Remove `noindex` and the robots restriction only after the commercial content is approved.
 - Complete manual screen-reader, mobile-device and touch review. Confirm real device performance, lighting/finish rendering, font-loading fallback and translated content where applicable.
-- Finish native Paper authoring through the compatible approved connection; record actual document/artboard IDs and reconcile approved visual changes with the code.
+- Keep the completed native Paper file and deployed implementation aligned as real product specifications replace the conceptual design.
 
 ## What is already implemented
 
-The responsive collection experience, original product/architecture visuals, progressive interactive 3D, product detail dialogs, private pilot-brief builder, functional QA suite, pinned build/deployment workflow, and editable Paper handoff source.
+The responsive collection experience, original product/architecture visuals, progressive interactive 3D, product detail dialogs, private pilot-brief builder, functional QA suite, pinned build/deployment workflow, native Paper website and interaction boards, exported design tokens, JSX references, screenshots, and a policy-gated Pages release path.
 
 ## Scope boundaries
 

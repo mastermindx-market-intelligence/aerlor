@@ -1,4 +1,4 @@
-<div layer-name="AERLOR / LITE Card" style="width:624px;display:flex;flex-direction:column;gap:20px;color:#2c2a25;background:#eae5db;"><div style="width:624px;height:550px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#eee9df,#d9d8cd);"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="530" viewBox="0 0 800 900" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900" fill="none">
 <defs>
 <linearGradient id="body" x1="400" y1="210" x2="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#aba99e"/><stop offset=".15" stop-color="#fcf8eb"/><stop offset=".3" stop-color="#ffffff"/><stop offset=".56" stop-color="#fcf8eb"/><stop offset=".82" stop-color="#c9c6b9"/><stop offset="1" stop-color="#aba99e"/></linearGradient>
 <linearGradient id="handle" x1="337" y1="550" x2="462" y2="550" gradientUnits="userSpaceOnUse"><stop stop-color="#aba99e"/><stop offset=".2" stop-color="#fcf8eb"/><stop offset=".39" stop-color="#ffffff"/><stop offset=".7" stop-color="#fcf8eb"/><stop offset="1" stop-color="#c9c6b9"/></linearGradient>
@@ -45,4 +45,4 @@
 <ellipse cx="598" cy="308" rx="50" ry="82" stroke="#ffffff" stroke-opacity=".7" stroke-width="1.2"/>
 <text x="390" y="302" fill="#675d4b" font-family="Arial,sans-serif" font-size="10" letter-spacing="4">AERLOR</text>
 <text x="432" y="320" fill="#675d4b" font-family="Arial,sans-serif" font-size="5.5" letter-spacing="2">LITE</text>
-</g></svg></div><div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:36px;">AERLOR LITE</div><div style="font-family:'DM Sans',Arial,sans-serif;font-size:10px;letter-spacing:1.3px;line-height:15px;font-size:8px;">DESIGN CONCEPT</div></div><div style="font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:22px;color:#625d54;">The essential expression of AERLOR. A proposed soft-matte shell.</div><div style="font-family:'DM Sans',Arial,sans-serif;font-size:10px;letter-spacing:1.3px;line-height:15px;font-size:9px;border-top:1px solid #d7d1c6;padding-top:16px;">IN DEVELOPMENT — NOT AVAILABLE TO ORDER</div></div>
+</g></svg>

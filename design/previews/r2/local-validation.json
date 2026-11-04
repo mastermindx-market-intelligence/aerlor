@@ -1,0 +1,18 @@
+{
+  "designRevision": "native-paper-r2",
+  "browserTests": {
+    "passed": 29,
+    "skipped": 1,
+    "skipReason": "Desktop copy of mobile-only navigation test"
+  },
+  "nativePaper": {
+    "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+    "artboards": 15,
+    "pages": 3,
+    "tokens": 28
+  },
+  "scope": "Local Chromium browser checks; live release verification is recorded separately.",
+  "contractTests": {
+    "passed": 7
+  }
+}

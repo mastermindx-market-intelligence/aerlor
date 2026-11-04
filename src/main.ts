@@ -90,9 +90,22 @@ document.querySelector('#detail-inquiry')?.addEventListener('click', () => {
 });
 
 const form = document.querySelector<HTMLFormElement>('#inquiry-form')!;
+const formError = document.querySelector<HTMLElement>('#form-error')!;
+form.noValidate = true;
 form.addEventListener('submit', event => {
   event.preventDefault();
-  if (!form.reportValidity()) return;
+  const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input[required],select[required]'));
+  const invalid = fields.filter(field => !field.validity.valid);
+  fields.forEach(field => {
+    if (field.validity.valid) { field.removeAttribute('aria-invalid'); field.removeAttribute('aria-describedby'); }
+    else { field.setAttribute('aria-invalid', 'true'); field.setAttribute('aria-describedby', 'form-error'); }
+  });
+  if (invalid.length) {
+    formError.textContent = 'Please complete your name, a valid work email, hotel or group, country, and room count before creating a brief.';
+    invalid[0]?.focus();
+    return;
+  }
+  formError.textContent = '';
   const data = new FormData(form);
   const brief = buildPilotBrief(Object.fromEntries(Array.from(data.entries(), ([key, value]) => [key, String(value)])));
   const blob = new Blob([brief], { type: 'text/plain;charset=utf-8' });
@@ -103,7 +116,14 @@ form.addEventListener('submit', event => {
   window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
   document.querySelector<HTMLElement>('#form-status')!.textContent = 'Your pilot brief is ready. A text file has been prepared for download. Nothing was sent to AERLOR.';
 });
-form.addEventListener('input', () => { document.querySelector<HTMLElement>('#form-status')!.textContent = ''; });
+form.addEventListener('input', event => {
+  document.querySelector<HTMLElement>('#form-status')!.textContent = '';
+  const field = event.target;
+  if ((field instanceof HTMLInputElement || field instanceof HTMLSelectElement) && field.validity.valid) {
+    field.removeAttribute('aria-invalid'); field.removeAttribute('aria-describedby');
+  }
+  if (!form.querySelector('[aria-invalid=true]')) formError.textContent = '';
+});
 
 for (const button of document.querySelectorAll<HTMLButtonElement>('[data-finish]')) {
   button.addEventListener('click', () => {
@@ -146,17 +166,17 @@ async function enhanceProduct(): Promise<void> {
     // The original local SVG remains usable when WebGL or the enhancement fails.
   }
 }
-motionButton.addEventListener('click', () => {
-  const moving = motionButton.getAttribute('aria-pressed') !== 'true';
+function updateMotionButton(moving: boolean): void {
   motionButton.setAttribute('aria-pressed', String(moving));
   motionButton.replaceChildren(document.createTextNode(moving ? 'Pause movement ' : 'Resume movement '));
   const icon = document.createElement('span'); icon.setAttribute('aria-hidden', 'true'); icon.textContent = moving ? 'Ⅱ' : '▷'; motionButton.append(icon);
   controller?.setMotion(moving);
-});
+}
+motionButton.addEventListener('click', () => updateMotionButton(motionButton.getAttribute('aria-pressed') !== 'true'));
 reducedMotion.addEventListener('change', event => {
   controller?.setMotion(!event.matches);
   motionButton.hidden = event.matches;
-  motionButton.setAttribute('aria-pressed', String(!event.matches));
+  updateMotionButton(!event.matches);
   document.querySelectorAll('.will-reveal').forEach(el => { if (event.matches) el.classList.add('is-visible'); });
 });
 if ('requestIdleCallback' in window) window.requestIdleCallback(() => { void enhanceProduct(); }, { timeout: 1500 });

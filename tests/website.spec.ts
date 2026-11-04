@@ -108,3 +108,37 @@ test('static fallback remains usable without JavaScript',async({browser,baseURL}
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await context.close();
 });
+
+test('pilot validation is visible, linked to fields, and clears as corrected',async({page})=>{
+ await page.locator('#hospitality [data-inquiry]').click();
+ await page.getByRole('button',{name:'Create my pilot brief'}).click();
+ await expect(page.locator('#form-error')).toBeVisible();
+ await expect(page.locator('[name=name]')).toBeFocused();
+ await expect(page.locator('[name=email]')).toHaveAttribute('aria-describedby','form-error');
+ await page.locator('[name=name]').fill('Alex Morgan');
+ await page.locator('[name=email]').fill('alex@example.com');
+ await page.locator('[name=property]').fill('Example Hotel');
+ await page.locator('[name=country]').fill('Canada');
+ await page.locator('[name=rooms]').selectOption({label:'50–149'});
+ await expect(page.locator('#form-error')).toBeEmpty();
+ await expect(page.locator('#inquiry-form [aria-invalid=true]')).toHaveCount(0);
+});
+test('finish controls provide 44 pixel touch targets',async({page})=>{
+ for(const control of await page.locator('[data-finish]').all()){
+  const box=await control.boundingBox();
+  expect(box?.width).toBeGreaterThanOrEqual(44);expect(box?.height).toBeGreaterThanOrEqual(44);
+ }
+});
+test('motion label follows manual pause and changed motion preference',async({page})=>{
+ await expect(page.locator('#product-stage')).toHaveAttribute('data-scene',/ready|fallback/,{timeout:20000});
+ if(await page.locator('#product-stage').getAttribute('data-scene')==='fallback'){
+  await expect(page.locator('#motion-toggle')).toBeHidden();return;
+ }
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ const control=page.locator('#motion-toggle');
+ await expect(control).toHaveText(/Pause movement/);await control.click();
+ await expect(control).toHaveText(/Resume movement/);
+ await page.emulateMedia({reducedMotion:'reduce'});await expect(control).toBeHidden();
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await expect(control).toHaveText(/Pause movement/);await expect(control).toHaveAttribute('aria-pressed','true');
+});
