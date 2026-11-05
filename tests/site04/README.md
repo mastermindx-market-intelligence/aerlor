@@ -1,5 +1,19 @@
 # SITE-04 prelaunch assurance — issue #17
 
+## Parser hardening follow-up — 5 November 2026
+
+The original report and evidence below describe the R3 review at commit `3b58949b22649deb5a0d80099a47863401d29b14`; its evidence hashes remain historical, not hashes of this follow-up.
+
+The two CodeQL findings were in test-only markup stripping, not demonstrated deployed XSS. [head-policy.mjs](head-policy.mjs) now scans original, quote-aware source spans rather than deleting comments or raw-text elements. It requires an explicit head and fails closed on unsupported or malformed markup, including ambiguous meta character references and escaped script states. It is a bounded authored-source audit, not an HTML sanitizer or general HTML parser.
+
+[head-policy.test.mjs](head-policy.test.mjs) adds normal and adversarial fixtures for comments, quoted tag-like text, raw-text closing rules, duplicate/encoded robots declarations, malformed markup and unquoted slash handling. Run the complete opt-in assurance suite, including the parser fixtures, with:
+
+```sh
+node --test tests/site04/*.test.mjs
+```
+
+No package scripts, CI configuration, application source, deployment exclusion or historical evidence files are changed by this repair. Hosted-check and publication readback results are recorded in the [PR repair receipt](https://github.com/mastermindx-market-intelligence/aerlor/pull/22#issuecomment-6657956923).
+
 **Review date:** 4 November 2026
 
 **Claimed scope:** [issue #17](https://github.com/mastermindx-market-intelligence/aerlor/issues/17), linked to [SITE-04 #11](https://github.com/mastermindx-market-intelligence/aerlor/issues/11)

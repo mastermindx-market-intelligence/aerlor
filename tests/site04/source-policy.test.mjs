@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {robotsDirectives} from './head-policy.mjs';
 
 // Source/configuration checks only: these do not establish deployed headers,
 // provider configuration, product approval, or browser enforcement.
@@ -8,18 +9,6 @@ const read = path => readFileSync(new URL('../../' + path, import.meta.url), 'ut
 const vercel = JSON.parse(read('vercel.json'));
 const manifest = JSON.parse(read('storefront-pages.json'));
 const assuranceBranch = 'work/site/prelaunch-assurance-20261104';
-
-function attributes(tag) {
-  const result = new Map();
-  // A slash adjoining an unquoted value is part of that value in HTML.
-  const body = tag.replace(/^<\w+\b/, '').replace(/>$/, '');
-  for (const match of body.matchAll(/([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g)) {
-    const name = match[1].toLowerCase();
-    assert.ok(!result.has(name), 'Duplicate attribute: ' + name);
-    result.set(name, match[2] ?? match[3] ?? match[4] ?? '');
-  }
-  return result;
-}
 
 function assertNoIndex(value, label) {
   const directives = new Set(value.toLowerCase().split(/[\s,]+/).filter(Boolean));
@@ -49,15 +38,7 @@ test('this assurance branch alone is disabled in Vercel Git deployment configura
 test('every storefront route declares noindex and nofollow in its HTML head', () => {
   assert.ok(manifest.pages.length > 1, 'Check the complete storefront manifest, not only the home page');
   for (const path of manifest.pages) {
-    const html = read(path).replace(/<!--[\s\S]*?-->/g, '');
-    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head\s*>/i)?.[1];
-    assert.ok(head, path + ' must have a head element');
-    const markup = head.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '');
-    const robots = [...markup.matchAll(/<meta\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi)]
-      .map(([tag]) => attributes(tag))
-      .filter(attrs => attrs.get('name')?.toLowerCase() === 'robots');
-    assert.equal(robots.length, 1, path + ' must have one unambiguous robots meta element');
-    assertNoIndex(robots[0].get('content') ?? '', path);
+    assertNoIndex(robotsDirectives(read(path)), path);
   }
 });
 
