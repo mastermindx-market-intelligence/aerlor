@@ -12,8 +12,8 @@ export default defineConfig({
  base,
  plugins:[{name:'aerlor-static-release',async closeBundle(){
   const path='dist/404.html';const source=await readFile(path,'utf8');await writeFile(path,source.replace('href="/aerlor/"',`href="${base}"`));
-  await writeFile('dist/build-info.json',JSON.stringify({commit:commit(),base,designRevision:'hospitality-commerce-r3',paperFileId:'01M6JNN71ZN4867VJZ83PPXQZ0',pages:manifest.pages.length,commerceMode:'server-gated'},null,2)+'\n');
+  await writeFile('dist/build-info.json',JSON.stringify({commit:commit(),base,designRevision:'precision-r4',paperPageId:'p-4-0',paperFileId:'01M6JNN71ZN4867VJZ83PPXQZ0',pages:manifest.pages.length,commerceMode:'server-gated'},null,2)+'\n');
  }}],
  build:{target:'es2022',sourcemap:false,rollupOptions:{input}},
- server:{port:5188,strictPort:true},preview:{port:4188,strictPort:true}
+ server:{port:5194,strictPort:true},preview:{port:4194,strictPort:true}
 });

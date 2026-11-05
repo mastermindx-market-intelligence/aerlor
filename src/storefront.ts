@@ -36,10 +36,12 @@ function showToast(message:string):void {
   toastTimer=window.setTimeout(()=>{toast.hidden=true;},6500);
 }
 function imageFor(id:string,finish:string):string {
-  const p=products.find(p=>p.id===id);if(!p)return 'dryer-pearl.svg';
-  if(finish==='Graphite')return p.family==='hairdryers'?'dryer-graphite.svg':p.family==='mirrors'?'mirror-graphite.svg':'curler-graphite.svg';
-  return p.image;
+  const p=products.find(p=>p.id===id);
+  if(!p)return 'studio/dryer-pearl-product.webp';
+  const chosen=p.finishes.includes(finish)?finish:p.finish;
+  return `studio/${p.studioFamily}-${chosen.toLowerCase()}-product.webp`;
 }
+
 function addProduct(id:string,finish?:string,quantity=1):void {
   const p=products.find(p=>p.id===id);if(!p)return;
   try {saveCart([...items,{id,finish:finish??p.finish,quantity}]);showToast(`${p.name} added to your project.`);}catch(error){showToast(error instanceof Error?error.message:'Please check the quantity.');}
@@ -62,7 +64,7 @@ $<HTMLSelectElement>('[data-product-finish]')?.addEventListener('change',event=>
 });
 window.addEventListener('storage',event=>{if(event.key===STORAGE_KEY){items=readStoredCart(event.newValue,products);updateCounts();renderCart();renderCheckout();}});
 
-// The existing homepage retains its own tested navigation and dialog controller.
+// Shared navigation works on the homepage and every product or procurement route.
 if(document.body.dataset.legacy!=='true'){
   const toggle=$<HTMLButtonElement>('.menu-toggle');const menu=$('#mobile-menu');
   const close=(restore=false):void=>{if(!toggle||!menu)return;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');menu.hidden=true;if(restore)toggle.focus();};
@@ -83,6 +85,14 @@ function updateFilters():void {
 }
 for(const button of document.querySelectorAll<HTMLButtonElement>('[data-family-filter]'))button.addEventListener('click',()=>{document.querySelectorAll('[data-family-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));updateFilters();});
 $<HTMLSelectElement>('#tier-filter')?.addEventListener('change',updateFilters);
+const filterQuery=new URLSearchParams(location.search);
+const requestedTier=filterQuery.get('tier');
+const tierSelect=$<HTMLSelectElement>('#tier-filter');
+if(tierSelect&&requestedTier&&['Lite','Premium'].includes(requestedTier))tierSelect.value=requestedTier;
+const requestedFamily=filterQuery.get('family');
+if(requestedFamily&&['hairdryers','mirrors','curlers'].includes(requestedFamily))document.querySelectorAll<HTMLButtonElement>('[data-family-filter]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.familyFilter===requestedFamily)));
+updateFilters();
+
 
 function updateInvestment():void {
   const form=$<HTMLFormElement>('#investment-form');if(!form)return;

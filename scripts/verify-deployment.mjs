@@ -23,7 +23,7 @@ try{
  }
  assert.ok(published,'The public build-info.json did not match the exact expected commit.');
  assert.equal(published.base,url.pathname,'Published base path must match deployment path.');
- assert.equal(published.designRevision,'hospitality-commerce-r3');
+ assert.equal(published.designRevision,'precision-r4');
  const showcase=published.kind==='design-showcase';
  if(process.env.VERIFY_KIND)assert.equal(showcase?'design-showcase':'storefront',process.env.VERIFY_KIND);
  if(!showcase){assert.equal(published.pages,33);assert.equal(published.paperFileId,'01M6JNN71ZN4867VJZ83PPXQZ0');}
@@ -38,7 +38,7 @@ try{
    const response=await page.goto(url.href,{waitUntil:'domcontentloaded',timeout:30000});assert.equal(response?.status(),200);
    await page.locator('h1').waitFor({state:'visible',timeout:15000});
    await page.waitForFunction(()=>Array.from(document.querySelectorAll('link[rel=stylesheet]')).filter(link=>new URL(link.href).origin===location.origin).every(link=>Boolean(link.sheet))&&getComputedStyle(document.body).marginTop==='0px');
-   if(!showcase){await page.waitForFunction(()=>['ready','fallback'].includes(document.querySelector('#product-stage')?.getAttribute('data-scene')),null,{timeout:25000});await page.waitForFunction(()=>document.body.dataset.runtimeReady==='true');}
+   if(!showcase){await page.waitForFunction(()=>document.body.dataset.runtimeReady==='true');assert.equal(await page.locator('#product-stage').getAttribute('data-scene'),'static');if(name==='desktop'){await page.locator('#view-3d').click();await page.waitForFunction(()=>['ready','fallback'].includes(document.querySelector('#product-stage')?.getAttribute('data-scene')),null,{timeout:30000});}}
    await page.evaluate(async()=>{document.querySelectorAll('.will-reveal').forEach(el=>el.classList.add('is-visible'));for(const image of document.images)image.loading='eager';await Promise.all([...document.images].map(image=>image.decode().catch(()=>{})));await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,8000))]);});
    const observation=await page.evaluate(()=>({width:innerWidth,horizontalOverflow:document.documentElement.scrollWidth>innerWidth,mainHeadings:document.querySelectorAll('h1').length,scene:document.querySelector('#product-stage')?.getAttribute('data-scene')??null,brokenImages:[...document.images].filter(image=>!image.complete||image.naturalWidth===0).map(image=>image.getAttribute('src')),forms:document.querySelectorAll('form').length,touchTargets:[...document.querySelectorAll('[data-finish]')].map(el=>({width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height}))}));
    assert.equal(observation.mainHeadings,1);assert.equal(observation.horizontalOverflow,false);assert.deepEqual(observation.brokenImages,[]);assert.deepEqual(javascriptErrors,[]);assert.deepEqual(sameOriginFailures,[]);

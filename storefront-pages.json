@@ -1,5 +1,5 @@
 {
-  "revision": "hospitality-commerce-r3",
+  "revision": "precision-r4",
   "base": "/aerlor/",
   "pages": [
     "index.html",
@@ -40,34 +40,34 @@
     {
       "slug": "hospitality-collection",
       "file": "aerlor-hospitality-collection.pdf",
-      "title": "The hospitality collection",
-      "category": "Lookbook",
+      "title": "Collection overview",
+      "category": "Product range",
       "pages": 8,
-      "desc": "The AERLOR point of view, three product families and two room expressions."
+      "desc": "Three product families. Lite and Premium. A concise introduction for your team."
     },
     {
       "slug": "hotel-upgrade-guide",
       "file": "aerlor-hotel-upgrade-guide.pdf",
-      "title": "The considered-room business case",
-      "category": "Hotel guide",
+      "title": "The hotel upgrade guide",
+      "category": "Buyer guide",
       "pages": 6,
-      "desc": "Guest perspectives, room-level economics and a persuasive, measurable pilot proposal."
+      "desc": "Guest needs, room-level budgeting and a measurable case for a pilot."
     },
     {
       "slug": "procurement-guide",
       "file": "aerlor-procurement-guide.pdf",
-      "title": "Procurement, without the guesswork",
-      "category": "Procurement",
+      "title": "Procurement checklist",
+      "category": "Technical review",
       "pages": 5,
-      "desc": "Compare configurations, define the technical evidence and prepare a decision-ready brief."
+      "desc": "The questions and evidence to resolve before a purchasing decision."
     },
     {
       "slug": "pilot-toolkit",
       "file": "aerlor-pilot-toolkit.pdf",
-      "title": "The hotel pilot toolkit",
+      "title": "Hotel pilot toolkit",
       "category": "Operations",
       "pages": 5,
-      "desc": "A room audit, evaluation scorecard and rollout checklist for your team."
+      "desc": "Room audit, guest feedback and an operational scorecard for your first trial."
     }
   ]
 }

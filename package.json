@@ -1,9 +1,9 @@
 {
   "name": "aerlor",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
-  "description": "AERLOR hospitality collection, project procurement and gated secure commerce.",
+  "description": "AERLOR guestroom technology: a buyer-led premium product and hospitality platform.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
@@ -12,7 +12,7 @@
     "test": "playwright test",
     "test:contracts": "node --test tests/contracts.test.mjs",
     "verify:deployment": "node scripts/verify-deployment.mjs",
-    "prebuild": "node scripts/create-collection-assets.mjs && node scripts/build-storefront.mjs",
+    "prebuild": "node scripts/build-storefront.mjs",
     "test:server": "node --test tests/domain.test.mjs tests/server.test.mjs",
     "build:showcase": "node scripts/build-design-showcase.mjs",
     "test:webkit": "playwright test --config playwright.webkit.config.ts"

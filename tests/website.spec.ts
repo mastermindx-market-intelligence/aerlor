@@ -1,143 +1,84 @@
 import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import {readFile} from 'node:fs/promises';
 
-test.beforeEach(async({page})=>{await page.emulateMedia({reducedMotion:'reduce'});await page.goto('./');});
+test.beforeEach(async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.goto('./',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>getComputedStyle(document.body).marginTop==='0px');
+ await page.evaluate(async()=>{await document.fonts.ready;});
+});
 
-test('essential content is real HTML with a single main heading',async({page})=>{
- await expect(page).toHaveTitle('AERLOR — The art of a better stay');
+test('homepage explains the product range and buyer path in semantic HTML',async({page})=>{
+ await expect(page).toHaveTitle('Better tools. Better stays. | AERLOR');
  await expect(page.locator('h1')).toHaveCount(1);
- await expect(page.locator('h1')).toContainText('better stay.');
- await expect(page.locator('#collection h3')).toHaveCount(2);
- await expect(page.locator('.collection-disclosure')).toContainText('certifications');
- await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content','noindex,nofollow');
+ await expect(page.locator('h1')).toHaveText('Better tools.Better stays.');
+ await expect(page.locator('.hero-description')).toContainText('Hairdryers, illuminated mirrors and styling tools');
+ await expect(page.locator('.category-card')).toHaveCount(3);
+ await expect(page.locator('.buyer-paths a')).toHaveCount(3);
+ await expect(page.locator('h1 em,h2 em')).toHaveCount(0);
+ await expect(page.locator('.footer-status')).toContainText('Collection in development');
+ await expect(page.locator('meta[name=robots]')).toHaveAttribute('content','noindex,nofollow');
 });
-test('finish choices update accessible selection and original fallback',async({page})=>{
- for(const [name,file] of [['Graphite','graphite'],['Pearl','pearl'],['Champagne','champagne']]){
-  await page.getByRole('button',{name:`${name} finish`,exact:true}).click();
-  await expect(page.getByRole('button',{name:`${name} finish`,exact:true})).toHaveAttribute('aria-pressed','true');
-  await expect(page.locator('#finish-name')).toHaveText(name);
-  await expect(page.locator('.hero-fallback')).toHaveAttribute('src',new RegExp(`dryer-${file}\\.svg$`));
- }
- await expect(page.locator('[data-finish][aria-pressed="true"]')).toHaveCount(1);
+test('the primary hotel and product actions lead to real pages',async({page})=>{
+ await expect(page.locator('.hero-actions').getByRole('link',{name:'Explore the collection'})).toHaveAttribute('href',/collection\/$/);
+ await expect(page.locator('.hero-actions').getByRole('link',{name:'For hotel buyers'})).toHaveAttribute('href',/hospitality\/$/);
+ await page.locator('.hero-actions').getByRole('link',{name:'For hotel buyers'}).click();
+ await expect(page.locator('h1')).toContainText('An upgrade guests use.');
 });
-test('PRO and LITE have working detail dialogs and close returns focus',async({page})=>{
- for(const product of ['PREMIUM','LITE']){
-  const button=page.getByRole('button',{name:`Explore AERLOR ${product}`,exact:true});
-  await button.click();
-  await expect(page.locator('#product-dialog')).toBeVisible();
-  await expect(page.locator('#product-dialog-title')).toContainText(product);
-  await expect(page.locator('#detail-specs')).toContainText('In development');
-  await page.keyboard.press('Escape');
-  await expect(page.locator('#product-dialog')).not.toBeVisible();
-  await expect(button).toBeFocused();
- }
+test('the initial experience does not require WebGL or eagerly load the 3D bundle',async({page})=>{
+ await expect(page.locator('#product-stage')).toHaveAttribute('data-scene','static');
+ await expect(page.locator('.hero-fallback')).toBeVisible();
+ const loaded=await page.evaluate(()=>performance.getEntriesByType('resource').map(r=>r.name).filter(n=>/studio-models/.test(n)));
+ expect(loaded).toEqual([]);
+ await expect(page.locator('#scene-canvas canvas')).toHaveCount(0);
 });
-test('product interest carries into the private pilot planner',async({page})=>{
- await page.getByRole('button',{name:'Explore AERLOR LITE',exact:true}).click();
- await page.getByRole('button',{name:'Include in my pilot brief'}).click();
- await expect(page.locator('#product-dialog')).not.toBeVisible();
- await expect(page.locator('#inquiry-dialog')).toBeVisible();
- await expect(page.getByRole('radio',{name:'LITE',exact:true})).toBeChecked();
- await expect(page.locator('.preview-notice')).toContainText('Nothing is sent');
-});
-test('required fields do not create a false success',async({page})=>{
- await page.getByRole('button',{name:'Plan a pilot for your property'}).click();
- await page.getByRole('button',{name:'Create my pilot brief'}).click();
- await expect(page.locator('#inquiry-form input:invalid')).toHaveCount(4);
- await expect(page.locator('#form-status')).toBeEmpty();
-});
-test('planner downloads an honest brief without transmitting personal data',async({page})=>{
- const sent:string[]=[];page.on('request',r=>{if(r.method()==='POST')sent.push(r.url());});
- await page.getByRole('button',{name:'Plan a pilot for your property'}).click();
- await page.getByLabel('Your name',{exact:true}).fill('Alex Test');
- await page.getByLabel('Work email',{exact:true}).fill('alex@example.com');
- await page.getByLabel('Hotel or group',{exact:true}).fill('Example Hotel');
- await page.getByLabel('Country',{exact:true}).fill('Canada');
- await page.getByLabel('Approximate room count').selectOption('50–149');
- await page.getByLabel('What matters most?').fill('Handling and guest experience.');
- const downloadPromise=page.waitForEvent('download');
- await page.getByRole('button',{name:'Create my pilot brief'}).click();
- const download=await downloadPromise;
- expect(download.suggestedFilename()).toBe('AERLOR-property-pilot-brief.txt');
- const file=await download.path();expect(file).toBeTruthy();
- const text=await readFile(file!,'utf8');
- expect(text).toContain('Example Hotel');expect(text).toContain('not been submitted to AERLOR');
- expect(sent).toEqual([]);
- await expect(page.locator('#form-status')).toContainText('Nothing was sent');
- expect(await page.evaluate(()=>localStorage.length+sessionStorage.length)).toBe(0);
-});
-test('FAQ and privacy disclosure are keyboard operable',async({page})=>{
- const question=page.locator('.faq summary').first();await question.focus();await page.keyboard.press('Enter');
- await expect(page.locator('.faq details').first()).toHaveAttribute('open','');
- await page.locator('.footer-bottom').getByRole('link',{name:'Privacy',exact:true}).click();
- await expect(page.locator('h1')).toHaveText('Privacy');
- await expect(page.locator('.legal-page')).toContainText('project bag');
-});
-test('mobile navigation opens, navigates and closes',async({page,isMobile})=>{
- test.skip(!isMobile,'Mobile-specific interaction');
- const button=page.getByRole('button',{name:'Open menu'});await button.click();
- await expect(page.locator('#mobile-menu')).toBeVisible();
- await page.locator('#mobile-menu').getByRole('link',{name:'The collection'}).click();
- await expect(page.locator('#mobile-menu')).not.toBeVisible();
- await expect(button).toHaveAttribute('aria-expanded','false');
-});
-test('has no horizontal overflow and all local imagery resolves',async({page})=>{
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
- const broken=await page.locator('img').evaluateAll(images=>images.filter(i=>i instanceof HTMLImageElement&&i.complete&&i.naturalWidth===0).map(i=>(i as HTMLImageElement).src));
- expect(broken).toEqual([]);
-});
-test('baseline and inquiry dialog pass WCAG A/AA automated checks',async({page})=>{
- await page.evaluate(()=>document.querySelectorAll('.will-reveal').forEach(e=>e.classList.add('is-visible')));
- const baseline=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
- expect(baseline.violations).toEqual([]);
- await page.getByRole('button',{name:'Plan a pilot for your property'}).click();
- const form=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
- expect(form.violations).toEqual([]);
-});
-test('reduced-motion preference suppresses ambient-motion control',async({page})=>{
- await expect(page.locator('#motion-toggle')).toBeHidden();
- expect(await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches)).toBe(true);
-});
-test('static fallback remains usable without JavaScript',async({browser,baseURL})=>{
- const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
- const page=await context.newPage();await page.goto(baseURL!);
- await expect(page.locator('h1')).toBeVisible();await expect(page.locator('.hero-fallback')).toBeVisible();
- await expect(page.locator('.noscript-note')).toContainText('without JavaScript');
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
- await context.close();
-});
-
-test('pilot validation is visible, linked to fields, and clears as corrected',async({page})=>{
- await page.locator('#hospitality [data-inquiry]').click();
- await page.getByRole('button',{name:'Create my pilot brief'}).click();
- await expect(page.locator('#form-error')).toBeVisible();
- await expect(page.locator('[name=name]')).toBeFocused();
- await expect(page.locator('[name=email]')).toHaveAttribute('aria-describedby','form-error');
- await page.locator('[name=name]').fill('Alex Morgan');
- await page.locator('[name=email]').fill('alex@example.com');
- await page.locator('[name=property]').fill('Example Hotel');
- await page.locator('[name=country]').fill('Canada');
- await page.locator('[name=rooms]').selectOption({label:'50–149'});
- await expect(page.locator('#form-error')).toBeEmpty();
- await expect(page.locator('#inquiry-form [aria-invalid=true]')).toHaveCount(0);
-});
-test('finish controls provide 44 pixel touch targets',async({page})=>{
- for(const control of await page.locator('[data-finish]').all()){
-  const box=await control.boundingBox();
-  expect(box?.width).toBeGreaterThanOrEqual(44);expect(box?.height).toBeGreaterThanOrEqual(44);
+test('finish selection updates the image and accessible selection state',async({page})=>{
+ for(const [name,key]of [['Champagne','champagne'],['Pearl','pearl'],['Graphite','graphite']]){
+  const button=page.getByRole('button',{name:`${name} finish`,exact:true});await button.click();
+  await expect(button).toHaveAttribute('aria-pressed','true');await expect(page.locator('#finish-name')).toHaveText(name);
+  await expect(page.locator('.hero-fallback')).toHaveAttribute('src',new RegExp(`dryer-${key}-hero\\.webp$`));
+  await expect(page.locator('[data-finish][aria-pressed=true]')).toHaveCount(1);
  }
 });
-test('motion label follows manual pause and changed motion preference',async({page})=>{
- await expect(page.locator('#product-stage')).toHaveAttribute('data-scene',/ready|fallback/,{timeout:20000});
+test('optional 3D inspection is keyboard operable and can return to the static image',async({page})=>{
+ await page.getByRole('button',{name:'Inspect in 3D'}).click();
+ await expect(page.locator('#product-stage')).toHaveAttribute('data-scene',/ready|fallback/,{timeout:30000});
  if(await page.locator('#product-stage').getAttribute('data-scene')==='fallback'){
-  await expect(page.locator('#motion-toggle')).toBeHidden();return;
+  await expect(page.locator('.hero-fallback')).toBeVisible();await expect(page.locator('#viewer-status')).toContainText('could not load');return;
  }
- await page.emulateMedia({reducedMotion:'no-preference'});
- const control=page.locator('#motion-toggle');
- await expect(control).toHaveText(/Pause movement/);await control.click();
- await expect(control).toHaveText(/Resume movement/);
- await page.emulateMedia({reducedMotion:'reduce'});await expect(control).toBeHidden();
- await page.emulateMedia({reducedMotion:'no-preference'});
- await expect(control).toHaveText(/Pause movement/);await expect(control).toHaveAttribute('aria-pressed','true');
+ await expect(page.locator('#scene-canvas canvas')).toHaveCount(1);
+ const view=page.locator('#scene-canvas');await view.focus();await page.keyboard.press('ArrowRight');await page.keyboard.press('Home');await page.keyboard.press('Escape');
+ await expect(page.locator('#product-stage')).toHaveAttribute('data-scene','static');
+ await expect(page.getByRole('button',{name:'Inspect in 3D'})).toBeFocused();
+});
+test('3D enhancement failure preserves the product image and a useful status',async({page})=>{
+ await page.route('**/*studio-models*.js',route=>route.abort());
+ await page.getByRole('button',{name:'Inspect in 3D'}).click();
+ await expect(page.locator('#product-stage')).toHaveAttribute('data-scene','fallback',{timeout:30000});
+ await expect(page.locator('.hero-fallback')).toBeVisible();await expect(page.locator('#viewer-status')).toContainText('could not load');
+ await expect(page.getByRole('button',{name:'Inspect in 3D'})).toBeEnabled();
+});
+test('finish controls retain 44 pixel touch targets',async({page})=>{
+ for(const control of await page.locator('[data-finish]').all()){const box=await control.boundingBox();expect(box?.width).toBeGreaterThanOrEqual(44);expect(box?.height).toBeGreaterThanOrEqual(44);}
+});
+test('mobile navigation restores focus and reaches the full collection',async({page,isMobile})=>{
+ test.skip(!isMobile,'Mobile-specific navigation');
+ const toggle=page.getByRole('button',{name:'Open menu'});await toggle.click();await expect(page.locator('#mobile-menu')).toBeVisible();
+ await page.keyboard.press('Escape');await expect(toggle).toBeFocused();await expect(page.locator('#mobile-menu')).toBeHidden();
+ await toggle.click();await page.locator('#mobile-menu').getByRole('link',{name:'All products',exact:true}).click();await expect(page.locator('h1')).toContainText('A complete room.');
+});
+test('homepage artwork loads without horizontal overflow',async({page})=>{
+ await page.evaluate(async()=>{for(const image of document.images)image.loading='eager';await Promise.all([...document.images].map(i=>i.decode()));});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(await page.locator('img').evaluateAll(images=>images.filter(i=>(i as HTMLImageElement).naturalWidth===0).map(i=>i.getAttribute('src')))).toEqual([]);
+});
+test('homepage and optional viewer pass automated WCAG rules',async({page})=>{
+ const baseline=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();expect(baseline.violations).toEqual([]);
+ await page.getByRole('button',{name:'Inspect in 3D'}).click();await expect(page.locator('#product-stage')).toHaveAttribute('data-scene',/ready|fallback/,{timeout:30000});
+ const viewer=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();expect(viewer.violations).toEqual([]);
+});
+test('the page remains useful with JavaScript disabled',async({browser,baseURL})=>{
+ const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto(baseURL!);
+ await expect(page.locator('h1')).toBeVisible();await expect(page.locator('.hero-fallback')).toBeVisible();await expect(page.locator('.category-card')).toHaveCount(3);
+ await expect(page.locator('.noscript-note')).toContainText('without JavaScript');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await context.close();
 });

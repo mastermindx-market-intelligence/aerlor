@@ -34,3 +34,7 @@ Actual public runtime verification passed for routes, all ten PDFs, API configur
 GitHub Pages now hosts the separate non-transactional design/engineering showcase, not the commercial application. A final QA patch improves the 320px showcase heading and makes geometry checks wait for actual stylesheet application; it does not change commerce eligibility.
 
 Commercial activation remains gated on the approved exact supplier models/specifications/market evidence, legal seller and correct merchant account, real prices/stock, tax/shipping/support terms, durable service credentials and real provider test-mode acceptance. Do not invent these facts or mark products released to make checkout appear active.
+
+## R4 precision redesign / 4 November 2026
+
+Founder direction: replace the cosmetic/editorial feel with a premium technology system designed for hotel buyers. Implementation branch: `work/site/precision-tech-r4`, baseline `68f0ba1`. All 33 routes are restructured and rewritten, six products use original studio renders, and the homepage uses an opt-in 3D viewer instead of automatic motion. Native Paper page `p-4-0` contains nine editable boards and 25 tokens; see `design/precision-r4/README.md`. Ten PDFs / 36 pages are restyled in the same system. Browser and deployment evidence is retained in `design/previews/r4/`. Commercial product and merchant release gates are unchanged. Do not revert the active interface to the archived R2 serif/ivory system.
