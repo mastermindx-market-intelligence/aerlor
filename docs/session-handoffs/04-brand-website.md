@@ -52,3 +52,8 @@ PR #23 imagery was integrated from exact source `4d80d3d781a9e992c7922e3f66c38ad
 ## R8 business-solutions expansion / 4 November 2026
 
 Branch `work/site/solutions-r8-hardening-20261104` extends the R5 premium technology site with a cross-industry Solutions menu, seven additional sector detail pages, industry-specific navigation and a local-only business brief. All original 33 routes and gated payment/inquiry paths remain. Paper R6 Solutions page `p-7-0` was corrected to reflect the non-transmitting project brief. Exact design captures, test results and implementation pointers are in `design/previews/r8/README.md`. Site is not deployed or merged by this work alone. The unmerged campaign asset PR #23 is a separate lane.
+
+
+## R9 editorial business solutions / 4 November 2026
+
+The founder requested a stronger, more premium cross-industry experience. The R8 implementation is extended into an editorial R9 while preserving all 42 routes, commerce and document paths, and disabled live payment/lead gates. R9 adds editable Paper page `p-9-1` with five boards, distinct buyer narratives, technical FAQs, an original salon workstation illustration, product-concept galleries, and a private live-preview brief with download/copy. Work stays on the existing review branch and PR #25; exact web screenshots and QA are in `design/previews/r9/README.md`. Concurrent PR #23 is independent, and this work does not indicate production deployment.

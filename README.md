@@ -4,6 +4,12 @@
 
 [Website](https://aerlor.vercel.app/) · [R5 editable Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-6-0) · [Design handoff](design/precision-r5/README.md) · [Commerce operations](docs/commerce/OPERATIONS.md)
 
+## R9: Editorial Solutions and professional buyer experience
+
+The R9 review branch elevates the 42-route prelaunch storefront beyond repeated industry templates. It introduces an editorial, image-led Solutions flagship, distinct salon/spa/club and specialty buyer storytelling, a purpose-built original salon workstation diagram, product-concept galleries, precise technical review guidance, and a locally downloadable or copyable project brief with a live preview. The work lives in [Paper R9](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-9-1) and the [browser visual QA gallery](design/previews/r9/README.md).
+
+This is a review implementation, not a commercial activation. All previous purchasing protections remain.
+
 ## R8: Business Solutions — salons and specialty environments
 
 The **Solutions** navigation expands AERLOR beyond hotel procurement into distinct buyer journeys for salons, spas, fitness clubs and four specialist markets. The existing hotel content remains under `/hospitality/` and all 33 original routes are preserved. The 42-route storefront includes eight new solution destinations plus a cross-industry planning path.
