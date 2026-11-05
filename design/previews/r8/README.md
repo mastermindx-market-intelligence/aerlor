@@ -48,7 +48,9 @@ Screenshots were reviewed for hierarchy, spacing, typography, clipping and mobil
 - `npm run test:server` — 39 passed
 - `TEST_URL=http://127.0.0.1:4197/aerlor/ npx playwright test tests/solutions.spec.ts --project=desktop --project=mobile` — 10 passed, 2 intentionally skipped (platform-specific tests)
 - `TEST_URL=http://127.0.0.1:4197/aerlor/ npx playwright test tests/storefront.spec.ts --project=desktop --project=mobile` — 36 passed
-- Automated accessibility tests on Solutions, salon and brief screens returned zero serious or critical WCAG 2A/AA/2.1AA violations
+- `TEST_URL=http://127.0.0.1:4197/aerlor/ npx playwright test tests/solutions.spec.ts --config playwright.webkit.config.ts --project=desktop --project=mobile` — 10 passed, 2 intentional platform skips
+- `TEST_URL=http://127.0.0.1:4197/aerlor/ npx playwright test tests/storefront.spec.ts --config playwright.webkit.config.ts --project=desktop --project=mobile` — 36 passed
+- Automated accessibility tests on Solutions, salon and brief screens returned zero serious or critical WCAG 2A/AA/2.1AA violations in Chromium and WebKit
 
 ## Remaining commercial gates
 
