@@ -81,3 +81,8 @@ test('fallback typography stays usable when external fonts are blocked',async({p
  test.setTimeout(90000);await page.route('https://fonts.googleapis.com/**',route=>route.abort());await page.route('https://fonts.gstatic.com/**',route=>route.abort());
  for(const path of ['hospitality/groups/','products/makeup-mirror-premium/','hospitality/wholesale/','pricing/']){await navigate(page,path);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),path).toBe(true);}
 });
+
+
+test('homepage, product and hotel journeys fit intermediate tablet widths',async({page})=>{
+ test.setTimeout(120000);for(const width of [768,820,1024]){await page.setViewportSize({width,height:1024});for(const path of ['', 'products/hairdryer-premium/','hospitality/','collection/']){await navigate(page,path);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${path} at ${width}px`).toBe(true);}}
+});

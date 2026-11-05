@@ -12,3 +12,23 @@
 @media(prefers-reduced-motion:reduce){.r5-gallery .product-gallery>img{transition:none}}
 
 .r5-hotels-hero .hero-actions .text-link{color:#111214}@media(max-width:760px){.r5-hero h1{font-size:46px;line-height:1.07}.r5-hero-copy{padding-top:42px}.r5-hero-art{height:415px}.r5-hero-art>.r5-signature{height:438px}}@media(max-width:370px){.r5-hero h1{font-size:39px}.r5-hero-art{height:380px}.r5-hero-art>.r5-signature{height:400px}}
+
+/* Intrinsic aspect ratios must not widen grid tracks at intermediate widths. */
+.r5-collection .category-image{width:100%;min-width:0;aspect-ratio:auto}
+.r5-model-study{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.r5-model-study>div{min-width:0}
+.r5-model-study .hero-art{width:100%;max-width:100%;min-width:0}
+@media(min-width:761px) and (max-width:960px){
+ .r5-hero{grid-template-columns:1fr;gap:0;padding-top:0;padding-bottom:0}
+ .r5-hero-copy{padding:54px 0 0;max-width:640px}
+ .r5-hero-art{height:470px;width:100%}
+ .r5-hero-art>.r5-signature{height:490px}
+ .r5-art-label{left:8px;right:8px;flex-direction:row;align-items:center}
+ .r5-collection .category-image{height:265px}
+ .r5-collection .category-card:first-child .category-image>img{padding:10px}
+ .r5-collection .category-copy h3{font-size:22px}
+ .r5-model-study{grid-template-columns:1fr;gap:35px}
+ .r5-model-study .hero-art{height:500px;min-height:500px}
+}
+@media(max-width:760px){.r5-model-study{grid-template-columns:1fr}}
+.r5-model-study .hero-art{inset:auto;transform:none}

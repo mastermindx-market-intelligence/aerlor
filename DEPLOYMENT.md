@@ -54,4 +54,4 @@ No domain, paid service, merchant account or inventory is purchased by this depl
 
 ## R5 product-view acceptance
 
-The homepage must first report `data-scene="static"` without downloading the 3D module. The deployment verifier explicitly requests 3D on desktop, then checks the live canvas. Other widths use the original image. This design release keeps existing checkout and direct-submission gates unchanged. The Paper design target is page `p-6-0`; the active palette and typography are exported to `src/precision-tokens.css`.
+The homepage uses the original static flagship artwork and has no 3D canvas. The optional early-geometry viewer lives on `/products/hairdryer-premium/`; the release verifier explicitly opens it and checks the gallery and live canvas. The site is also checked at desktop, tablet and narrow phone widths. Existing checkout and direct-submission gates remain unchanged. The current native Paper page is `p-6-0`; shared precision tokens remain in `src/precision-tokens.css`.

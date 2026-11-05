@@ -2,11 +2,11 @@
   "revision": "premium-tech-r5",
   "browserTests": {
     "chromium": {
-      "passed": 57,
+      "passed": 59,
       "skipped": 1
     },
     "webkit": {
-      "passed": 57,
+      "passed": 59,
       "skipped": 1
     },
     "skipReason": "Desktop duplicate of mobile-only navigation"
@@ -26,5 +26,20 @@
     "pages": 36,
     "renderedAndReviewed": true
   },
-  "scope": "Local application and design verification. Exact live source receipt is recorded after deployment."
+  "scope": "Local application and design verification. Exact live source receipt is recorded after deployment.",
+  "contractTests": {
+    "passed": 14
+  },
+  "responsiveRegressionWidths": [
+    320,
+    390,
+    768,
+    820,
+    1024,
+    1440
+  ],
+  "internalReferences": {
+    "checked": 1734,
+    "broken": 0
+  }
 }

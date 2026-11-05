@@ -52,7 +52,7 @@ TEST_URL=https://aerlor.vercel.app/ EXPECTED_COMMIT=<40-character-sha> npm run v
 
 ## Design and documents
 
-The new system starts with the native Paper direction and tokens, then reconciles the final browser layouts into native editable artboards. [The R4 handoff](design/precision-r4/README.md) contains board IDs, native JSX references and screenshots. R2 native references remain archived in `design/paper/native/`; they are not the active visual direction.
+The current R5 page contains five editable native compositions for the homepage, flagship product and hotel-buyer journey. [The R5 handoff](design/precision-r5/README.md) records the actual board IDs, source-safe JSX references and screenshots. R4 contributes the shared native token foundations; R2/R4 compositions remain historical references rather than the active release direction.
 
 ```sh
 # With the local dev server running, regenerate missing original studio PNGs:
@@ -67,7 +67,7 @@ The PDF workflow uses authored HTML, `marketing/print.css`, Playwright, `pdftopp
 
 ## Verification scope
 
-R4 local verification: **55 Chromium checks and 55 WebKit checks passed**, plus one intentional desktop duplicate of a mobile-only navigation test skipped per engine. Coverage includes all 33 routes, 320-pixel reflow, fonts unavailable, product selection, quote drafts, download integrity, inaccessible services, optional 3D, keyboard controls and automated accessibility rules. Server/domain tests cover payment and inquiry invariants using controlled provider fixtures. Native design review and actual public deployment proof are separate checks.
+R5 local verification is recorded in `design/previews/r5/local-validation.json`. Each browser suite intentionally skips the desktop duplicate of the mobile-only navigation test. Coverage includes all 33 routes, 320-pixel reflow, fonts unavailable, product selection, quote drafts, download integrity, inaccessible services, optional 3D, keyboard controls and automated accessibility rules. Server/domain tests cover payment and inquiry invariants using controlled provider fixtures. Native design review and actual public deployment proof are separate checks.
 
 ## Deployment
 
@@ -84,7 +84,8 @@ src/catalog.json                 Product concepts and specification status
 src/storefront.ts                 Bag, filters, forms and checkout handoff
 src/main.ts, studio-models.ts     Optional product inspection and original models
 shared/, server/, api/            Existing commerce/inquiry rules and adapters
-design/precision-r4/              Native designs, JSX, screenshots and decisions
+design/precision-r5/              Current native designs, JSX, screenshots and decisions
+design/precision-r4/tokens.css    Shared native precision token lineage
 marketing/, public/documents/     Ten versioned guides and product briefs
 ```
 
