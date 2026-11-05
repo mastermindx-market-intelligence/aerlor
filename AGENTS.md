@@ -8,7 +8,7 @@ AERLOR seeks to become a premium, commercially reliable haircare/beauty applianc
 **Prelaunch:** https://aerlor.vercel.app/ is a concept preview, **not** a certified available product, consumer launch, approved vendor, or lead intake. Product imagery and PRO/LITE labels are conceptual. Do not claim genuine hotel installations or existing MSRP/partnerships.
 
 ## Read relevant sources; reuse verified context
-At unfamiliar entry or recovery, load the assignment-relevant sources below. Reuse already-read same-revision instructions and evidence on ordinary continuation; refresh affected facts when scope, source, ownership or the planned effect changes. Check live issue/PR and target revision before writing. Missing Notion or Drive access holds only work that depends on it, not an independent source/code task.
+At unfamiliar entry or recovery, load the assignment-relevant sources below. Reuse already-read same-revision instructions and evidence on ordinary continuation; refresh affected facts when scope, source, ownership or the planned effect changes. Before taking a new target, check its current issue/PR ownership and source revision. Missing Notion or Drive access holds only work that depends on it, not an independent source/code task.
 
 1. This `AGENTS.md` and [docs/PROJECT_BOOTSTRAP.md](docs/PROJECT_BOOTSTRAP.md).
 2. [GitHub issues](https://github.com/mastermindx-market-intelligence/aerlor/issues) and [pull requests](https://github.com/mastermindx-market-intelligence/aerlor/pulls) — refresh state and identify exact owner/issue. **Do not assume prior PR #1 is merged**; it contains extensive market and operating work.
