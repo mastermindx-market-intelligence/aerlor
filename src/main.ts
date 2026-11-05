@@ -25,9 +25,9 @@ function resetView():void{
 function showView():void{
  active=true;stage?.classList.add('scene-ready');if(stage)stage.dataset.scene='ready';
  if(launch){launch.textContent='Close 3D view ×';launch.setAttribute('aria-pressed','true');}
- if(host){host.tabIndex=0;host.setAttribute('role','img');host.removeAttribute('aria-hidden');host.setAttribute('aria-label',`Interactive ${finishLabel(finish)} hairdryer design study. Use arrow keys to change the viewing angle; Escape returns to the product image.`);}
+ if(host){host.tabIndex=0;host.setAttribute('role','img');host.removeAttribute('aria-hidden');host.setAttribute('aria-label',`Interactive ${finishLabel(finish)} early hairdryer geometry study. Use arrow keys to change the viewing angle; Escape returns to the product image.`);}
  controller?.setFinish(finish);controller?.render();
- announce('3D product view is ready. Use the arrow keys or move the pointer to inspect the design. Escape returns to the product image.');
+ announce('3D geometry study is ready. Use the arrow keys or move the pointer to inspect the design. Escape returns to the product image.');
 }
 launch?.setAttribute('aria-pressed','false');
 launch?.addEventListener('click',async()=>{
@@ -53,8 +53,8 @@ for(const button of document.querySelectorAll<HTMLButtonElement>('[data-finish]'
  const productName=document.querySelector('#hero-product-name');if(productName)productName.textContent=`Hairdryer ${range}`;
  const productLink=document.querySelector<HTMLAnchorElement>('#hero-product-link');if(productLink)productLink.href=`${base}products/hairdryer-${range.toLowerCase()}/`;
  const name=document.querySelector('#finish-name');if(name)name.textContent=label;
- if(fallback){fallback.src=`${base}images/studio/dryer-${finish}-hero.webp`;fallback.alt=`AERLOR Hairdryer ${range} in ${label} — original product design study`;}
- stage?.setAttribute('aria-label',`AERLOR Hairdryer ${range} design study in ${label.toLowerCase()}`);
+ if(fallback){fallback.src=`${base}images/studio/dryer-${finish}-hero.webp`;fallback.alt=`Early AERLOR hairdryer geometry study in ${label}`;}
+ stage?.setAttribute('aria-label',`Early AERLOR hairdryer geometry study in ${label.toLowerCase()}`);
  controller?.setFinish(finish);
  if(host&&active)host.setAttribute('aria-label',`Interactive ${label} hairdryer design study. Use arrow keys to change the viewing angle; Escape returns to the product image.`);
 });

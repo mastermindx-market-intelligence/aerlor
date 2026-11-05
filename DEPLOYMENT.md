@@ -4,16 +4,16 @@
 
 - Source: `mastermindx-market-intelligence/aerlor`, production branch `main`.
 - Storefront and same-origin server functions: https://aerlor.vercel.app/.
-- GitHub Pages: https://mastermindx-market-intelligence.github.io/aerlor/ — **R4 design/engineering showcase only**, not an ecommerce host.
+- GitHub Pages: https://mastermindx-market-intelligence.github.io/aerlor/ — **R5 design/engineering showcase only**, not an ecommerce host.
 - Native Paper foundation: https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0.
 
-GitHub's Pages limits prohibit using Pages as free hosting for an online business or ecommerce site: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits. R4 separates the application from the non-transactional showcase rather than pretending a static Pages origin can run payment or email services.
+GitHub's Pages limits prohibit using Pages as free hosting for an online business or ecommerce site: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits. R5 separates the application from the non-transactional showcase rather than pretending a static Pages origin can run payment or email services.
 
 ## Build artifacts
 
 `npm run build` generates the 33-route application into `dist/`. On Vercel it runs with `BASE_PATH=/`; the local verification base is `/aerlor/`. Vercel also deploys the five root `api/*.js` functions and their imported server/shared modules. The private product-contact setting and credentials belong in server environment variables, never the public repository.
 
-`npm run build:showcase` generates `showcase-dist/` separately. Only this directory is uploaded to GitHub Pages. It contains project documentation, two design screenshots, styles, a 404 page and build metadata. It has no form, cart, price offer or payment endpoint.
+`npm run build:showcase` generates `showcase-dist/` separately. Only this directory is uploaded to GitHub Pages. It contains project documentation, reviewed design screenshots, styles, a 404 page and build metadata. It has no form, cart, price offer or payment endpoint.
 
 Both artifacts contain an exact `build-info.json` source commit. A live URL alone does not establish that the intended revision was released.
 
@@ -52,6 +52,6 @@ No product is currently released or priced. The website remains `noindex`; no cu
 
 No domain, paid service, merchant account or inventory is purchased by this deployment. No real payment, email send, refund or shipment is triggered by the release tests.
 
-## R4 product-view acceptance
+## R5 product-view acceptance
 
-The homepage must first report `data-scene="static"` without downloading the 3D module. The deployment verifier explicitly requests 3D on desktop, then checks the live canvas. Other widths use the original image. This design release keeps existing checkout and direct-submission gates unchanged. The Paper design target is page `p-4-0`; the active palette and typography are exported to `src/precision-tokens.css`.
+The homepage must first report `data-scene="static"` without downloading the 3D module. The deployment verifier explicitly requests 3D on desktop, then checks the live canvas. Other widths use the original image. This design release keeps existing checkout and direct-submission gates unchanged. The Paper design target is page `p-6-0`; the active palette and typography are exported to `src/precision-tokens.css`.

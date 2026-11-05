@@ -1,21 +1,22 @@
 # AERLOR
 
-**Better tools. Better stays.** A buyer-led guestroom technology website for hairdryers, illuminated mirrors and styling tools in Lite and Premium ranges.
+**The essentials. Reimagined.** Premium product design for the modern hotel room. Hairdryers, illuminated mirrors and styling tools in Lite and Premium ranges.
 
-[Live website](https://aerlor.vercel.app/) · [R4 native Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-4-0) · [Design decisions](design/precision-r4/DESIGN_DECISIONS.md) · [Commerce operations](docs/commerce/OPERATIONS.md)
+[Website](https://aerlor.vercel.app/) · [R5 editable Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-6-0) · [Design handoff](design/precision-r5/README.md) · [Commerce operations](docs/commerce/OPERATIONS.md)
 
-## R4: precision hospitality
+## R5: premium technology, built around the hotel buyer
 
-R4 replaces the warm beauty-editorial treatment with a premium-technology system: Inter typography, white and graphite surfaces, neutral silver product studies and a restrained copper accent. It restructures the buyer journey rather than simply changing colours.
+A graphite product stage, white space, Inter typography and restrained metal finishes replace the previous cosmetics/editorial identity. The homepage establishes the product range and guest relevance; the hotel path provides a practical purchasing journey.
 
-- **33 semantic HTML routes** for the collection, six products, comparison, hotel purchasing, groups, specifiers, resources, company information and transactional journeys.
-- Clear navigation: Products, For hotels, Resources, About and Discuss a project.
-- Dedicated product pages lead with the model, room fit, finish, quantity and next action. Technical release information and documentation remain close to the decision.
-- Original studio presentation models and **19 rendered views** across the three families. The homepage loads a lightweight image first; 3D inspection is explicitly requested, keyboard-operable and optional.
-- **Nine native R4 Paper artboards, 25 tokens and 2,740 native nodes**. The dedicated page includes desktop/mobile layouts, collection, product, hotel, project and foundation boards. Text and frames are editable; product artwork remains a separate asset.
-- **Ten PDFs / 36 pages**, restyled in the same R4 system: collection overview, hotel upgrade guide, procurement checklist, pilot toolkit and six product briefs.
-- Product-only project bag, quantities, finishes, bundles, local brief downloads and a user-reviewed business-email draft.
-- Existing server-authoritative checkout and inquiry adapters are preserved. This design release does not activate real payments or manufacture commercial readiness.
+- **33 semantic HTML routes**, with six full product pages, comparison, hotel buying, wholesale, groups, specifiers, resources and company information.
+- A product-led homepage using the founder's preproduction imagery, a three-family range, Lite/Premium comparison and a direct hotel-project route.
+- Product galleries with selectable views, explicit finish captions, quantity controls, specification access and a project handoff.
+- The optional, keyboard-operable 3D geometry study is secondary on the flagship product page and never blocks the first view. It is not presented as production CAD.
+- **Five new editable R5 Paper artboards / 530 nodes**: home and flagship product on desktop/mobile, plus the hotel-buyer journey. Native JSX, screenshots and IDs are saved in `design/precision-r5/`. Earlier R4 foundations and 25 native tokens remain the shared design lineage.
+- **Ten PDFs / 36 pages**, restyled and refreshed to match the current product and typography direction.
+- Existing project bag, filters, finish selection, bundles, brief downloads, email-draft workflow, budgeting calculator and gated checkout remain functional.
+
+The exact production revision is exposed by the deployed `build-info.json`; source and deployment verification are separate. GitHub Pages hosts the non-transactional design showcase, not the storefront.
 
 ## Commercial status
 

@@ -39,6 +39,7 @@ function imageFor(id:string,finish:string):string {
   const p=products.find(p=>p.id===id);
   if(!p)return 'studio/dryer-pearl-product.webp';
   const chosen=p.finishes.includes(finish)?finish:p.finish;
+  if(id==='dryer-premium')return chosen==='Champagne'?'studio/dryer-signature-champagne.webp':'campaign/travel-case.webp';
   return `studio/${p.studioFamily}-${chosen.toLowerCase()}-product.webp`;
 }
 
@@ -57,11 +58,24 @@ for(const button of document.querySelectorAll<HTMLButtonElement>('[data-bundle]'
   const set=products.filter(p=>p.tier===button.dataset.bundle).map(p=>({id:p.id,finish:p.finish,quantity:1}));
   try{saveCart([...items,...set]);showToast(`The ${button.dataset.bundle} three-piece room concept is in your project bag.`);}catch(error){showToast(error instanceof Error?error.message:'Please review your selection.');}
 });
-$<HTMLSelectElement>('[data-product-finish]')?.addEventListener('change',event=>{
-  const select=event.target as HTMLSelectElement;const id=document.body.dataset.productId??'';const image=$<HTMLImageElement>('[data-gallery-image]');
-  if(image){image.src=route('images/'+imageFor(id,select.value));image.alt=`${products.find(p=>p.id===id)?.name??'AERLOR'} ${select.value} design study`;}
-  updatePrices();
-});
+function setProductGallery(view='product'):void {
+  const id=document.body.dataset.productId??'';
+  const p=products.find(p=>p.id===id);if(!p)return;
+  const selected=$<HTMLSelectElement>('[data-product-finish]')?.value??p.finish;
+  const image=$<HTMLImageElement>('[data-gallery-image]');
+  const button=$<HTMLButtonElement>(`[data-gallery-view="${view}"]`);
+  const src=view==='product'?imageFor(id,selected):button?.dataset.gallerySrc;
+  if(!src||!image)return;
+  image.src=route('images/'+src);
+  const labels:Record<string,string>={product:`${selected} / ${selected==='Graphite'&&id==='dryer-premium'?'presentation concept':'product design study'}`,detail:`${id==='dryer-premium'?'Champagne':p.finish} / exterior design detail`,'in-room':'Champagne / room-placement visualization',presentation:'Champagne / proposed presentation kit'};
+  const caption=labels[view]??'Product design visualization';
+  image.alt=`${p.name}: ${caption}`;
+  const label=$('#gallery-caption');if(label)label.textContent=caption;
+  const stage=image.closest<HTMLElement>('.product-gallery');if(stage)stage.dataset.photo=String(view==='in-room'||view==='presentation');
+  document.querySelectorAll<HTMLButtonElement>('[data-gallery-view]').forEach(control=>control.setAttribute('aria-pressed',String(control===button)));
+}
+$<HTMLSelectElement>('[data-product-finish]')?.addEventListener('change',()=>{setProductGallery();updatePrices();});
+for(const control of document.querySelectorAll<HTMLButtonElement>('[data-gallery-view]'))control.addEventListener('click',()=>setProductGallery(control.dataset.galleryView));
 window.addEventListener('storage',event=>{if(event.key===STORAGE_KEY){items=readStoredCart(event.newValue,products);updateCounts();renderCart();renderCheckout();}});
 
 // Shared navigation works on the homepage and every product or procurement route.

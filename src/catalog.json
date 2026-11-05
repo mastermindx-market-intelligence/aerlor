@@ -1,5 +1,5 @@
 {
-  "revision": "precision-r4-2026-11-04",
+  "revision": "premium-tech-r5-2026-11-04",
   "commercialStatus": "development",
   "products": [
     {
@@ -81,20 +81,20 @@
       "tier": "Premium",
       "code": "AR-HD-P",
       "image": "dryer-champagne.svg",
-      "finish": "Graphite",
+      "finish": "Champagne",
       "finishes": [
-        "Graphite",
-        "Champagne"
+        "Champagne",
+        "Graphite"
       ],
-      "tagline": "A stronger presence. A finer finish.",
-      "summary": "A slim handle, a sculpted barrel and a coordinated metal-finish palette. Hairdryer Premium is the signature haircare design for suites and design-led hotels.",
-      "story": "The objects guests handle should match the room around them. Premium gives the dryer a more deliberate presence, with a refined finish and controls placed within the handle. Pair it with a matching mirror or specify it as a standalone room upgrade.",
+      "tagline": "A different kind of everyday.",
+      "summary": "A refined silhouette, a slim handle and a distinctive circular profile. Our signature hairdryer design brings a coordinated finish to premium guestrooms and suites.",
+      "story": "An essential appliance should not feel like an afterthought. Hairdryer Premium brings the shell, controls and intake into one restrained material palette, with a form designed to sit naturally within a modern room.",
       "placement": "Signature guestrooms, suites, boutique hotels and resorts",
       "material": "Metal-finish exterior · Graphite or Champagne design finish",
       "highlights": [
-        "Refined barrel and handle proportions",
-        "Tactile control placement",
-        "Coordinated Premium finishes"
+        "Slim handle and tactile control layout",
+        "Distinctive circular exterior profile",
+        "A coordinated finish for the dressing space"
       ],
       "specs": [
         [
@@ -143,7 +143,7 @@
       "released": false,
       "price": null,
       "studioFamily": "dryer",
-      "studioImage": "studio/dryer-graphite-product.webp"
+      "studioImage": "studio/dryer-signature-champagne.webp"
     },
     {
       "id": "mirror-lite",

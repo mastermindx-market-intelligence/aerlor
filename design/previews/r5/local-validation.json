@@ -1,0 +1,30 @@
+{
+  "revision": "premium-tech-r5",
+  "browserTests": {
+    "chromium": {
+      "passed": 57,
+      "skipped": 1
+    },
+    "webkit": {
+      "passed": 57,
+      "skipped": 1
+    },
+    "skipReason": "Desktop duplicate of mobile-only navigation"
+  },
+  "serverTests": {
+    "passed": 39,
+    "scope": "Provider fixtures, not real payments or email delivery"
+  },
+  "nativePaper": {
+    "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+    "pageId": "p-6-0",
+    "artboards": 5,
+    "nodes": 530
+  },
+  "pdfs": {
+    "documents": 10,
+    "pages": 36,
+    "renderedAndReviewed": true
+  },
+  "scope": "Local application and design verification. Exact live source receipt is recorded after deployment."
+}

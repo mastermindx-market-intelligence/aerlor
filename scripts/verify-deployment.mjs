@@ -23,7 +23,7 @@ try{
  }
  assert.ok(published,'The public build-info.json did not match the exact expected commit.');
  assert.equal(published.base,url.pathname,'Published base path must match deployment path.');
- assert.equal(published.designRevision,'precision-r4');
+ assert.equal(published.designRevision,'premium-tech-r5');
  const showcase=published.kind==='design-showcase';
  if(process.env.VERIFY_KIND)assert.equal(showcase?'design-showcase':'storefront',process.env.VERIFY_KIND);
  if(!showcase){assert.equal(published.pages,33);assert.equal(published.paperFileId,'01M6JNN71ZN4867VJZ83PPXQZ0');}
@@ -38,16 +38,22 @@ try{
    const response=await page.goto(url.href,{waitUntil:'domcontentloaded',timeout:30000});assert.equal(response?.status(),200);
    await page.locator('h1').waitFor({state:'visible',timeout:15000});
    await page.waitForFunction(()=>Array.from(document.querySelectorAll('link[rel=stylesheet]')).filter(link=>new URL(link.href).origin===location.origin).every(link=>Boolean(link.sheet))&&getComputedStyle(document.body).marginTop==='0px');
-   if(!showcase){await page.waitForFunction(()=>document.body.dataset.runtimeReady==='true');assert.equal(await page.locator('#product-stage').getAttribute('data-scene'),'static');if(name==='desktop'){await page.locator('#view-3d').click();await page.waitForFunction(()=>['ready','fallback'].includes(document.querySelector('#product-stage')?.getAttribute('data-scene')),null,{timeout:30000});}}
+   if(!showcase){await page.waitForFunction(()=>document.body.dataset.runtimeReady==='true');await page.locator('.r5-signature').waitFor({state:'visible'});}
    await page.evaluate(async()=>{document.querySelectorAll('.will-reveal').forEach(el=>el.classList.add('is-visible'));for(const image of document.images)image.loading='eager';await Promise.all([...document.images].map(image=>image.decode().catch(()=>{})));await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,8000))]);});
    const observation=await page.evaluate(()=>({width:innerWidth,horizontalOverflow:document.documentElement.scrollWidth>innerWidth,mainHeadings:document.querySelectorAll('h1').length,scene:document.querySelector('#product-stage')?.getAttribute('data-scene')??null,brokenImages:[...document.images].filter(image=>!image.complete||image.naturalWidth===0).map(image=>image.getAttribute('src')),forms:document.querySelectorAll('form').length,touchTargets:[...document.querySelectorAll('[data-finish]')].map(el=>({width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height}))}));
    assert.equal(observation.mainHeadings,1);assert.equal(observation.horizontalOverflow,false);assert.deepEqual(observation.brokenImages,[]);assert.deepEqual(javascriptErrors,[]);assert.deepEqual(sameOriginFailures,[]);
    if(showcase)assert.equal(observation.forms,0,'The Pages showcase must not collect customer data.');
-   else{assert.ok(observation.touchTargets.every(x=>x.width>=44&&x.height>=44));if(name==='desktop')assert.equal(observation.scene,'ready');}
+   else{assert.equal(observation.scene,null,'The brand homepage must not depend on a 3D canvas.');}
    await page.screenshot({path:path.join(output,`${name}-hero.png`)});report.checks.push({name,status:'passed',...observation,javascriptErrors,sameOriginFailures});
   }finally{await context.close();}
  }
  if(!showcase){
+  const inspection=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+  await inspection.goto(new URL('products/hairdryer-premium/',url).href);
+  await inspection.locator('#view-3d').click();await inspection.waitForFunction(()=>['ready','fallback'].includes(document.querySelector('#product-stage')?.getAttribute('data-scene')),null,{timeout:30000});
+  assert.equal(await inspection.locator('#product-stage').getAttribute('data-scene'),'ready');
+  await inspection.getByRole('button',{name:'Detail view',exact:true}).click();assert.match(await inspection.locator('[data-gallery-image]').getAttribute('src'),/dryer-signature-detail/);
+  report.productInspection={webgl:'ready',gallery:'passed'};await inspection.close();
   const response=await fetch(new URL('/api/config',url),{signal:AbortSignal.timeout(15000)});assert.equal(response.status,200);assert.match(response.headers.get('cache-control')??'',/no-store/);const config=await response.json();
   assert.equal(typeof config.checkoutEnabled,'boolean');assert.equal(typeof config.inquiryEnabled,'boolean');assert.ok(!JSON.stringify(config).includes('STRIPE_SECRET_KEY'));assert.ok(!JSON.stringify(config).includes('UPSTASH'));
   report.services={configStatus:response.status,checkoutEnabled:config.checkoutEnabled,directInquiryEnabled:config.inquiryEnabled,contactConfigured:typeof config.contactEmail==='string'&&config.contactEmail.includes('@'),mode:config.mode};

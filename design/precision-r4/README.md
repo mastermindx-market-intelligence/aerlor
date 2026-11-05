@@ -2,8 +2,8 @@
 
 [Open the R4 Paper page](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-4-0) · [Design rationale](DESIGN_DECISIONS.md) · [Live website](https://aerlor.vercel.app/)
 
-**File:** `01M6JNN71ZN4867VJZ83PPXQZ0`  
-**Page:** `p-4-0`, `03 / R4 / Precision hospitality`  
+**File:** `01M6JNN71ZN4867VJZ83PPXQZ0`
+**Page:** `p-4-0`, `03 / R4 / Precision hospitality`
 **Observed:** nine artboards, 2,740 native nodes and 25 R4 tokens. Native tokens hash: `f27aa63e`.
 
 ## Native artboards

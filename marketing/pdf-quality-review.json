@@ -25,7 +25,7 @@
         },
         {
           "page": 3,
-          "textCharacters": 849,
+          "textCharacters": 842,
           "outOfBoundsText": 0,
           "rendered": true
         },
@@ -204,7 +204,7 @@
       "pdfInspection": [
         {
           "page": 1,
-          "textCharacters": 874,
+          "textCharacters": 867,
           "outOfBoundsText": 0,
           "rendered": true
         },
@@ -293,9 +293,9 @@
       ]
     }
   ],
-  "revision": "precision-r4",
+  "revision": "R5",
   "visualReview": {
-    "scope": "All 36 pages reviewed in three contact sheets; no clipping, overlap, missing artwork or unexpected blank pages observed.",
-    "renderer": "Actual PDF bytes rendered with pdftoppm."
+    "scope": "All 36 pages reviewed from three contact sheets rendered by pdftoppm. No clipped text, overlapping layout or missing product images observed.",
+    "date": "2026-11-04"
   }
 }

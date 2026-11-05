@@ -38,3 +38,12 @@ Commercial activation remains gated on the approved exact supplier models/specif
 ## R4 precision redesign / 4 November 2026
 
 Founder direction: replace the cosmetic/editorial feel with a premium technology system designed for hotel buyers. Implementation branch: `work/site/precision-tech-r4`, baseline `68f0ba1`. All 33 routes are restructured and rewritten, six products use original studio renders, and the homepage uses an opt-in 3D viewer instead of automatic motion. Native Paper page `p-4-0` contains nine editable boards and 25 tokens; see `design/precision-r4/README.md`. Ten PDFs / 36 pages are restyled in the same system. Browser and deployment evidence is retained in `design/previews/r4/`. Commercial product and merchant release gates are unchanged. Do not revert the active interface to the archived R2 serif/ivory system.
+
+
+## R5 premium-technology redesign / 4 November 2026
+
+The founder requested a substantial departure from the beauty/editorial identity. Current implementation branch: `work/site/premium-tech-r5`. Five native R5 design boards are on Paper page `p-6-0`; `design/precision-r5/README.md` records scope, actual IDs, image provenance and the relationship to the shared R4 tokens.
+
+The 33-route site now has the product-led homepage, a separate hotel-buyer journey, improved product galleries, direct project calls to action and a neutral premium-tech design system. The ten PDFs have been refreshed in that system. Local Chromium and WebKit runs each passed 57 tests with one intentional mobile-only duplicate skipped; the server/domain fixture suite passed 39 tests. Live release identity must be checked against `build-info.json`, not inferred from this handoff.
+
+PR #23 imagery was integrated from exact source `4d80d3d781a9e992c7922e3f66c38adc18fa486b`; its conflicting legacy CSS/generator changes were not. Do not merge the old visual direction over this rebuild. Preserve independent assurance, sourcing and finance work. Commercial activation remains a separate prerequisite: no paid orders, production claims or automated email delivery were enabled by this design release.

@@ -82,7 +82,7 @@ test('client storage and checkout remain separate from personal data and provide
 test('the precision theme uses its actual native Paper token export',()=>{
  const vars=css=>Object.fromEntries([...css.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(m=>[m[1],m[2].trim()]));
  assert.deepEqual(vars(read('src/precision-tokens.css')),vars(read('design/precision-r4/tokens.css')));
- assert.match(read('src/style.css'),/precision-tokens\.css/);assert.match(read('index.html'),/precision-r4/);
+ assert.match(read('src/style.css'),/precision-tokens\.css/);assert.match(read('index.html'),/premium-tech-r5/);
  assert.ok(!read('index.html').includes('Cormorant'));assert.ok(!/<h[12][^>]*>[^<]*<em>/.test(read('index.html')));
 });
 
@@ -93,4 +93,11 @@ test('R4 native Paper handoff is complete, editable and public-safe',()=>{
   assert.ok(existsSync(new URL('../design/precision-r4/'+board.screenshot,import.meta.url)));
   const jsx=read('design/precision-r4/'+board.jsx);assert.match(jsx,/export default function/);assert.ok(!jsx.includes('/Users/'));assert.ok(!jsx.includes('paper-asset://'));
  }
+});
+
+
+test('R5 native design and image provenance are recoverable without private machine paths',()=>{
+ const m=JSON.parse(read('design/precision-r5/native-manifest.json'));assert.equal(m.pageId,'p-6-0');assert.equal(m.artboardCount,5);assert.equal(m.nodeCount,530);
+ for(const board of Object.values(m.boards)){assert.ok(existsSync(new URL('../design/precision-r5/'+board.screenshot,import.meta.url)));const jsx=read('design/precision-r5/'+board.jsx);assert.match(jsx,/export default function/);assert.ok(!jsx.includes('/Users/'));assert.ok(!jsx.includes('paper-asset://'));}
+ assert.match(read('design/precision-r5/README.md'),/4d80d3d781a9e992c7922e3f66c38adc18fa486b/);assert.match(read('products/hairdryer-premium/index.html'),/not production CAD/);
 });
