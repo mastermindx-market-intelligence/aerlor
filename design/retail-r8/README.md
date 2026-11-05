@@ -7,6 +7,13 @@
 - The lifestyle scene `public/images/retail/ritual-model.jpg` was extracted directly from the R8 Paper generated image fill `66D-1` at 1360 × 768 and added to Git as a self-hosted JPEG.
 - Paper design is conceptual. A product image is not a CAD file, certified model, performance proof, or product release.
 
+## Visual review captures
+
+- [Desktop R8 design](./previews/desktop.jpg) — original Paper artboard `5YG-1`.
+- [Mobile R8 design](./previews/mobile.jpg) — original Paper artboard `61L-1`.
+
+These are source **Paper design captures**, not screenshots of a verified website deployment. Browser QA is separately tracked by the PR checks.
+
 ## Implementation
 
 - `scripts/r8-retail.mjs`: visual narrative, hierarchy, hero, finish presentation, technology macros, FAQ, development specifications, professional CTA and lightbox.
