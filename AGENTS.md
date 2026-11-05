@@ -7,19 +7,21 @@ AERLOR seeks to become a premium, commercially reliable haircare/beauty applianc
 
 **Prelaunch:** https://aerlor.vercel.app/ is a concept preview, **not** a certified available product, consumer launch, approved vendor, or lead intake. Product imagery and PRO/LITE labels are conceptual. Do not claim genuine hotel installations or existing MSRP/partnerships.
 
-## Read these sources first (do not rely on memory)
+## Read relevant sources; reuse verified context
+At unfamiliar entry or recovery, load the assignment-relevant sources below. Reuse already-read same-revision instructions and evidence on ordinary continuation; refresh affected facts when scope, source, ownership or the planned effect changes. Before taking a new target, check its current issue/PR ownership and source revision. Missing Notion or Drive access holds only work that depends on it, not an independent source/code task.
+
 1. This `AGENTS.md` and [docs/PROJECT_BOOTSTRAP.md](docs/PROJECT_BOOTSTRAP.md).
 2. [GitHub issues](https://github.com/mastermindx-market-intelligence/aerlor/issues) and [pull requests](https://github.com/mastermindx-market-intelligence/aerlor/pulls) — refresh state and identify exact owner/issue. **Do not assume prior PR #1 is merged**; it contains extensive market and operating work.
 3. [LAUNCH.md](LAUNCH.md), [README.md](README.md), and relevant source files before website work.
-4. [Notion company HQ](https://app.notion.com/p/40ea491acd7a81dfb599e4c7585e52ac?pvs=204) for decision navigation and cross-session summaries.
-5. [Aerlor private Google Drive workspace](https://drive.google.com/drive/folders/1yYsYi5Evu0AE2fTHixoTw5OCvdKNW-Bh) for financials, supplier quotes, buyer details, packaging work and confidential materials.
+4. [Notion company HQ](https://app.notion.com/p/40ea491acd7a81dfb599e4c7585e52ac?pvs=204) when relevant decisions or cross-session summaries affect the assignment.
+5. [Aerlor private Google Drive workspace](https://drive.google.com/drive/folders/1yYsYi5Evu0AE2fTHixoTw5OCvdKNW-Bh) when the assignment needs financials, supplier quotes, buyer details, packaging work or confidential materials.
 6. [Session handoffs](docs/session-handoffs/README.md) for role and nonoverlapping assignments. Follow the assigned lane only.
 
 ## Ownership and approval
 - **Chairman** (human principal) decides major strategy, capital, legal structures, trademarks, licensing, contracts, outside representation and launch. The term is a working arrangement, not corporate office proof.
 - **CEO execution/integrator** coordinates research and engineering, integrates evidence, creates/reviews PRs and prepares decision memos. Does not self-approve external obligations.
 - **Workers** own one bounded lane with distinct paths and tasks. A handoff document is not an admitted/running worker; verify admission and START before claiming work is underway.
-- Avoid concurrent edits to any shared document/branch. A workstream may propose edits outside its lane but must request integration instead of overwriting another owner's work.
+- Use isolated branches and nonoverlapping assigned targets. Disjoint sections or blocks of a shared document may proceed in parallel when each has an assigned writer and bounded edits preserve concurrent content; reread the target before writing. Serialize overlapping edits and whole-document replacements. A workstream may propose edits outside its lane but must request integration instead of overwriting another owner's work.
 
 ## Source/data custody (critical)
 - This **GitHub repository is PUBLIC**. Publish only public-safe generic research, source URLs, general product specifications, drafts and code. Never commit supplier quotations, buyer/contact CRM, margins, individual business emails, contracts, financial sheets, legal advice, owner identifiers, credentials or personal data.
