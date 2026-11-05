@@ -4,6 +4,14 @@
 
 [Website](https://aerlor.vercel.app/) · [R5 editable Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-6-0) · [Design handoff](design/precision-r5/README.md) · [Commerce operations](docs/commerce/OPERATIONS.md)
 
+## R8: Business Solutions — salons and specialty environments
+
+The **Solutions** navigation expands AERLOR beyond hotel procurement into distinct buyer journeys for salons, spas, fitness clubs and four specialist markets. The existing hotel content remains under `/hospitality/` and all 33 original routes are preserved. The 42-route storefront includes eight new solution destinations plus a cross-industry planning path.
+
+The local project brief validates environment, market, scale, timeline and product category, then downloads a private text file without transmitting data. Live enquiries, commercial pricing, checkout and release requirements are unchanged.
+
+[Paper Solutions design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-7-0) · [Visual and test evidence](design/previews/r8/README.md)
+
 ## R5: premium technology, built around the hotel buyer
 
 A graphite product stage, white space, Inter typography and restrained metal finishes replace the previous cosmetics/editorial identity. The homepage establishes the product range and guest relevance; the hotel path provides a practical purchasing journey.

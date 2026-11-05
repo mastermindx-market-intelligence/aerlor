@@ -61,8 +61,9 @@ test('deployment verification rejects ambiguous or credential-bearing targets be
  }
 });
 
-test('R4 storefront has all routes, six product pages and actual PDF assets',()=>{
- const manifest=JSON.parse(read('storefront-pages.json'));assert.equal(manifest.pages.length,33);
+test('R8 storefront has original and business solutions routes, six product pages and actual PDF assets',()=>{
+ const manifest=JSON.parse(read('storefront-pages.json'));assert.equal(manifest.pages.length,42);
+ for(const route of ['solutions/','solutions/salons/','solutions/spas/','solutions/fitness/','solutions/residences/','solutions/travel/','solutions/academies/','solutions/studios/','solutions/brief/'])assert.ok(manifest.pages.includes(route+'index.html'),route);
  for(const page of manifest.pages)assert.ok(existsSync(new URL('../'+page,import.meta.url)),page);
  const catalog=JSON.parse(read('src/catalog.json'));assert.equal(catalog.products.length,6);
  const documents=JSON.parse(read('marketing/document-manifest.json'));assert.equal(documents.documents.length,10);
