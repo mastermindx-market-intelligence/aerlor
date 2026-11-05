@@ -1,0 +1,138 @@
+{
+  "url": "https://mastermindx-market-intelligence.github.io/aerlor/",
+  "expectedCommit": "74ab4b9046c3ff0e9e1861b361d2db10ec07f525",
+  "checkedAt": "2026-11-04T08:46:05.511Z",
+  "checks": [
+    {
+      "name": "desktop",
+      "status": "passed",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "mainHeadings": 1,
+      "scene": "ready",
+      "brokenImages": [],
+      "touchTargets": [
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "javascriptErrors": [],
+      "sameOriginFailures": []
+    },
+    {
+      "name": "tablet",
+      "status": "passed",
+      "width": 768,
+      "horizontalOverflow": false,
+      "mainHeadings": 1,
+      "scene": "ready",
+      "brokenImages": [],
+      "touchTargets": [
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "javascriptErrors": [],
+      "sameOriginFailures": []
+    },
+    {
+      "name": "mobile",
+      "status": "passed",
+      "width": 390,
+      "horizontalOverflow": false,
+      "mainHeadings": 1,
+      "scene": "ready",
+      "brokenImages": [],
+      "touchTargets": [
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "javascriptErrors": [],
+      "sameOriginFailures": []
+    },
+    {
+      "name": "narrow",
+      "status": "passed",
+      "width": 320,
+      "horizontalOverflow": false,
+      "mainHeadings": 1,
+      "scene": "ready",
+      "brokenImages": [],
+      "touchTargets": [
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "javascriptErrors": [],
+      "sameOriginFailures": []
+    }
+  ],
+  "build": {
+    "commit": "74ab4b9046c3ff0e9e1861b361d2db10ec07f525",
+    "base": "/aerlor/",
+    "designRevision": "native-paper-r2",
+    "paperFileId": "01M6JNN71ZN4867VJZ83PPXQZ0"
+  },
+  "custom404": {
+    "status": 404,
+    "returnPath": "/aerlor/"
+  },
+  "status": "passed",
+  "fullBrowserSuite": {
+    "passed": 29,
+    "intentionallySkipped": 1,
+    "skipReason": "Desktop duplicate of the mobile-only navigation test",
+    "target": "https://mastermindx-market-intelligence.github.io/aerlor/"
+  },
+  "nativePaper": {
+    "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+    "pages": 3,
+    "artboards": 15,
+    "tokens": 28,
+    "tokenHash": "6bf5d928",
+    "reviewedNodes": [
+      "I-0",
+      "12F-0",
+      "18U-0"
+    ],
+    "review": "Hero, mobile validation, and foundations visually checked; hierarchy, spacing, contrast and artboard fit accepted."
+  },
+  "githubPagesRun": "https://github.com/mastermindx-market-intelligence/aerlor/actions/runs/41794688107"
+}

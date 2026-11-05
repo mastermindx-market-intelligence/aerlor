@@ -1,0 +1,30 @@
+{
+  "revision": "hospitality-commerce-r3",
+  "localBrowserTests": {
+    "passed": 61,
+    "skipped": 1,
+    "skipReason": "Desktop copy of a mobile-only navigation test"
+  },
+  "domainAndServerTests": {
+    "passed": 39,
+    "providerMode": "dependency-injected fixtures; no real payment or email"
+  },
+  "sourceContracts": {
+    "passed": 11
+  },
+  "documents": {
+    "count": 10,
+    "pages": 36,
+    "actualPDFRenderReview": true
+  },
+  "routes": 33,
+  "products": 6,
+  "commercialRelease": {
+    "releasedProducts": 0,
+    "approvedPrices": 0,
+    "livePayments": false,
+    "directEmailSubmission": false
+  },
+  "publicSourceScan": "passed",
+  "deploymentProof": "Recorded separately after actual publication."
+}

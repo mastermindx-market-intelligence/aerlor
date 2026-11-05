@@ -1,0 +1,329 @@
+{
+  "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+  "url": "https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0",
+  "pages": {
+    "website": "p-1-0",
+    "states": "p-2-0",
+    "foundations": "p-3-0"
+  },
+  "boards": {
+    "home-desktop": {
+      "id": "1-0",
+      "name": "AERLOR / Home / Desktop 1440",
+      "width": 1440,
+      "sections": [
+        {
+          "selector": ".site-header",
+          "id": "2-0",
+          "surfaceId": "4-0"
+        },
+        {
+          "selector": ".hero",
+          "id": "I-0",
+          "surfaceId": "M-0"
+        },
+        {
+          "selector": ".manifesto",
+          "id": "27-0",
+          "surfaceId": "29-0"
+        },
+        {
+          "selector": ".collection",
+          "id": "2T-0",
+          "surfaceId": "2V-0"
+        },
+        {
+          "selector": ".ritual",
+          "id": "4Z-0",
+          "surfaceId": "51-0"
+        },
+        {
+          "selector": ".details",
+          "id": "5M-0",
+          "surfaceId": "5O-0"
+        },
+        {
+          "selector": ".hospitality",
+          "id": "6L-0",
+          "surfaceId": "6N-0"
+        },
+        {
+          "selector": ".faq",
+          "id": "7Z-0",
+          "surfaceId": "81-0"
+        },
+        {
+          "selector": ".closing",
+          "id": "96-0",
+          "surfaceId": "98-0"
+        },
+        {
+          "selector": ".footer",
+          "id": "9J-0",
+          "surfaceId": "9L-0"
+        }
+      ],
+      "jsx": "reference-jsx/home-desktop.jsx",
+      "screenshot": "screenshots/home-desktop.jpg"
+    },
+    "home-mobile": {
+      "id": "A4-0",
+      "name": "AERLOR / Home / Mobile 390",
+      "width": 390,
+      "sections": [
+        {
+          "selector": ".site-header",
+          "id": "A5-0",
+          "surfaceId": "A7-0"
+        },
+        {
+          "selector": ".hero",
+          "id": "AG-0",
+          "surfaceId": "AI-0"
+        },
+        {
+          "selector": ".manifesto",
+          "id": "CB-0",
+          "surfaceId": "CD-0"
+        },
+        {
+          "selector": ".collection",
+          "id": "D4-0",
+          "surfaceId": "D6-0"
+        },
+        {
+          "selector": ".ritual",
+          "id": "FQ-0",
+          "surfaceId": "FS-0"
+        },
+        {
+          "selector": ".details",
+          "id": "GD-0",
+          "surfaceId": "GF-0"
+        },
+        {
+          "selector": ".hospitality",
+          "id": "HI-0",
+          "surfaceId": "HK-0"
+        },
+        {
+          "selector": ".faq",
+          "id": "IW-0",
+          "surfaceId": "IY-0"
+        },
+        {
+          "selector": ".closing",
+          "id": "K0-0",
+          "surfaceId": "K2-0"
+        },
+        {
+          "selector": ".footer",
+          "id": "KD-0",
+          "surfaceId": "KF-0"
+        }
+      ],
+      "jsx": "reference-jsx/home-mobile.jsx",
+      "screenshot": "screenshots/home-mobile.jpg"
+    },
+    "detail-pro-desktop": {
+      "id": "KT-0",
+      "name": "AERLOR / PRO / desktop",
+      "width": 1000,
+      "sections": [
+        {
+          "selector": "#product-dialog",
+          "id": "KU-0",
+          "surfaceId": "KW-0"
+        }
+      ],
+      "jsx": "reference-jsx/detail-pro-desktop.jsx",
+      "screenshot": "screenshots/detail-pro-desktop.jpg"
+    },
+    "pilot-default-mobile": {
+      "id": "ME-0",
+      "name": "Pilot planner / default / mobile",
+      "width": 390,
+      "sections": [
+        {
+          "selector": "#inquiry-dialog",
+          "id": "MF-0",
+          "surfaceId": "MH-0"
+        }
+      ],
+      "jsx": "reference-jsx/pilot-default-mobile.jsx",
+      "screenshot": "screenshots/pilot-default-mobile.jpg"
+    },
+    "detail-lite-desktop": {
+      "id": "PH-0",
+      "name": "AERLOR / LITE / desktop",
+      "width": 1000,
+      "sections": [
+        {
+          "selector": "#product-dialog",
+          "id": "PI-0",
+          "surfaceId": "PK-0"
+        }
+      ],
+      "jsx": "reference-jsx/detail-lite-desktop.jsx",
+      "screenshot": "screenshots/detail-lite-desktop.jpg"
+    },
+    "pilot-default-desktop": {
+      "id": "R3-0",
+      "name": "Pilot planner / default / desktop",
+      "width": 660,
+      "sections": [
+        {
+          "selector": "#inquiry-dialog",
+          "id": "R4-0",
+          "surfaceId": "R6-0"
+        }
+      ],
+      "jsx": "reference-jsx/pilot-default-desktop.jsx",
+      "screenshot": "screenshots/pilot-default-desktop.jpg"
+    },
+    "pilot-invalid-desktop": {
+      "id": "TR-0",
+      "name": "Pilot planner / validation / desktop",
+      "width": 660,
+      "sections": [
+        {
+          "selector": "#inquiry-dialog",
+          "id": "TS-0",
+          "surfaceId": "TU-0"
+        }
+      ],
+      "jsx": "reference-jsx/pilot-invalid-desktop.jsx",
+      "screenshot": "screenshots/pilot-invalid-desktop.jpg"
+    },
+    "pilot-ready-desktop": {
+      "id": "WI-0",
+      "name": "Pilot planner / local brief ready / desktop",
+      "width": 660,
+      "sections": [
+        {
+          "selector": "#inquiry-dialog",
+          "id": "WJ-0",
+          "surfaceId": "WL-0"
+        }
+      ],
+      "jsx": "reference-jsx/pilot-ready-desktop.jsx",
+      "screenshot": "screenshots/pilot-ready-desktop.jpg"
+    },
+    "detail-pro-mobile": {
+      "id": "Z9-0",
+      "name": "AERLOR / PRO / mobile",
+      "width": 367,
+      "sections": [
+        {
+          "selector": "#product-dialog",
+          "id": "ZA-0",
+          "surfaceId": "ZC-0"
+        }
+      ],
+      "jsx": "reference-jsx/detail-pro-mobile.jsx",
+      "screenshot": "screenshots/detail-pro-mobile.jpg"
+    },
+    "detail-lite-mobile": {
+      "id": "10U-0",
+      "name": "AERLOR / LITE / mobile",
+      "width": 367,
+      "sections": [
+        {
+          "selector": "#product-dialog",
+          "id": "10V-0",
+          "surfaceId": "10X-0"
+        }
+      ],
+      "jsx": "reference-jsx/detail-lite-mobile.jsx",
+      "screenshot": "screenshots/detail-lite-mobile.jpg"
+    },
+    "pilot-invalid-mobile": {
+      "id": "12F-0",
+      "name": "Pilot planner / validation / mobile",
+      "width": 390,
+      "sections": [
+        {
+          "selector": "#inquiry-dialog",
+          "id": "12G-0",
+          "surfaceId": "12I-0"
+        }
+      ],
+      "jsx": "reference-jsx/pilot-invalid-mobile.jsx",
+      "screenshot": "screenshots/pilot-invalid-mobile.jpg"
+    },
+    "pilot-ready-mobile": {
+      "id": "154-0",
+      "name": "Pilot planner / local brief ready / mobile",
+      "width": 390,
+      "sections": [
+        {
+          "selector": "#inquiry-dialog",
+          "id": "155-0",
+          "surfaceId": "157-0"
+        }
+      ],
+      "jsx": "reference-jsx/pilot-ready-mobile.jsx",
+      "screenshot": "screenshots/pilot-ready-mobile.jpg"
+    },
+    "privacy-mobile": {
+      "id": "17T-0",
+      "name": "Privacy and preview notice / mobile",
+      "width": 354,
+      "sections": [
+        {
+          "selector": "#privacy-dialog",
+          "id": "17U-0",
+          "surfaceId": "17W-0"
+        }
+      ],
+      "jsx": "reference-jsx/privacy-mobile.jsx",
+      "screenshot": "screenshots/privacy-mobile.jpg"
+    },
+    "navigation-mobile": {
+      "id": "18D-0",
+      "name": "Navigation / mobile expanded",
+      "width": 390,
+      "sections": [
+        {
+          "selector": "#mobile-menu",
+          "id": "18E-0",
+          "surfaceId": "18G-0"
+        }
+      ],
+      "jsx": "reference-jsx/navigation-mobile.jsx",
+      "screenshot": "screenshots/navigation-mobile.jpg"
+    },
+    "foundations": {
+      "id": "18U-0",
+      "name": "AERLOR / Foundations and components",
+      "width": 1440,
+      "sections": [],
+      "jsx": "reference-jsx/foundations.jsx",
+      "screenshot": "screenshots/foundations.jpg"
+    }
+  },
+  "source": "Native editable Paper frames and text; original artwork is a static asset in Paper. Production uses native exported tokens with responsive application-owned layout and interactions.",
+  "nativeTokenHash": "6bf5d928",
+  "artboardCount": 15,
+  "verification": {
+    "nativeReadback": {
+      "website": {
+        "pageId": "p-1-0",
+        "nodeCount": 550,
+        "artboardCount": 2
+      },
+      "states": {
+        "pageId": "p-2-0",
+        "nodeCount": 644,
+        "artboardCount": 12
+      },
+      "foundations": {
+        "pageId": "p-3-0",
+        "nodeCount": 71,
+        "artboardCount": 1
+      }
+    },
+    "originalArtworkAssetCount": 5,
+    "tokenExportIntegrated": true
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "revision": "premium-tech-r5-2026-11-04",
+  "commercialStatus": "development",
+  "products": [
+    {
+      "id": "dryer-lite",
+      "slug": "hairdryer-lite",
+      "name": "Hairdryer Lite",
+      "family": "hairdryers",
+      "tier": "Lite",
+      "code": "AR-HD-L",
+      "image": "dryer-pearl.svg",
+      "finish": "Pearl",
+      "finishes": [
+        "Pearl"
+      ],
+      "tagline": "The everyday room standard.",
+      "summary": "A clean, compact hairdryer design for guestrooms and serviced apartments. Lite keeps the presentation simple, with a soft-matte Pearl finish.",
+      "story": "An amenity should be easy to find, straightforward to use and simple to put away. Hairdryer Lite starts with those everyday requirements, in a restrained design that works across a room portfolio.",
+      "placement": "Standard guestrooms, serviced apartments and select-service hotels",
+      "material": "Soft-matte shell · Pearl design finish",
+      "highlights": [
+        "Compact visual footprint",
+        "A simple control layout",
+        "A consistent look across rooms"
+      ],
+      "specs": [
+        [
+          "Collection reference",
+          "AR-HD-L",
+          "defined"
+        ],
+        [
+          "Category",
+          "Handheld guestroom hairdryer",
+          "defined"
+        ],
+        [
+          "Finish direction",
+          "Pearl / soft-matte polymer",
+          "proposed"
+        ],
+        [
+          "Motor, airflow and power",
+          "Exact-model measurements required before release",
+          "unverified"
+        ],
+        [
+          "Heat and speed controls",
+          "Final settings to be confirmed with the approved sample",
+          "unverified"
+        ],
+        [
+          "Voltage and plug",
+          "Market-specific version; not represented as universal voltage",
+          "unverified"
+        ],
+        [
+          "Dimensions, mass and cable",
+          "Released with the production specification sheet",
+          "unverified"
+        ],
+        [
+          "Approvals and hotel-use warranty",
+          "Exact-market evidence and written terms required before sale",
+          "unverified"
+        ]
+      ],
+      "roomNote": "Specify the outlet, storage position and cable route alongside the dryer. Include engineering and housekeeping in the sample review.",
+      "document": "hairdryer-lite-specification-brief.pdf",
+      "released": false,
+      "price": null,
+      "studioFamily": "dryer",
+      "studioImage": "studio/dryer-pearl-product.webp"
+    },
+    {
+      "id": "dryer-premium",
+      "slug": "hairdryer-premium",
+      "name": "Hairdryer Premium",
+      "family": "hairdryers",
+      "tier": "Premium",
+      "code": "AR-HD-P",
+      "image": "dryer-champagne.svg",
+      "finish": "Champagne",
+      "finishes": [
+        "Champagne",
+        "Graphite"
+      ],
+      "tagline": "A different kind of everyday.",
+      "summary": "A refined silhouette, a slim handle and a distinctive circular profile. Our signature hairdryer design brings a coordinated finish to premium guestrooms and suites.",
+      "story": "An essential appliance should not feel like an afterthought. Hairdryer Premium brings the shell, controls and intake into one restrained material palette, with a form designed to sit naturally within a modern room.",
+      "placement": "Signature guestrooms, suites, boutique hotels and resorts",
+      "material": "Metal-finish exterior · Graphite or Champagne design finish",
+      "highlights": [
+        "Slim handle and tactile control layout",
+        "Distinctive circular exterior profile",
+        "A coordinated finish for the dressing space"
+      ],
+      "specs": [
+        [
+          "Collection reference",
+          "AR-HD-P; formerly presented as AERLOR PRO",
+          "defined"
+        ],
+        [
+          "Category",
+          "Handheld guestroom hairdryer",
+          "defined"
+        ],
+        [
+          "Finish direction",
+          "Champagne or Graphite / brushed-metal study",
+          "proposed"
+        ],
+        [
+          "Motor, airflow and power",
+          "No performance equivalence or numerical specification claimed",
+          "unverified"
+        ],
+        [
+          "Heat management and acoustics",
+          "Independent sample testing required",
+          "unverified"
+        ],
+        [
+          "Voltage and plug",
+          "A separately approved configuration for each destination market",
+          "unverified"
+        ],
+        [
+          "Dimensions, mass and attachments",
+          "Confirmed against the final production sample",
+          "unverified"
+        ],
+        [
+          "Approvals and hotel-use warranty",
+          "Exact-model certificates and written commercial terms required",
+          "unverified"
+        ]
+      ],
+      "roomNote": "Review the actual unit in your room mock-up. Confirm guest handling, electrical suitability, care and hotel-use terms before choosing a rollout quantity.",
+      "document": "hairdryer-premium-specification-brief.pdf",
+      "released": false,
+      "price": null,
+      "studioFamily": "dryer",
+      "studioImage": "studio/dryer-signature-champagne.webp"
+    },
+    {
+      "id": "mirror-lite",
+      "slug": "makeup-mirror-lite",
+      "name": "Makeup Mirror Lite",
+      "family": "mirrors",
+      "tier": "Lite",
+      "code": "AR-MR-L",
+      "image": "mirror-lite.svg",
+      "finish": "Pearl",
+      "finishes": [
+        "Pearl"
+      ],
+      "tagline": "A useful view, wherever they get ready.",
+      "summary": "A freestanding illuminated-mirror concept with a simple Pearl finish. Designed for desks, compact vanities and getting-ready spaces beyond the bathroom.",
+      "story": "Placement matters as much as appearance. Mirror Lite gives your team a compact freestanding design to evaluate wherever guests sit, prepare and share the room. Specify the view, available space and power arrangement together.",
+      "placement": "Guestroom desks, compact vanities and dressing areas",
+      "material": "Soft-matte frame and base · Pearl design finish",
+      "highlights": [
+        "Freestanding room placement",
+        "A clear circular viewing surface",
+        "A simple, coordinated finish"
+      ],
+      "specs": [
+        [
+          "Collection reference",
+          "AR-MR-L",
+          "defined"
+        ],
+        [
+          "Category",
+          "Freestanding illuminated makeup mirror",
+          "defined"
+        ],
+        [
+          "Finish direction",
+          "Pearl / soft-matte frame and base",
+          "proposed"
+        ],
+        [
+          "Lighting and controls",
+          "Dimming, light output and colour accuracy require sample approval",
+          "unverified"
+        ],
+        [
+          "Viewing surface and magnification",
+          "Final mirror specification to be confirmed",
+          "unverified"
+        ],
+        [
+          "Power and charging",
+          "Power arrangement must be agreed with hotel engineering",
+          "unverified"
+        ],
+        [
+          "Dimensions and base stability",
+          "Production measurements and stability testing required",
+          "unverified"
+        ],
+        [
+          "Cleaning and electrical approval",
+          "Validated care instructions and exact-market evidence required",
+          "unverified"
+        ]
+      ],
+      "roomNote": "Check sightlines, seated use, outlet access and housekeeping clearance in the actual room. Final lighting and optical specifications are confirmed with the approved model.",
+      "document": "makeup-mirror-lite-specification-brief.pdf",
+      "released": false,
+      "price": null,
+      "studioFamily": "mirror",
+      "studioImage": "studio/mirror-pearl-product.webp"
+    },
+    {
+      "id": "mirror-premium",
+      "slug": "makeup-mirror-premium",
+      "name": "Makeup Mirror Premium",
+      "family": "mirrors",
+      "tier": "Premium",
+      "code": "AR-MR-P",
+      "image": "mirror-premium.svg",
+      "finish": "Graphite",
+      "finishes": [
+        "Graphite",
+        "Champagne"
+      ],
+      "tagline": "Bring the dressing space into focus.",
+      "summary": "An illuminated circular mirror with a slim metal-finish frame and a stable-base design. A coordinated focal point for the suite or dressing table.",
+      "story": "A dressing space should work as well as it looks. Mirror Premium combines a clean silhouette with the same finish language as our Premium haircare tools. The design brief treats light, viewing position and daily handling as one problem—not separate accessories.",
+      "placement": "Suites, dressing tables and premium guestrooms",
+      "material": "Metal-finish frame and base · Graphite or Champagne design finish",
+      "highlights": [
+        "Slim circular frame",
+        "A coordinated dressing-table setup",
+        "Freestanding base design"
+      ],
+      "specs": [
+        [
+          "Collection reference",
+          "AR-MR-P",
+          "defined"
+        ],
+        [
+          "Category",
+          "Premium freestanding illuminated makeup mirror",
+          "defined"
+        ],
+        [
+          "Finish direction",
+          "Champagne or Graphite / metal-finish study",
+          "proposed"
+        ],
+        [
+          "Light quality and adjustment",
+          "Colour rendering, colour temperature and dimming are not yet validated",
+          "unverified"
+        ],
+        [
+          "Magnification and viewing angle",
+          "Final optical configuration requires sample approval",
+          "unverified"
+        ],
+        [
+          "Power and location suitability",
+          "Confirm the market-specific electrical arrangement and installation location",
+          "unverified"
+        ],
+        [
+          "Dimensions, weight and materials",
+          "Production data to accompany the approved sample",
+          "unverified"
+        ],
+        [
+          "Hospitality-use warranty",
+          "Written coverage and service terms required before sale",
+          "unverified"
+        ]
+      ],
+      "roomNote": "Evaluate the mirror in its intended position. Confirm light quality, optical specification, stability, electrical suitability and approved cleaning instructions.",
+      "document": "makeup-mirror-premium-specification-brief.pdf",
+      "released": false,
+      "price": null,
+      "studioFamily": "mirror",
+      "studioImage": "studio/mirror-graphite-product.webp"
+    },
+    {
+      "id": "curler-lite",
+      "slug": "curler-lite",
+      "name": "Curler Lite",
+      "family": "curlers",
+      "tier": "Lite",
+      "code": "AR-CL-L",
+      "image": "curler-lite.svg",
+      "finish": "Pearl",
+      "finishes": [
+        "Pearl"
+      ],
+      "tagline": "A thoughtful extra, on request.",
+      "summary": "An essential curling-tool concept for a managed guest lending program. Lite offers a simple Pearl finish for an amenity that does not need to occupy every room.",
+      "story": "For a wedding, a dinner or an unexpected change of plans, a styling tool can be a useful service. Start with a small on-request program, then use real demand to decide the right stock level. Safe handling, cooling and inspection belong in the program from the start.",
+      "placement": "Managed guest lending and event preparation",
+      "material": "Soft-matte handle · Pearl design finish",
+      "highlights": [
+        "Designed around an on-request service",
+        "A straightforward handle layout",
+        "A compact storage brief"
+      ],
+      "specs": [
+        [
+          "Collection reference",
+          "AR-CL-L",
+          "defined"
+        ],
+        [
+          "Category",
+          "Heated curling tool for a managed amenity program",
+          "defined"
+        ],
+        [
+          "Finish direction",
+          "Pearl / soft-matte handle",
+          "proposed"
+        ],
+        [
+          "Barrel size and coating",
+          "Final production configuration is not yet selected",
+          "unverified"
+        ],
+        [
+          "Temperature and controls",
+          "Range, accuracy and controls require independent verification",
+          "unverified"
+        ],
+        [
+          "Automatic shutoff and heat rest",
+          "Safety features must be evidenced on the exact approved model",
+          "unverified"
+        ],
+        [
+          "Voltage, plug and cord",
+          "Destination-specific electrical compatibility required",
+          "unverified"
+        ],
+        [
+          "Lending kit and cleaning",
+          "Contents, cooling time and approved cleaning procedure to be confirmed",
+          "unverified"
+        ]
+      ],
+      "roomNote": "Introduce heated tools only after exact-model approval and a documented lend, return, cool and inspect procedure.",
+      "document": "curler-lite-specification-brief.pdf",
+      "released": false,
+      "price": null,
+      "studioFamily": "curler",
+      "studioImage": "studio/curler-pearl-product.webp"
+    },
+    {
+      "id": "curler-premium",
+      "slug": "curler-premium",
+      "name": "Curler Premium",
+      "family": "curlers",
+      "tier": "Premium",
+      "code": "AR-CL-P",
+      "image": "curler-premium.svg",
+      "finish": "Graphite",
+      "finishes": [
+        "Graphite",
+        "Champagne"
+      ],
+      "tagline": "Complete the suite’s styling offer.",
+      "summary": "A coordinated curling-tool design for high-touch guest services. Premium pairs metal accents with the finish palette of the dryer and mirror.",
+      "story": "Create a styling service that feels like part of the property. Curler Premium complements the suite’s haircare and vanity setup, while a managed lending approach keeps the operational requirements visible. Final heat settings, safety features and kit contents are confirmed with the production model.",
+      "placement": "Concierge-led lending, signature suites and event-focused hotels",
+      "material": "Metal-accented handle · Graphite or Champagne design finish",
+      "highlights": [
+        "A matching Premium finish palette",
+        "A suite and concierge-service brief",
+        "A presentation-led storage concept"
+      ],
+      "specs": [
+        [
+          "Collection reference",
+          "AR-CL-P",
+          "defined"
+        ],
+        [
+          "Category",
+          "Premium heated curling tool",
+          "defined"
+        ],
+        [
+          "Finish direction",
+          "Champagne or Graphite / metal-accented study",
+          "proposed"
+        ],
+        [
+          "Barrel, coating and temperature",
+          "Final size, material and settings require production validation",
+          "unverified"
+        ],
+        [
+          "Heat protection and automatic shutoff",
+          "No safety feature is represented as certified until verified",
+          "unverified"
+        ],
+        [
+          "Electrical configuration",
+          "Exact-market model and plug to be specified",
+          "unverified"
+        ],
+        [
+          "Presentation kit and accessories",
+          "Case, rest and instructions are proposed; contents unconfirmed",
+          "unverified"
+        ],
+        [
+          "Commercial use and service",
+          "Hotel-use warranty, replacement process and care terms required",
+          "unverified"
+        ]
+      ],
+      "roomNote": "Define who issues the tool, how it is delivered and who checks it on return. Confirm exact-model safety evidence before guest use.",
+      "document": "curler-premium-specification-brief.pdf",
+      "released": false,
+      "price": null,
+      "studioFamily": "curler",
+      "studioImage": "studio/curler-graphite-product.webp"
+    }
+  ]
+}

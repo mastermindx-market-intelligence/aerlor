@@ -1,0 +1,520 @@
+{
+  "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+  "pageId": "p-4-0",
+  "boards": {
+    "home-direction": {
+      "id": "1BE-0",
+      "name": "R4 / Home / Precision technology / 1440",
+      "width": 1440,
+      "height": 980,
+      "sections": [
+        {
+          "name": "navigation"
+        },
+        {
+          "name": "hero"
+        },
+        {
+          "name": "buyer-paths"
+        }
+      ],
+      "jsx": "reference-jsx/home-direction.jsx",
+      "screenshot": "screenshots/home-direction.jpg"
+    },
+    "home-mobile": {
+      "id": "1CJ-0",
+      "name": "R4 / home / mobile / 390",
+      "width": 390,
+      "height": 9500.28125,
+      "route": "",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "1CK-0",
+          "height": 72
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "1CX-0",
+          "height": 927.078125
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "1E6-0",
+          "height": 311.640625
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "1EW-0",
+          "height": 1918
+        },
+        {
+          "index": 4,
+          "selector": "main > :nth-child(4)",
+          "id": "1GT-0",
+          "height": 1354.21875
+        },
+        {
+          "index": 5,
+          "selector": "main > :nth-child(5)",
+          "id": "1I6-0",
+          "height": 1212.90625
+        },
+        {
+          "index": 6,
+          "selector": "main > :nth-child(6)",
+          "id": "1J9-0",
+          "height": 788.21875
+        },
+        {
+          "index": 7,
+          "selector": "main > :nth-child(7)",
+          "id": "1JR-0",
+          "height": 1740.96875
+        },
+        {
+          "index": 8,
+          "selector": "main > :nth-child(8)",
+          "id": "1MD-0",
+          "height": 393.75
+        },
+        {
+          "index": 9,
+          "selector": ".site-footer",
+          "id": "1MR-0",
+          "height": 781.5
+        }
+      ],
+      "screenshot": "screenshots/home-mobile.jpg",
+      "jsx": "reference-jsx/home-mobile.jsx"
+    },
+    "home-desktop": {
+      "id": "1ON-0",
+      "name": "R4 / home / desktop / 1440",
+      "width": 1440,
+      "height": 5635.125,
+      "route": "",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "1OO-0",
+          "height": 80
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "1PD-0",
+          "height": 750
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "1QM-0",
+          "height": 124.828125
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "1RC-0",
+          "height": 919.78125
+        },
+        {
+          "index": 4,
+          "selector": "main > :nth-child(4)",
+          "id": "1T7-0",
+          "height": 847.5625
+        },
+        {
+          "index": 5,
+          "selector": "main > :nth-child(5)",
+          "id": "1UK-0",
+          "height": 775.1875
+        },
+        {
+          "index": 6,
+          "selector": "main > :nth-child(6)",
+          "id": "1VN-0",
+          "height": 600
+        },
+        {
+          "index": 7,
+          "selector": "main > :nth-child(7)",
+          "id": "1W5-0",
+          "height": 815.8125
+        },
+        {
+          "index": 8,
+          "selector": "main > :nth-child(8)",
+          "id": "1YR-0",
+          "height": 279.96875
+        },
+        {
+          "index": 9,
+          "selector": ".site-footer",
+          "id": "1Z5-0",
+          "height": 441.984375
+        }
+      ],
+      "screenshot": "screenshots/home-desktop.jpg",
+      "jsx": "reference-jsx/home-desktop.jsx"
+    },
+    "collection-desktop": {
+      "id": "211-0",
+      "name": "R4 / collection / desktop / 1440",
+      "width": 1440,
+      "height": 2835.671875,
+      "route": "collection/",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "212-0",
+          "height": 80
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "21R-0",
+          "height": 400.5625
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "220-0",
+          "height": 1633.15625
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "27F-0",
+          "height": 279.96875
+        },
+        {
+          "index": 4,
+          "selector": ".site-footer",
+          "id": "27T-0",
+          "height": 441.984375
+        }
+      ],
+      "screenshot": "screenshots/collection-desktop.jpg",
+      "jsx": "reference-jsx/collection-desktop.jsx"
+    },
+    "product-desktop": {
+      "id": "29P-0",
+      "name": "R4 / product / desktop / 1440",
+      "width": 1440,
+      "height": 5196.984375,
+      "route": "products/hairdryer-premium/",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "29Q-0",
+          "height": 80
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "2AF-0",
+          "height": 60
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "2AQ-0",
+          "height": 78
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "2B2-0",
+          "height": 830.28125
+        },
+        {
+          "index": 4,
+          "selector": "main > :nth-child(4)",
+          "id": "2D6-0",
+          "height": 329.25
+        },
+        {
+          "index": 5,
+          "selector": "main > :nth-child(5)",
+          "id": "2DG-0",
+          "height": 682
+        },
+        {
+          "index": 6,
+          "selector": "main > :nth-child(6)",
+          "id": "2E9-0",
+          "height": 870
+        },
+        {
+          "index": 7,
+          "selector": "main > :nth-child(7)",
+          "id": "2H9-0",
+          "height": 527.8125
+        },
+        {
+          "index": 8,
+          "selector": "main > :nth-child(8)",
+          "id": "2I3-0",
+          "height": 1297.65625
+        },
+        {
+          "index": 9,
+          "selector": ".site-footer",
+          "id": "2KA-0",
+          "height": 441.984375
+        }
+      ],
+      "screenshot": "screenshots/product-desktop.jpg",
+      "jsx": "reference-jsx/product-desktop.jsx"
+    },
+    "product-mobile": {
+      "id": "2M6-0",
+      "name": "R4 / product / mobile / 390",
+      "width": 390,
+      "height": 7293.375,
+      "route": "products/makeup-mirror-premium/",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "2M7-0",
+          "height": 72
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "2MK-0",
+          "height": 58
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "2MT-0",
+          "height": 72
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "2N5-0",
+          "height": 1312.03125
+        },
+        {
+          "index": 4,
+          "selector": "main > :nth-child(4)",
+          "id": "2P9-0",
+          "height": 437.25
+        },
+        {
+          "index": 5,
+          "selector": "main > :nth-child(5)",
+          "id": "2PJ-0",
+          "height": 826.78125
+        },
+        {
+          "index": 6,
+          "selector": "main > :nth-child(6)",
+          "id": "2QC-0",
+          "height": 1272.3125
+        },
+        {
+          "index": 7,
+          "selector": "main > :nth-child(7)",
+          "id": "2TC-0",
+          "height": 860.9375
+        },
+        {
+          "index": 8,
+          "selector": "main > :nth-child(8)",
+          "id": "2U6-0",
+          "height": 1600.5625
+        },
+        {
+          "index": 9,
+          "selector": ".site-footer",
+          "id": "2WD-0",
+          "height": 781.5
+        }
+      ],
+      "screenshot": "screenshots/product-mobile.jpg",
+      "jsx": "reference-jsx/product-mobile.jsx"
+    },
+    "hotels-desktop": {
+      "id": "2Y9-0",
+      "name": "R4 / hotels / desktop / 1440",
+      "width": 1440,
+      "height": 5547.046875,
+      "route": "hospitality/",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "2YA-0",
+          "height": 80
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "2YZ-0",
+          "height": 624
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "2ZC-0",
+          "height": 124.828125
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "302-0",
+          "height": 543.828125
+        },
+        {
+          "index": 4,
+          "selector": "main > :nth-child(4)",
+          "id": "311-0",
+          "height": 881.46875
+        },
+        {
+          "index": 5,
+          "selector": "main > :nth-child(5)",
+          "id": "32W-0",
+          "height": 655.6875
+        },
+        {
+          "index": 6,
+          "selector": "main > :nth-child(6)",
+          "id": "33Q-0",
+          "height": 477.5625
+        },
+        {
+          "index": 7,
+          "selector": "main > :nth-child(7)",
+          "id": "34H-0",
+          "height": 621.90625
+        },
+        {
+          "index": 8,
+          "selector": "main > :nth-child(8)",
+          "id": "365-0",
+          "height": 815.8125
+        },
+        {
+          "index": 9,
+          "selector": "main > :nth-child(9)",
+          "id": "38R-0",
+          "height": 279.96875
+        },
+        {
+          "index": 10,
+          "selector": ".site-footer",
+          "id": "395-0",
+          "height": 441.984375
+        }
+      ],
+      "screenshot": "screenshots/hotels-desktop.jpg",
+      "jsx": "reference-jsx/hotels-desktop.jsx"
+    },
+    "project-desktop": {
+      "id": "3B1-0",
+      "name": "R4 / project / desktop / 1440",
+      "width": 1440,
+      "height": 3274.78125,
+      "route": "hospitality/wholesale/",
+      "sections": [
+        {
+          "index": 0,
+          "selector": ".site-header",
+          "id": "3B2-0",
+          "height": 80
+        },
+        {
+          "index": 1,
+          "selector": "main > :nth-child(1)",
+          "id": "3BR-0",
+          "height": 400.5625
+        },
+        {
+          "index": 2,
+          "selector": "main > :nth-child(2)",
+          "id": "3C0-0",
+          "height": 1039.40625
+        },
+        {
+          "index": 3,
+          "selector": "main > :nth-child(3)",
+          "id": "3FC-0",
+          "height": 497.015625
+        },
+        {
+          "index": 4,
+          "selector": "main > :nth-child(4)",
+          "id": "3GN-0",
+          "height": 815.8125
+        },
+        {
+          "index": 5,
+          "selector": ".site-footer",
+          "id": "3J9-0",
+          "height": 441.984375
+        }
+      ],
+      "screenshot": "screenshots/project-desktop.jpg",
+      "jsx": "reference-jsx/project-desktop.jsx"
+    },
+    "foundations": {
+      "id": "3L5-0",
+      "name": "R4 / Foundations / Precision system",
+      "width": 1440,
+      "height": 1190,
+      "sections": [
+        {
+          "name": "header",
+          "id": "3L6-0"
+        },
+        {
+          "name": "palette",
+          "id": "3LB-0"
+        },
+        {
+          "name": "type",
+          "id": "3M9-0"
+        },
+        {
+          "name": "controls",
+          "id": "3MI-0"
+        },
+        {
+          "name": "handoff",
+          "id": "3N0-0"
+        }
+      ],
+      "screenshot": "screenshots/foundations.jpg",
+      "jsx": "reference-jsx/foundations.jsx"
+    }
+  },
+  "revision": "precision-r4",
+  "artboardCount": 9,
+  "tokenCount": 25,
+  "tokenHash": "f27aa63e",
+  "url": "https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-4-0",
+  "source": "Native editable Paper frames and text with original studio image assets. Initial direction and tokens were authored in Paper before implementation. Final application layouts were reconciled into the native file. Browser code owns responsive behaviour and interactions.",
+  "polish": {
+    "secondaryLabelContrast": 58,
+    "detailCaptions": 2,
+    "projectConsentWrapping": "fixed and re-rendered"
+  },
+  "verification": {
+    "pageId": "p-4-0",
+    "nodeCount": 2740,
+    "artboardCount": 9
+  }
+}

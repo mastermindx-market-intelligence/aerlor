@@ -1,0 +1,56 @@
+[
+  {
+    "name": "home-desktop",
+    "httpStatus": 200,
+    "width": 1440,
+    "overflow": false,
+    "headings": 1,
+    "broken": [],
+    "errors": []
+  },
+  {
+    "name": "mirror-desktop",
+    "httpStatus": 200,
+    "width": 1440,
+    "overflow": false,
+    "headings": 1,
+    "broken": [],
+    "errors": []
+  },
+  {
+    "name": "hotel-desktop",
+    "httpStatus": 200,
+    "width": 1440,
+    "overflow": false,
+    "headings": 1,
+    "broken": [],
+    "errors": []
+  },
+  {
+    "name": "collection-mobile",
+    "httpStatus": 200,
+    "width": 390,
+    "overflow": false,
+    "headings": 1,
+    "broken": [],
+    "errors": []
+  },
+  {
+    "name": "curler-mobile",
+    "httpStatus": 200,
+    "width": 390,
+    "overflow": false,
+    "headings": 1,
+    "broken": [],
+    "errors": []
+  },
+  {
+    "name": "wholesale-mobile",
+    "httpStatus": 200,
+    "width": 390,
+    "overflow": false,
+    "headings": 1,
+    "broken": [],
+    "errors": []
+  }
+]
