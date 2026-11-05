@@ -1,4 +1,5 @@
 import {products,e,url,arrow,downloadIcon,link,small,eye,stageImage,sectionTitle,grid,calculator,inquiryForm,subnav,crumb,resourceCard,docs} from './r4/ui.mjs';
+import {retailPremiumPage} from './r8-retail.mjs';
 const image=(path,alt,cls='',priority=false)=>`<img class="${cls}" src="/images/${path}" alt="${e(alt)}" width="1145" height="1374" ${priority?'fetchpriority="high"':'loading="lazy"'}>`;
 const signature=(view='product',cls='',priority=false)=>image(`studio/dryer-signature-${view==='detail'?'detail':'champagne'}.webp`,'AERLOR Hairdryer Premium in Champagne — preproduction design visualization',cls,priority);
 export function home(){return `<section class="r5-hero" aria-labelledby="hero-title"><div class="r5-hero-copy">${eye('AERLOR / HOSPITALITY COLLECTION')}<h1 id="hero-title">The essentials.<br>Reimagined.</h1><p class="hero-description">Hairdryers, illuminated mirrors and styling tools. Premium design for the modern hotel room.</p><div class="hero-actions">${link('Explore products','collection/','button-light')}${small('For hotels','hospitality/')}</div></div><div class="r5-hero-art">${signature('product','r5-signature',true)}<div class="r5-art-label"><a href="${url('products/hairdryer-premium/')}">Hairdryer Premium ${arrow}</a><span>Champagne · Design study</span></div></div></section>
@@ -17,6 +18,7 @@ ${calculator()}
 <section class="section-pad r5-downloads">${sectionTitle('TAKE IT TO YOUR NEXT MEETING','The information to move forward.')}<div class="resource-grid">${docs.slice(0,3).map(resourceCard).join('')}</div></section>`;}
 export function productPage(p){
  const premiumDryer=p.id==='dryer-premium';
+ if(premiumDryer)return retailPremiumPage(p,interactiveStudy());
  const initial=premiumDryer?'studio/dryer-signature-champagne.webp':p.studioImage;
  const detail=premiumDryer?'studio/dryer-signature-detail.webp':`studio/${p.studioFamily}-${p.finish.toLowerCase()}-detail.webp`;
  const gallery=[['product','Product',initial],['detail','Detail',detail],...(premiumDryer?[['in-room','In the room','campaign/vanity-editorial.webp'],['presentation','Presentation','campaign/kit-flatlay.webp']]:[])];
