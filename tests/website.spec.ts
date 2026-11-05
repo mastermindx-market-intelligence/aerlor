@@ -17,15 +17,45 @@ test('primary navigation sends buyers to real collection and hotel pages',async(
 test('homepage product presentation never requires WebGL or eager 3D loading',async({page})=>{
  await expect(page.locator('.r5-signature')).toBeVisible();await expect(page.locator('canvas')).toHaveCount(0);expect(await page.evaluate(()=>performance.getEntriesByType('resource').some(r=>/studio-models/.test(r.name)))).toBe(false);
 });
-test('product galleries change views accessibly and preserve the selected order configuration',async({page})=>{
- await product(page);await page.getByRole('button',{name:'Detail view',exact:true}).click();await expect(page.locator('[data-gallery-image]')).toHaveAttribute('src',/dryer-signature-detail\.webp$/);await expect(page.getByRole('button',{name:'Detail view',exact:true})).toHaveAttribute('aria-pressed','true');
- await page.getByRole('button',{name:'In the room view',exact:true}).click();await expect(page.locator('#gallery-caption')).toContainText('room-placement');await expect(page.locator('[data-product-finish]')).toHaveValue('Champagne');
- await page.locator('[data-product-finish]').selectOption('Graphite');await expect(page.locator('[data-gallery-image]')).toHaveAttribute('src',/travel-case\.webp$/);await expect(page.locator('#gallery-caption')).toContainText('Graphite');await expect(page.getByRole('button',{name:'Product view',exact:true})).toHaveAttribute('aria-pressed','true');
- await page.getByRole('button',{name:'Presentation view',exact:true}).click();await expect(page.locator('#gallery-caption')).toContainText('Champagne');await expect(page.locator('[data-product-finish]')).toHaveValue('Graphite');
+test('retail flagship uses original gallery studies and preserves the selected concept',async({page})=>{
+ await product(page);
+ const retail=page.locator('[data-retail-root]');
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/product-porcelain\.png$/);
+ await retail.getByRole('button',{name:'Outlet detail view'}).click();
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/macro-outlet\.png$/);
+ await retail.getByRole('button',{name:'Controls detail view'}).click();
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/macro-controls\.png$/);
+ await retail.getByRole('button',{name:'Intake detail view'}).click();
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/macro-intake\.png$/);
+ await retail.getByRole('button',{name:'In use view'}).click();
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/ritual-model\.jpg$/);
+ await expect(page.locator('#gallery-caption')).toContainText('lifestyle visualization');
+ await retail.getByRole('button',{name:'Stone finish'}).click();
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/product-stone\.png$/);
+ await expect(retail.locator('[data-product-finish]')).toHaveValue('Stone');
+ await retail.getByRole('button',{name:'Graphite finish'}).click();
+ await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/product-graphite\.png$/);
+ await expect(retail.locator('[data-product-finish]')).toHaveValue('Graphite');
+ await expect(retail.getByRole('button',{name:'Graphite finish'})).toHaveAttribute('aria-pressed','true');
+ await retail.getByRole('button',{name:'Increase quantity'}).click();
+ await expect(retail.locator('[data-product-quantity]')).toHaveValue('2');
+ await retail.getByRole('button',{name:'Save to project bag'}).click();
+ await expect(page.locator('#cart-notice')).toContainText('added to your project');
+ await page.goto('./cart/',{waitUntil:'domcontentloaded'});
+ await expect(page.locator('.cart-line')).toContainText('Graphite');
+});
+test('retail lightbox opens and closes with keyboard focus restored',async({page})=>{
+ await product(page);
+ const zoom=page.getByRole('button',{name:'View larger product image'});
+ await zoom.click();
+ await expect(page.getByRole('dialog',{name:'Enlarged product image'})).toBeVisible();
+ await page.keyboard.press('Escape');
+ await expect(page.getByRole('dialog',{name:'Enlarged product image'})).not.toBeVisible();
+ await expect(zoom).toBeFocused();
 });
 test('optional geometry study is not represented as the production product',async({page})=>{
  await product(page);await expect(page.locator('.r5-model-study')).toContainText('not production CAD');await expect(page.locator('#product-stage')).toHaveAttribute('data-scene','static');await expect(page.locator('#scene-canvas canvas')).toHaveCount(0);
- for(const [label,key]of [['Champagne','champagne'],['Pearl','pearl'],['Graphite','graphite']]){const button=page.getByRole('button',{name:`${label} finish`,exact:true});await button.click();await expect(button).toHaveAttribute('aria-pressed','true');await expect(page.locator('.hero-fallback')).toHaveAttribute('src',new RegExp(`dryer-${key}-hero\\.webp$`));}
+ for(const [label,key]of [['Champagne','champagne'],['Pearl','pearl'],['Graphite','graphite']]){const button=page.locator('.r5-model-study').getByRole('button',{name:`${label} finish`,exact:true});await button.click();await expect(button).toHaveAttribute('aria-pressed','true');await expect(page.locator('.hero-fallback')).toHaveAttribute('src',new RegExp(`dryer-${key}-hero\\.webp$`));}
 });
 test('optional 3D inspection supports keyboard controls and focus return',async({page})=>{
  await product(page);await page.getByRole('button',{name:'Inspect in 3D'}).click();await expect(page.locator('#product-stage')).toHaveAttribute('data-scene',/ready|fallback/,{timeout:30000});
@@ -35,7 +65,7 @@ test('optional 3D inspection supports keyboard controls and focus return',async(
 test('3D enhancement failure preserves a useful static product study',async({page})=>{
  await product(page);await page.route('**/*studio-models*.js',route=>route.abort());await page.getByRole('button',{name:'Inspect in 3D'}).click();await expect(page.locator('#product-stage')).toHaveAttribute('data-scene','fallback',{timeout:30000});await expect(page.locator('.hero-fallback')).toBeVisible();await expect(page.locator('#viewer-status')).toContainText('could not load');
 });
-test('finish and gallery controls have usable touch targets',async({page})=>{await product(page);for(const el of await page.locator('[data-finish],[data-gallery-view]').all()){const box=await el.boundingBox();expect(box?.width).toBeGreaterThanOrEqual(44);expect(box?.height).toBeGreaterThanOrEqual(44);}});
+test('finish and gallery controls have usable touch targets',async({page})=>{await product(page);for(const el of await page.locator('[data-finish],[data-retail-view],[data-retail-swatch]').all()){const box=await el.boundingBox();expect(box?.width).toBeGreaterThanOrEqual(44);expect(box?.height).toBeGreaterThanOrEqual(44);}});
 test('mobile navigation restores focus and reaches the collection',async({page,isMobile})=>{
  test.skip(!isMobile,'Mobile-specific interaction');const toggle=page.getByRole('button',{name:'Open menu'});await toggle.click();await expect(page.locator('#mobile-menu')).toBeVisible();await page.keyboard.press('Escape');await expect(toggle).toBeFocused();await expect(page.locator('#mobile-menu')).toBeHidden();await toggle.click();await page.locator('#mobile-menu').getByRole('link',{name:'All products',exact:true}).click();await expect(page.locator('h1')).toContainText('A complete room.');
 });
