@@ -80,17 +80,19 @@
       "family": "hairdryers",
       "tier": "Premium",
       "code": "AR-HD-P",
-      "image": "dryer-champagne.svg",
-      "finish": "Champagne",
+      "image": "dryer-pearl.svg",
+      "finish": "Porcelain White",
       "finishes": [
-        "Champagne",
-        "Graphite"
+        "Porcelain White",
+        "Stone",
+        "Graphite",
+        "Champagne"
       ],
       "tagline": "A different kind of everyday.",
       "summary": "A refined silhouette, a slim handle and a distinctive circular profile. Our signature hairdryer design brings a coordinated finish to premium guestrooms and suites.",
       "story": "An essential appliance should not feel like an afterthought. Hairdryer Premium brings the shell, controls and intake into one restrained material palette, with a form designed to sit naturally within a modern room.",
       "placement": "Signature guestrooms, suites, boutique hotels and resorts",
-      "material": "Metal-finish exterior · Graphite or Champagne design finish",
+      "material": "Porcelain White, Stone, Graphite and Champagne concept finish directions",
       "highlights": [
         "Slim handle and tactile control layout",
         "Distinctive circular exterior profile",
@@ -109,7 +111,7 @@
         ],
         [
           "Finish direction",
-          "Champagne or Graphite / brushed-metal study",
+          "Porcelain White, Stone, Graphite and Champagne / preproduction visual studies",
           "proposed"
         ],
         [
@@ -143,7 +145,7 @@
       "released": false,
       "price": null,
       "studioFamily": "dryer",
-      "studioImage": "studio/dryer-signature-champagne.webp"
+      "studioImage": "retail/product-porcelain.png"
     },
     {
       "id": "mirror-lite",
