@@ -4,7 +4,14 @@ import {readFile} from 'node:fs/promises';
 import catalog from '../src/catalog.json' with {type:'json'};
 import pagesManifest from '../storefront-pages.json' with {type:'json'};
 const config={checkoutEnabled:false,inquiryEnabled:false,mode:'development',contactEmail:'contact@example.com',turnstileSiteKey:null,prices:[]};
-const navigate=async(page:Page,path:string)=>{await page.goto('./'+path,{waitUntil:'domcontentloaded'});await expect(page.locator('body')).toHaveAttribute('data-runtime-ready','true');};
+const navigate=async(page:Page,path:string)=>{
+ await page.goto('./'+path,{waitUntil:'domcontentloaded'});
+ await expect(page.locator('body')).toHaveAttribute('data-runtime-ready','true');
+ // A cached module can finish before WebKit applies the route's render-blocking CSS.
+ // Assert the real presentation boundary before taking geometry measurements.
+ await page.waitForFunction(()=>Array.from(document.querySelectorAll<HTMLLinkElement>('link[rel=stylesheet]')).filter(link=>new URL(link.href).origin===location.origin).every(link=>Boolean(link.sheet))&&getComputedStyle(document.body).marginTop==='0px');
+ await page.evaluate(async()=>{await document.fonts.ready;await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));});
+};
 async function fillProject(page:Page){
  await page.getByLabel('Your name',{exact:true}).fill('Alex Morgan');await page.getByLabel('Work email',{exact:true}).fill('alex@example.com');await page.getByLabel('Hotel, group or studio',{exact:true}).fill('Example Hotel');await page.getByLabel('Country',{exact:true}).selectOption('CA');await page.getByLabel('Number of rooms',{exact:true}).fill('120');await page.getByLabel('Your role',{exact:true}).selectOption('Procurement');await page.getByLabel('Project timing',{exact:true}).selectOption('Exploring options');await page.getByLabel('Hairdryers',{exact:true}).check();await page.locator('[name=message]').fill('A coordinated guestroom pilot.');await page.locator('[name=consent]').check();
 }
@@ -18,13 +25,13 @@ test('all 33 routes have real content, correct titles and no runtime errors',asy
 test('collection filters combine product family and Lite/Premium without stale counts',async({page})=>{
  await navigate(page,'collection/');await expect(page.locator('[data-catalog-card]:visible')).toHaveCount(6);
  await page.getByRole('button',{name:'Mirrors',exact:true}).click();await expect(page.locator('[data-catalog-card]:visible')).toHaveCount(2);await page.locator('#tier-filter').selectOption('Premium');await expect(page.locator('[data-catalog-card]:visible')).toHaveCount(1);await expect(page.locator('#filter-count')).toHaveText('1 collection concept');await expect(page.locator('[data-catalog-card]:visible h3')).toContainText('Makeup Mirror Premium');
- await page.getByRole('button',{name:'All',exact:true}).click();await expect(page.locator('[data-catalog-card]:visible')).toHaveCount(3);
+ await page.getByRole('button',{name:'All products',exact:true}).click();await expect(page.locator('[data-catalog-card]:visible')).toHaveCount(3);
 });
 test('every product has a status-labelled specification, PDF and correct purchase boundary',async({page})=>{
  test.setTimeout(90000);for(const p of catalog.products){await navigate(page,'products/'+p.slug+'/');await expect(page.locator('h1')).toContainText(p.tier);await expect(page.locator('#specifications tbody tr')).toHaveCount(8);await expect(page.locator('#specifications')).toContainText('unverified');await expect(page.locator('[data-add]').first()).toHaveText(/Add to your project/);await expect(page.locator('.product-utility a[download]')).toHaveAttribute('href',new RegExp(p.document.replaceAll('.','\\.')));}
 });
 test('a selected finish and quantity persist across pages as product data only',async({page})=>{
- await navigate(page,'products/makeup-mirror-premium/');await page.locator('[data-product-finish]').selectOption('Graphite');await expect(page.locator('[data-gallery-image]')).toHaveAttribute('src',/mirror-graphite\.svg$/);await page.locator('[data-product-quantity]').fill('3');await page.locator('[data-add]').first().click();await expect(page.locator('#cart-notice')).toContainText('added');await navigate(page,'cart/');await expect(page.locator('.cart-line')).toHaveCount(1);await expect(page.locator('.cart-line')).toContainText('Graphite');await expect(page.locator('#cart-units')).toHaveText('3');await expect(page.locator('#cart-subtotal')).toHaveText('Price on request');
+ await navigate(page,'products/makeup-mirror-premium/');await page.locator('[data-product-finish]').selectOption('Graphite');await expect(page.locator('[data-gallery-image]')).toHaveAttribute('src',/mirror-graphite-product\.webp$/);await page.locator('[data-product-quantity]').fill('3');await page.locator('[data-add]').first().click();await expect(page.locator('#cart-notice')).toContainText('added');await navigate(page,'cart/');await expect(page.locator('.cart-line')).toHaveCount(1);await expect(page.locator('.cart-line')).toContainText('Graphite');await expect(page.locator('#cart-units')).toHaveText('3');await expect(page.locator('#cart-subtotal')).toHaveText('Price on request');
  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('aerlor-project-v1')||'null'));expect(stored).toEqual({version:1,items:[{id:'mirror-premium',finish:'Graphite',quantity:3}]});
  await page.getByRole('spinbutton',{name:'Makeup Mirror Premium Graphite quantity'}).fill('5');await page.getByRole('spinbutton',{name:'Makeup Mirror Premium Graphite quantity'}).blur();await expect(page.locator('#cart-units')).toHaveText('5');await page.getByRole('button',{name:'Remove Makeup Mirror Premium Graphite'}).click();await expect(page.locator('#cart-empty')).toBeVisible();
 });
@@ -68,4 +75,14 @@ test('all inner pages reflow at 320 pixels without horizontal scrolling',async({
 });
 test('hotel anecdotes are attributed and do not masquerade as AERLOR customer outcomes',async({page})=>{
  await navigate(page,'journal/the-getting-ready-gap/');await expect(page.locator('.source-notes article')).toHaveCount(6);await expect(page.locator('.editorial-article')).toContainText('not AERLOR customers or partners');await expect(page.locator('.evidence-caption')).toContainText('not AERLOR reviews');
+});
+
+test('fallback typography stays usable when external fonts are blocked',async({page})=>{
+ test.setTimeout(90000);await page.route('https://fonts.googleapis.com/**',route=>route.abort());await page.route('https://fonts.gstatic.com/**',route=>route.abort());
+ for(const path of ['hospitality/groups/','products/makeup-mirror-premium/','hospitality/wholesale/','pricing/']){await navigate(page,path);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),path).toBe(true);}
+});
+
+
+test('homepage, product and hotel journeys fit intermediate tablet widths',async({page})=>{
+ test.setTimeout(120000);for(const width of [768,820,1024]){await page.setViewportSize({width,height:1024});for(const path of ['', 'products/hairdryer-premium/','hospitality/','collection/']){await navigate(page,path);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${path} at ${width}px`).toBe(true);}}
 });

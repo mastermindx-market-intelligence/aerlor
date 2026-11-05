@@ -16,7 +16,7 @@ test('brief bounds and sanitizes user input',()=>{
 test('preview is not indexed, has no false trademark registration or live form',()=>{
  const html=read('index.html');
  assert.match(html,/noindex,nofollow/);assert.ok(!html.includes('®'));
- assert.match(html,/Nothing is sent to AERLOR/);assert.match(html,/not a final specification/);
+ assert.match(html,/Collection in development/);assert.match(html,/design studies/);
  assert.ok(!/<form[^>]+action=/i.test(html));assert.match(read('public/robots.txt'),/Disallow: \//);
 });
 test('all production visuals are local and explicitly conceptual',()=>{
@@ -24,9 +24,10 @@ test('all production visuals are local and explicitly conceptual',()=>{
   assert.ok(existsSync(new URL('../public/images/'+asset,import.meta.url)));
   assert.ok(!/https?:\/\//.test(read('public/images/'+asset).replaceAll('http://www.w3.org/2000/svg','')));
  }
- assert.match(read('index.html'),/DESIGN CONCEPT/);
+ assert.match(read('index.html'),/design study/);
+ for(const family of ['dryer','mirror','curler'])for(const finish of ['graphite','champagne','pearl'])assert.ok(existsSync(new URL('../public/images/studio/'+family+'-'+finish+'-product.webp',import.meta.url)));
 });
-test('legacy offline brief controller has no tracking, storage or transmission API',()=>{
+test('optional product viewer has no tracking, storage or transmission API',()=>{
  const source=read('src/main.ts');
  assert.ok(!/\b(fetch|XMLHttpRequest|sendBeacon|localStorage|sessionStorage)\b/.test(source));
  assert.ok(!source.includes('innerHTML'));
@@ -60,7 +61,7 @@ test('deployment verification rejects ambiguous or credential-bearing targets be
  }
 });
 
-test('R3 storefront has all routes, six product pages and actual PDF assets',()=>{
+test('R4 storefront has all routes, six product pages and actual PDF assets',()=>{
  const manifest=JSON.parse(read('storefront-pages.json'));assert.equal(manifest.pages.length,33);
  for(const page of manifest.pages)assert.ok(existsSync(new URL('../'+page,import.meta.url)),page);
  const catalog=JSON.parse(read('src/catalog.json'));assert.equal(catalog.products.length,6);
@@ -76,4 +77,27 @@ test('client storage and checkout remain separate from personal data and provide
  const source=read('src/storefront.ts');assert.match(source,/JSON.stringify\(\{version:CART_VERSION,items\}\)/);
  for(const key of ['STRIPE_SECRET_KEY','RESEND_API_KEY','UPSTASH_REDIS_REST_TOKEN','TURNSTILE_SECRET_KEY'])assert.ok(!source.includes(key));
  assert.match(read('server/services.mjs'),/price_mismatch/);assert.match(read('server/services.mjs'),/reconciliation_required/);
+});
+
+test('the precision theme uses its actual native Paper token export',()=>{
+ const vars=css=>Object.fromEntries([...css.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(m=>[m[1],m[2].trim()]));
+ assert.deepEqual(vars(read('src/precision-tokens.css')),vars(read('design/precision-r4/tokens.css')));
+ assert.match(read('src/style.css'),/precision-tokens\.css/);assert.match(read('index.html'),/premium-tech-r5/);
+ assert.ok(!read('index.html').includes('Cormorant'));assert.ok(!/<h[12][^>]*>[^<]*<em>/.test(read('index.html')));
+});
+
+test('R4 native Paper handoff is complete, editable and public-safe',()=>{
+ const m=JSON.parse(read('design/precision-r4/native-manifest.json'));
+ assert.equal(m.pageId,'p-4-0');assert.equal(m.artboardCount,9);assert.equal(m.tokenCount,25);assert.equal(m.verification.artboardCount,9);
+ for(const board of Object.values(m.boards)){
+  assert.ok(existsSync(new URL('../design/precision-r4/'+board.screenshot,import.meta.url)));
+  const jsx=read('design/precision-r4/'+board.jsx);assert.match(jsx,/export default function/);assert.ok(!jsx.includes('/Users/'));assert.ok(!jsx.includes('paper-asset://'));
+ }
+});
+
+
+test('R5 native design and image provenance are recoverable without private machine paths',()=>{
+ const m=JSON.parse(read('design/precision-r5/native-manifest.json'));assert.equal(m.pageId,'p-6-0');assert.equal(m.artboardCount,5);assert.equal(m.nodeCount,530);
+ for(const board of Object.values(m.boards)){assert.ok(existsSync(new URL('../design/precision-r5/'+board.screenshot,import.meta.url)));const jsx=read('design/precision-r5/'+board.jsx);assert.match(jsx,/export default function/);assert.ok(!jsx.includes('/Users/'));assert.ok(!jsx.includes('paper-asset://'));}
+ assert.match(read('design/precision-r5/README.md'),/4d80d3d781a9e992c7922e3f66c38adc18fa486b/);assert.match(read('products/hairdryer-premium/index.html'),/not production CAD/);
 });

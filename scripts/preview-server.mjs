@@ -4,7 +4,7 @@ import {resolve,extname,sep} from 'node:path';
 import {Readable} from 'node:stream';
 import {createHandler} from '../server/http.mjs';
 const root=resolve(import.meta.dirname,'../dist');
-const port=Number(process.env.PORT||4188);const base=process.env.BASE_PATH||'/aerlor/';
+const port=Number(process.env.PORT||4194);const base=process.env.BASE_PATH||'/aerlor/';
 const api=Object.fromEntries(['config','checkout','inquiry','order','webhook'].map(name=>['/api/'+name,createHandler(name)]));
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.pdf':'application/pdf','.txt':'text/plain; charset=utf-8'};
 const server=createServer(async(req,res)=>{
