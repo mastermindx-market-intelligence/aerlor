@@ -79,7 +79,7 @@ if(root){
  });
  root.querySelectorAll<HTMLButtonElement>('[data-retail-select-finish]').forEach(button=>button.addEventListener('click',()=>{
   chooseFinish(button.dataset.retailSelectFinish??'');
-  root.scrollIntoView({behavior:reducedMotion.matches?'instant':'smooth',block:'start'});
+  root.scrollIntoView({behavior:reducedMotion.matches?'auto':'smooth',block:'start'});
  }));
  root.querySelectorAll<HTMLButtonElement>('[data-retail-qty]').forEach(button=>button.addEventListener('click',()=>{
   if(!quantity)return;
