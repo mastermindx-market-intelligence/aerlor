@@ -24,7 +24,7 @@ These are **ready-to-paste assignments**, not evidence that any worker or ChatGP
 
 ## How to open multiple sessions manually
 
-Open **separate chats** (or use an actually available authorized session/worker launch tool), one per lane. Paste the text under each role file's **Launch prompt**; read its exact role file and source pointers. Cross-session memory is not assumed. At most one writer per target path/branch; avoid all six agents editing the same README or `AGENTS.md`.
+Open **separate chats** (or use an actually available authorized session/worker launch tool), one per lane. Paste the text under each role file's **Launch prompt**; read its exact role file and source pointers. Cross-session memory is not assumed. Use isolated branches and one writer per conflicting target. For disjoint sections or blocks in a shared document, apply the target-level custody and bounded-edit rules in [AGENTS.md](../../AGENTS.md).
 
 Before work, each session reports/records:
 1. ID and bounded task/issue, source commit, target paths, and relevant access.
@@ -36,7 +36,7 @@ Before work, each session reports/records:
 
 ## Lock/claim etiquette
 
-No custom locking service is invented. Use existing **GitHub issues and PRs**: record in a relevant issue comment the lane, branch and owned paths; read issue comments before taking it. The integrator resolves collisions. Separate Notion and Drive pages/docs can each have one active writer; don't update shared Notion HQ wholesale while another session edits it.
+No custom locking service is invented. Use existing **GitHub issues and PRs**: record in a relevant issue comment the lane, branch and owned paths or document sections; read issue comments before taking it. The integrator resolves collisions. The same target-level rule applies to Notion and Drive: assigned disjoint sections or blocks may proceed where bounded edits preserve concurrent content; overlapping edits and whole-document replacements remain serialized.
 
 ## Return format
 

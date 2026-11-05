@@ -1,0 +1,218 @@
+{
+  "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+  "pageId": "p-6-0",
+  "url": "https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-6-0",
+  "revision": "premium-tech-r5",
+  "boards": {
+    "home-desktop": {
+      "id": "3UX-0",
+      "name": "Home desktop",
+      "width": 1440,
+      "screenshot": "screenshots/home-desktop.jpg",
+      "jsx": "reference-jsx/home-desktop.jsx",
+      "sectionCount": 9,
+      "sections": [
+        {
+          "id": "434-0",
+          "name": "Global navigation"
+        },
+        {
+          "id": "4HO-0",
+          "name": "Flagship hero"
+        },
+        {
+          "id": "43T-0",
+          "name": "Collection introduction"
+        },
+        {
+          "id": "3W1-0",
+          "name": "Three product categories"
+        },
+        {
+          "id": "43Y-0",
+          "name": "Guest experience story"
+        },
+        {
+          "id": "446-0",
+          "name": "Lite and Premium comparison"
+        },
+        {
+          "id": "44M-0",
+          "name": "Product detail story"
+        },
+        {
+          "id": "4I1-0",
+          "name": "Hotel buying pathway"
+        },
+        {
+          "id": "452-0",
+          "name": "Shared footer"
+        }
+      ]
+    },
+    "home-mobile": {
+      "id": "3Z2-0",
+      "name": "Home mobile",
+      "width": 390,
+      "screenshot": "screenshots/home-mobile.jpg",
+      "jsx": "reference-jsx/home-mobile.jsx",
+      "sectionCount": 9,
+      "sections": [
+        {
+          "id": "45C-0",
+          "name": "Global navigation"
+        },
+        {
+          "id": "4I9-0",
+          "name": "Flagship hero / mobile"
+        },
+        {
+          "id": "45Z-0",
+          "name": "Collection introduction"
+        },
+        {
+          "id": "403-0",
+          "name": "Three product categories"
+        },
+        {
+          "id": "464-0",
+          "name": "Guest experience story"
+        },
+        {
+          "id": "46C-0",
+          "name": "Lite and Premium comparison"
+        },
+        {
+          "id": "46S-0",
+          "name": "Product detail story"
+        },
+        {
+          "id": "4IP-0",
+          "name": "Hotel buying pathway"
+        },
+        {
+          "id": "478-0",
+          "name": "Shared footer"
+        }
+      ]
+    },
+    "product-desktop": {
+      "id": "47I-0",
+      "name": "Product desktop",
+      "width": 1440,
+      "screenshot": "screenshots/product-desktop.jpg",
+      "jsx": "reference-jsx/product-desktop.jsx",
+      "sectionCount": 6,
+      "sections": [
+        {
+          "id": "47J-0",
+          "name": "Global navigation"
+        },
+        {
+          "id": "47V-0",
+          "name": "Product overview"
+        },
+        {
+          "id": "48Z-0",
+          "name": "Product design story"
+        },
+        {
+          "id": "49G-0",
+          "name": "Specification table"
+        },
+        {
+          "id": "4AK-0",
+          "name": "Hotel room planning"
+        },
+        {
+          "id": "4B3-0",
+          "name": "Shared footer"
+        }
+      ]
+    },
+    "product-mobile": {
+      "id": "4BD-0",
+      "name": "Product mobile",
+      "width": 390,
+      "screenshot": "screenshots/product-mobile.jpg",
+      "jsx": "reference-jsx/product-mobile.jsx",
+      "sectionCount": 6,
+      "sections": [
+        {
+          "id": "4BE-0",
+          "name": "Global navigation"
+        },
+        {
+          "id": "4BL-0",
+          "name": "Product overview"
+        },
+        {
+          "id": "4CP-0",
+          "name": "Product design story"
+        },
+        {
+          "id": "4D6-0",
+          "name": "Specification table"
+        },
+        {
+          "id": "4EA-0",
+          "name": "Hotel room planning"
+        },
+        {
+          "id": "4ET-0",
+          "name": "Shared footer"
+        }
+      ]
+    },
+    "hotels-desktop": {
+      "id": "4F3-0",
+      "name": "Hotels desktop",
+      "width": 1440,
+      "screenshot": "screenshots/hotels-desktop.jpg",
+      "jsx": "reference-jsx/hotels-desktop.jsx",
+      "sectionCount": 7,
+      "sections": [
+        {
+          "id": "4F4-0",
+          "name": "Global navigation"
+        },
+        {
+          "id": "4FG-0",
+          "name": "Hotel buyer introduction"
+        },
+        {
+          "id": "4FQ-0",
+          "name": "Guest experience"
+        },
+        {
+          "id": "4G4-0",
+          "name": "Room standard"
+        },
+        {
+          "id": "4GK-0",
+          "name": "Investment planning"
+        },
+        {
+          "id": "4GX-0",
+          "name": "Purchasing process"
+        },
+        {
+          "id": "4HE-0",
+          "name": "Shared footer"
+        }
+      ]
+    }
+  },
+  "tokenSource": "../precision-r4/tokens.css",
+  "scope": "Native design composition of the home, flagship product and hotel-buying journey. Application-owned galleries, 3D controls, data validation and other functional states are verified separately.",
+  "artboardCount": 5,
+  "nodeCount": 530,
+  "verification": {
+    "readback": true,
+    "fileId": "01M6JNN71ZN4867VJZ83PPXQZ0",
+    "pageId": "p-6-0",
+    "artboardCount": 5,
+    "nodeCount": 530
+  },
+  "artworkNote": "Product images are preproduction visualizations, not production photography or performance evidence. Reference JSX contains native editable text and frames with image assets; no full page was flattened into a screenshot."
+}

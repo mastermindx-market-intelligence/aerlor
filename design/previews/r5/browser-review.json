@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-11-05T03:59:07.698Z",
+  "base": "http://127.0.0.1:4194/aerlor/",
+  "results": [
+    {
+      "name": "home-desktop",
+      "path": "",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "heading": "The essentials.Reimagined.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "home-mobile",
+      "path": "",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "heading": "The essentials.Reimagined.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "home-narrow",
+      "path": "",
+      "status": 200,
+      "width": 320,
+      "scrollWidth": 320,
+      "heading": "The essentials.Reimagined.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "product-desktop",
+      "path": "products/hairdryer-premium/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "heading": "Hairdryer Premium",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "product-mobile",
+      "path": "products/hairdryer-premium/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "heading": "Hairdryer Premium",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "hotels-desktop",
+      "path": "hospitality/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "heading": "The room is beautiful.Now think aboutgetting ready in it.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "hotels-mobile",
+      "path": "hospitality/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "heading": "The room is beautiful.Now think aboutgetting ready in it.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "project-desktop",
+      "path": "hospitality/wholesale/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "heading": "A better room startswith a clear brief.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "name": "collection-desktop",
+      "path": "collection/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "heading": "A complete room.A coordinated range.",
+      "fonts": "Inter, Arial, sans-serif",
+      "brokenImages": [],
+      "errors": []
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> **Current design: R4 precision hospitality.** See [the R4 native handoff](../precision-r4/README.md) and [Paper page p-4-0](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-4-0). The R2 material below is retained as design history, not the current visual direction.
+
 # AERLOR / Native Paper design
 
 [Open the editable Paper file](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) | [Live GitHub Pages website](https://mastermindx-market-intelligence.github.io/aerlor/) | [Vercel preview](https://aerlor.vercel.app/)
