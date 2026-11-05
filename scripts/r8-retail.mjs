@@ -41,7 +41,7 @@ export function retailPremiumPage(p,studyMarkup=''){
    <div class="retail-stage" data-retail-stage>
     <div class="retail-gallery-eyebrow"><span class="retail-indicator"></span> THE OBJECT / 001</div>
     ${img(retailImages[active],first.alt,'class="retail-stage-image" data-gallery-image width="928" height="1120" fetchpriority="high"')}
-    <button type="button" class="retail-zoom" data-retail-zoom aria-label="View larger product image">Explore in detail <span aria-hidden="true">↗</span></button>
+    <button type="button" class="retail-zoom" data-retail-zoom aria-label="Explore in detail — View larger product image">Explore in detail <span aria-hidden="true">↗</span></button>
     <span class="retail-gallery-counter" data-retail-counter>01 / 05</span>
    </div>
    <div class="retail-thumbnails" role="group" aria-label="Product gallery">${thumbnails}</div>
@@ -59,7 +59,7 @@ export function retailPremiumPage(p,studyMarkup=''){
     <p class="retail-selection-hint">Concept colorways. Final finishes may change.</p>
    </div>
    <div class="retail-quantity-line"><label for="retail-quantity">Quantity</label><div class="retail-quantity-control"><button type="button" data-retail-qty="-1" aria-label="Decrease quantity">−</button><input id="retail-quantity" type="number" data-product-quantity min="1" max="5000" step="1" inputmode="numeric" value="1"><button type="button" data-retail-qty="1" aria-label="Increase quantity">+</button></div></div>
-   <button type="button" class="retail-add" data-add="${e(p.id)}"><span>Save to project bag</span><span aria-hidden="true">↗</span></button>
+   <button type="button" class="retail-add" data-add="${e(p.id)}"><span>Add to your project</span><span aria-hidden="true">↗</span></button>
    <p class="retail-cta-note">Saves your selection only. No order or payment is created.</p>
    <div class="retail-buy-links"><a href="${url('contact/')}">Ask about availability <span aria-hidden="true">↗</span></a><a href="#specifications">Explore specifications <span aria-hidden="true">↗</span></a></div>
    <a class="retail-business-link" href="${url('hospitality/wholesale/')}"><span>For hotels, salons &amp; professionals</span><strong>Request a quote <span aria-hidden="true">↗</span></strong></a>
@@ -86,7 +86,7 @@ export function retailPremiumPage(p,studyMarkup=''){
  <section class="retail-finishes" id="finishes" aria-labelledby="retail-finishes-title">
   <div class="retail-section-head"><div><p class="retail-eyebrow">04 / EXPRESS YOUR STYLE</p><h2 id="retail-finishes-title">The right finish<br>for your space.</h2></div><p>One considered silhouette, explored in three distinctly different expressions.</p></div>
   <div class="retail-finish-grid">
-   ${['Porcelain White','Stone','Graphite'].map((f,i)=>`<button type="button" class="retail-finish-card" data-retail-select-finish="${f}" aria-label="View ${f} finish"><span class="retail-finish-media">${img(retailImages[f],`${f} AERLOR Premium hairdryer product concept`,'width="928" height="1120" loading="lazy"')}</span><span class="retail-finish-meta"><strong>${f}</strong><span>0${i+1} / 03</span></span></button>`).join('')}
+   ${['Porcelain White','Stone','Graphite'].map((f,i)=>`<button type="button" class="retail-finish-card" data-retail-select-finish="${f}"><span class="retail-finish-media">${img(retailImages[f],`${f} AERLOR Premium hairdryer product concept`,'width="928" height="1120" loading="lazy"')}</span><span class="retail-finish-meta"><strong>${f}</strong><span>0${i+1} / 03</span></span></button>`).join('')}
   </div>
   <p class="retail-finishes-note">Colors and proportions are preproduction design studies. Final released options will be confirmed.</p>
  </section>
@@ -94,9 +94,9 @@ export function retailPremiumPage(p,studyMarkup=''){
  ${studyMarkup}
 
  <section class="retail-information" id="specifications" aria-labelledby="retail-spec-title">
-  <div class="retail-info-intro"><p class="retail-eyebrow">05 / PRODUCT INFORMATION</p><h2 id="retail-spec-title">Every detail,<br>considered.</h2><p>See what is defined, what is proposed, and what needs independent validation before release.</p><a href="${url('documents/'+p.document)}" download>Download product brief ↗</a></div>
+  <div class="retail-info-intro"><p class="retail-eyebrow">05 / PRODUCT INFORMATION</p><h2 id="retail-spec-title">Every detail,<br>considered.</h2><p>See what is defined, what is proposed, and what needs independent validation before release.</p><div class="product-utility"><a href="${url('documents/'+p.document)}" download>Download product brief ↗</a></div></div>
   <div class="retail-info-content">
-   <details class="retail-disclosure" open><summary>Development specifications <span aria-hidden="true">+</span></summary><div class="retail-spec-wrap"><table><caption class="retail-sr-only">${e(p.name)} development specifications</caption><thead><tr><th scope="col">Detail</th><th scope="col">Current concept</th><th scope="col">Status</th></tr></thead><tbody>${specRows}</tbody></table></div></details>
+   <details class="retail-disclosure" open><summary>Development specifications <span aria-hidden="true">+</span></summary><div class="retail-spec-wrap" role="region" aria-label="Scrollable product specifications" tabindex="0"><table><caption class="retail-sr-only">${e(p.name)} development specifications</caption><thead><tr><th scope="col">Detail</th><th scope="col">Current concept</th><th scope="col">Status</th></tr></thead><tbody>${specRows}</tbody></table></div></details>
    <details class="retail-disclosure"><summary>Which finishes are planned? <span aria-hidden="true">+</span></summary><p>Porcelain White, Stone, Graphite and Champagne are currently visual concepts. No colorway is presented as an available production SKU.</p></details>
    <details class="retail-disclosure"><summary>What comes in the box? <span aria-hidden="true">+</span></summary><p>Packaging and included attachments are being developed. Final pack contents will be published after the production configuration is approved.</p></details>
    <details class="retail-disclosure"><summary>When will it be available? <span aria-hidden="true">+</span></summary><p>Timing has not been confirmed. The current site lets you save a concept selection or ask the team about progress.</p></details>

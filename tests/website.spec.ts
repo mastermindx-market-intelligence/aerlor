@@ -39,7 +39,7 @@ test('retail flagship uses original gallery studies and preserves the selected c
  await expect(retail.getByRole('button',{name:'Graphite finish'})).toHaveAttribute('aria-pressed','true');
  await retail.getByRole('button',{name:'Increase quantity'}).click();
  await expect(retail.locator('[data-product-quantity]')).toHaveValue('2');
- await retail.getByRole('button',{name:'Save to project bag'}).click();
+ await retail.getByRole('button',{name:'Add to your project'}).click();
  await expect(page.locator('#cart-notice')).toContainText('added to your project');
  await page.goto('./cart/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('.cart-line')).toContainText('Graphite');
