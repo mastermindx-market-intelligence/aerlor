@@ -21,6 +21,8 @@ test('retail flagship uses original gallery studies and preserves the selected c
  await product(page);
  const retail=page.locator('[data-retail-root]');
  await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/product-porcelain\.png$/);
+ await expect(retail.locator('.retail-thumb img')).toHaveCount(5);
+ await expect.poll(()=>retail.locator('.retail-thumb img').evaluateAll(els=>els.every(el=>(el as HTMLImageElement).complete&&(el as HTMLImageElement).naturalWidth>0))).toBe(true);
  await retail.getByRole('button',{name:'Outlet detail view'}).click();
  await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/macro-outlet\.png$/);
  await retail.getByRole('button',{name:'Controls detail view'}).click();
@@ -33,6 +35,7 @@ test('retail flagship uses original gallery studies and preserves the selected c
  await retail.getByRole('button',{name:'Stone finish'}).click();
  await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/product-stone\.png$/);
  await expect(retail.locator('[data-product-finish]')).toHaveValue('Stone');
+ await expect(retail.locator('[data-retail-view=product] img')).toHaveAttribute('src',/retail\/thumb-stone\.jpg$/);
  await retail.getByRole('button',{name:'Graphite finish'}).click();
  await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',/retail\/product-graphite\.png$/);
  await expect(retail.locator('[data-product-finish]')).toHaveValue('Graphite');

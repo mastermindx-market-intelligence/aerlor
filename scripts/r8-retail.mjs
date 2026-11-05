@@ -8,10 +8,10 @@ const retailImages={
 };
 const img=(src,alt,extra='')=>`<img src="${url('images/'+src)}" alt="${e(alt)}" ${extra}>`;
 const views=[
- {key:'product',label:'Product',src:retailImages['Porcelain White'],alt:'AERLOR Premium hairdryer, porcelain-white design study',caption:'Porcelain White · preproduction product visualization'},
- {key:'outlet',label:'Outlet detail',src:'retail/macro-outlet.png',alt:'Independent macro design study of the circular outlet and brushed-metal finish',caption:'The circular outlet · original detail study'},
- {key:'controls',label:'Controls detail',src:'retail/macro-controls.png',alt:'Independent macro study of the AERLOR hairdryer control and slim handle',caption:'The controls · original detail study'},
- {key:'intake',label:'Intake detail',src:'retail/macro-intake.png',alt:'Independent macro study of the hairdryer handle intake surface',caption:'The intake · original detail study'},
+ {key:'product',thumbnail:'retail/thumb-porcelain.jpg',label:'Product',src:retailImages['Porcelain White'],alt:'AERLOR Premium hairdryer, porcelain-white design study',caption:'Porcelain White · preproduction product visualization'},
+ {key:'outlet',thumbnail:'retail/thumb-outlet.jpg',label:'Outlet detail',src:'retail/macro-outlet.png',alt:'Independent macro design study of the circular outlet and brushed-metal finish',caption:'The circular outlet · original detail study'},
+ {key:'controls',thumbnail:'retail/thumb-controls.jpg',label:'Controls detail',src:'retail/macro-controls.png',alt:'Independent macro study of the AERLOR hairdryer control and slim handle',caption:'The controls · original detail study'},
+ {key:'intake',thumbnail:'retail/thumb-intake.jpg',label:'Intake detail',src:'retail/macro-intake.png',alt:'Independent macro study of the hairdryer handle intake surface',caption:'The intake · original detail study'},
  {key:'in-use',label:'In use',src:'retail/ritual-model.jpg',alt:'Lifestyle visualization of a woman using a white AERLOR hairdryer in a bright modern bathroom',caption:'The daily ritual · lifestyle visualization'}
 ];
 const finishes=[
@@ -29,7 +29,7 @@ export function retailPremiumPage(p,studyMarkup=''){
  const active=p.finish in retailImages?p.finish:'Porcelain White';
  const first=views[0];
  const thumbnails=views.map((v,i)=>`<button type="button" class="retail-thumb" data-retail-view="${v.key}" aria-label="${v.label} view" aria-pressed="${i===0?'true':'false'}" title="${v.label}">
- ${img(v.src,'','width="100" height="116" loading="lazy"')}<span>${v.label}</span></button>`).join('');
+ ${img(v.thumbnail??v.src,'','width="100" height="116" loading="lazy"')}<span>${v.label}</span></button>`).join('');
  const swatches=finishes.filter(f=>p.finishes.includes(f.name)).map(f=>`<button class="retail-swatch" type="button" data-retail-swatch="${e(f.name)}" aria-label="${e(f.name)} finish" aria-pressed="${f.name===active?'true':'false'}" title="${e(f.name)}"><span style="background:${f.tone}"></span></button>`).join('');
  const options=p.finishes.map(f=>`<option value="${e(f)}" ${f===active?'selected':''}>${e(f)}</option>`).join('');
  const specRows=p.specs.map(([key,value,status])=>`<tr><th scope="row">${e(key)}</th><td>${e(value)}</td><td><span class="spec-status ${e(status)}">${e(status)}</span></td></tr>`).join('');

@@ -18,6 +18,7 @@ These are source **Paper design captures**, not screenshots of a verified websit
 
 - `scripts/r8-retail.mjs`: visual narrative, hierarchy, hero, finish presentation, technology macros, FAQ, development specifications, professional CTA and lightbox.
 - `src/r8-retail.css`: exclusive desktop/mobile responsive layout and reduced-motion rules.
+- `public/images/retail/thumb-*.jpg`: 60–160 KB original-image JPEG thumbnail derivatives extracted from the Paper masters; full-resolution PNG is reserved for the selected main/detail view. Finish switching also updates the first thumbnail.
 - `src/r8-retail.ts`: progressive client interactions — accessible image gallery, pressed thumbnail and finish states, quantity controls, modal image enlargement, keyboard gallery navigation, and focus recovery.
 - `scripts/r5-experience.mjs`: dispatches only `dryer-premium` to the retail flagship; all other product pages retain their existing buying flows.
 - `src/catalog.json`: adds conceptual Porcelain White and Stone to the Premium dryer. Prior Champagne is retained as a legacy design finish to avoid invalidating saved project selections.

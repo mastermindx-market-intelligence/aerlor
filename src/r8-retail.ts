@@ -27,6 +27,13 @@ if(root){
   {view:'intake',src:'retail/macro-intake.png',caption:'The intake · original detail study',alt:'Independent product study of the textured handle intake'},
   {view:'in-use',src:'retail/ritual-model.jpg',caption:'The daily ritual · lifestyle visualization',alt:'Woman using the proposed AERLOR white dryer in a bright bathroom'}
  ];
+ const thumbSources:Record<string,string>={
+  'Porcelain White':'retail/thumb-porcelain.jpg',
+  'Stone':'retail/thumb-stone.jpg',
+  'Graphite':'retail/thumb-graphite.jpg',
+  'Champagne':'studio/dryer-signature-champagne.webp'
+ };
+ const productThumbnail=root.querySelector<HTMLImageElement>('[data-retail-view="product"] img');
  const route=(src:string)=>`${import.meta.env.BASE_URL}images/${src}`;
  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
  let current:GalleryView='product';
@@ -57,6 +64,7 @@ if(root){
  function chooseFinish(name:string,dispatch=true):void{
   if(!sources[name]||!selected||![...selected.options].some(opt=>opt.value===name))return;
   selectedFinish=name;selected.value=name;
+  if(productThumbnail)productThumbnail.src=route(thumbSources[name]??sources[name]);
   if(finishLabel)finishLabel.textContent=name;
   swatches.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.retailSwatch===name)));
   if(dispatch)selected.dispatchEvent(new Event('change',{bubbles:true}));
