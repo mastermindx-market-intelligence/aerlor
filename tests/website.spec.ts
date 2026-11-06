@@ -47,6 +47,46 @@ test('retail flagship uses original gallery studies and preserves the selected c
  await page.goto('./cart/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('.cart-line')).toContainText('Graphite');
 });
+for(const [finish,key] of [['Stone','stone'],['Graphite','graphite']] as const){
+ test(`finish discovery selects ${finish} and preserves it in the project bag`,async({page})=>{
+  await product(page);
+  const retail=page.locator('[data-retail-root]');
+  const cards=page.locator('[data-retail-select-finish]');
+  await expect(cards).toHaveCount(3);
+  await expect(retail.locator('[data-retail-select-finish]')).toHaveCount(0);
+  await expect(retail.locator('[data-product-finish]')).toHaveValue('Porcelain White');
+  await retail.getByRole('button',{name:'Outlet detail view'}).click();
+  await expect(retail.locator('[data-retail-stage]')).toHaveAttribute('data-media','outlet');
+  await retail.getByRole('button',{name:'Increase quantity'}).click();
+  await expect(retail.locator('[data-product-quantity]')).toHaveValue('2');
+
+  await page.locator(`[data-retail-select-finish="${finish}"]`).click();
+
+  await expect(retail.locator('[data-product-finish]')).toHaveValue(finish);
+  await expect(retail.locator('[data-retail-finish-label]')).toHaveText(finish);
+  await expect(retail.locator(`[data-retail-swatch="${finish}"]`)).toHaveAttribute('aria-pressed','true');
+  await expect(retail.locator('[data-retail-stage]')).toHaveAttribute('data-media','product');
+  await expect(retail.locator('[data-retail-view="product"]')).toHaveAttribute('aria-pressed','true');
+  await expect(retail.locator('[data-gallery-image]')).toHaveAttribute('src',new RegExp(`retail/product-${key}[.]png$`));
+  await expect(retail.locator('[data-retail-view="product"] img')).toHaveAttribute('src',new RegExp(`retail/thumb-${key}[.]jpg$`));
+  await expect(page.locator('#gallery-caption')).toHaveText(`${finish} · preproduction product visualization`);
+  await expect.poll(()=>retail.locator('[data-gallery-image],[data-retail-view="product"] img').evaluateAll(images=>images.length===2&&images.every(image=>(image as HTMLImageElement).complete&&(image as HTMLImageElement).naturalWidth>0))).toBe(true);
+  await expect(retail).toBeInViewport();
+  await expect(retail.locator('[data-product-quantity]')).toHaveValue('2');
+  await retail.getByRole('button',{name:'Add to your project'}).click();
+  await expect(page.locator('#cart-notice')).toContainText('added to your project');
+  await page.goto('./cart/',{waitUntil:'domcontentloaded'});
+  const line=page.locator('.cart-line');
+  await expect(line).toHaveCount(1);
+  await expect(line).toContainText(finish);
+  await expect(line.getByRole('spinbutton')).toHaveValue('2');
+  await expect(line.locator('.cart-line-image')).toHaveAttribute('src',new RegExp(`retail/product-${key}[.]png$`));
+  await page.reload({waitUntil:'domcontentloaded'});
+  await expect(line).toHaveCount(1);
+  await expect(line).toContainText(finish);
+  await expect(line.getByRole('spinbutton')).toHaveValue('2');
+ });
+}
 test('retail lightbox opens and closes with keyboard focus restored',async({page})=>{
  await product(page);
  const zoom=page.getByRole('button',{name:'View larger product image'});

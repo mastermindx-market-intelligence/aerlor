@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "work/site/prelaunch-assurance-20261104": false,
+      "work/market/buying-routes-20261104": false
+    }
+  },
   "framework": "vite",
   "installCommand": "npm ci",
   "buildCommand": "BASE_PATH=/ npm run build",
