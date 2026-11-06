@@ -134,3 +134,9 @@ The current website is an award-style visual *preview*. Preserve the truthful la
 - Curator supplier program is discretionary: https://www.curatorhotelsandresorts.com/join-the-collection/
 - QT Dyson example: https://www.qthotels.com/qt-blog/qt-x-dyson-a-mane-changer/
 - Dyson patents: https://www.dyson.com/inside-dyson/patents
+
+## 10. Avendra / distributor / marketplace validation supplement (2026-11-05)
+
+The [source audit](../research/2026-11-05_AVENDRA_PROCUREMENT_EVIDENCE_AUDIT.md) and [implementation addendum](2026-11-05_AVENDRA_CHANNEL_IMPLEMENTATION.md) add a channel-specific test to the existing pilot protocol. Before labeling a GPO/distributor lead as qualified, record: named guestroom electrical category owner; current category cycle; legal contracting party; exact hotel SKU and authenticated net delivered price if legitimately available; fee/rebate basis and timing; stock/drop-ship and merchant-of-record terms; brand/engineering veto; first eligible funded buyer; and a dated purchase decision. Mark unknowns **UNKNOWN**, never zero or approved.
+
+Preserve the staged pilot: three unrelated paid properties with approximately 20–30 approved installed rooms each first, then a conditional 100–250-room expansion only after real purchase evidence and safety/economic gates. Catalog presence, claimed marketplace savings, a buyer's compliment and network room count cannot substitute for a paid post-pilot PO. The original Chairman approvals for outreach, specialist spend, samples and hotel deployment remain required.

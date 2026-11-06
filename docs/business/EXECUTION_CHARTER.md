@@ -79,3 +79,9 @@ This is an **execution-lead / Chairman** working arrangement, not a corporate de
 - Site release gates remain governed by [LAUNCH.md](../../LAUNCH.md); this charter does not override them.
 
 **As of 2026-11-04:** repository design preview exists; no verified manufacturer, FTO opinion, hotel orders, installation, sample availability or legal incorporation is evidenced here. The next action is to qualify the channel and product in parallel and record the resulting data in an appropriate restricted workstream.
+
+## Avendra / Guest Supply / AAHOA channel gate (research overlay, 2026-11-05)
+
+The [Avendra procurement evidence audit](../research/2026-11-05_AVENDRA_PROCUREMENT_EVIDENCE_AUDIT.md) and [channel implementation addendum](2026-11-05_AVENDRA_CHANNEL_IMPLEMENTATION.md) are **proposed public-safe planning inputs**, not an approved supplier program. They preserve the core launch order: funded buyer and exact-SKU product readiness → paid pilot → repeat purchase → distributor/GPO activation. Avendra supplier inquiry, Folio onboarding, Guest Supply stocking, flag/engineering approval and hotel orders are independent gates. Public Conair distributor pricing can be below $30/unit; the AERLOR premium proposition therefore requires evidence of an approved **upgrade budget**, not a generic procurement savings claim. Actual program fees, private cost assumptions and buyer records remain in restricted company custody.
+
+The Chairman's existing authority for outreach, spend, contracts, inventory, claims and launch is unchanged. No commercial effect is authorized by this addendum.
