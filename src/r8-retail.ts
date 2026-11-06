@@ -85,7 +85,7 @@ if(root){
   const next=(thumbnails.indexOf(active as HTMLButtonElement)+(event.key==='ArrowRight'?1:-1)+thumbnails.length)%thumbnails.length;
   thumbnails[next].focus();setView(thumbnails[next].dataset.retailView as GalleryView);
  });
- root.querySelectorAll<HTMLButtonElement>('[data-retail-select-finish]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll<HTMLButtonElement>('[data-retail-select-finish]').forEach(button=>button.addEventListener('click',()=>{
   chooseFinish(button.dataset.retailSelectFinish??'');
   root.scrollIntoView({behavior:reducedMotion.matches?'auto':'smooth',block:'start'});
  }));
