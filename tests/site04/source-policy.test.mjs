@@ -9,6 +9,7 @@ const read = path => readFileSync(new URL('../../' + path, import.meta.url), 'ut
 const vercel = JSON.parse(read('vercel.json'));
 const manifest = JSON.parse(read('storefront-pages.json'));
 const assuranceBranch = 'work/site/prelaunch-assurance-20261104';
+const marketBranch = 'work/market/buying-routes-20261104';
 
 function assertNoIndex(value, label) {
   const directives = new Set(value.toLowerCase().split(/[\s,]+/).filter(Boolean));
@@ -30,9 +31,9 @@ function policyHeaders(name) {
   return entries;
 }
 
-test('this assurance branch alone is disabled in Vercel Git deployment configuration', () => {
-  assert.deepEqual(vercel.git?.deploymentEnabled, {[assuranceBranch]: false},
-    'Disable only this review branch; do not disable main, wildcard patterns, or other branches');
+test('only approved review branches are disabled in Vercel Git deployment configuration', () => {
+  assert.deepEqual(vercel.git?.deploymentEnabled, {[assuranceBranch]: false, [marketBranch]: false},
+    'Disable only the two approved review branches; do not disable main, wildcard patterns, or other branches');
 });
 
 test('every storefront route declares noindex and nofollow in its HTML head', () => {
