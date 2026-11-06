@@ -102,3 +102,9 @@ Next website work follows verified product selection and authorized commercial i
 Commercially significant prospect outreach should follow an approved representation/identity. Formal buyer samples follow exact product readiness and user-authorized commercial terms. Hotel installation follows product/legal/operational approvals. Broader stock follows purchase orders, contribution and cash gates. Consumer launch follows supportability and truth-in-pricing review.
 
 Related: [Execution charter](EXECUTION_CHARTER.md), [Market map](../research/2026-11-04_MARKET_MAP.md), [Validation protocol](VALIDATION_PROTOCOL.md), [Launch gates](../../LAUNCH.md).
+
+## 11. Avendra procurement overlay — source-checked 2026-11-05
+
+See [Avendra evidence audit](../research/2026-11-05_AVENDRA_PROCUREMENT_EVIDENCE_AUDIT.md) and [Avendra channel implementation](2026-11-05_AVENDRA_CHANNEL_IMPLEMENTATION.md). Do not collapse the following into one channel: (1) Avendra GPO supplier qualification/negotiated program; (2) Guest Supply distributor buy-sell/stock/drop-ship; (3) Folio-powered AAHOA member procurement UI; (4) hotel owner/operator purchasing authority; (5) brand/flag standards; and (6) actual property purchase orders.
+
+A public Guest Supply Conair SKU proves inventory visibility, not an Avendra contract price. Dyson's official hospitality offer does not establish Avendra listing or hotel net cost. Require written fee bases and a supplier-dollar waterfall, exact category eligibility, an activation plan and a funded first order before considering stock, exclusivity or broad price commitments. Maintain direct funded projects and owner/operators as the first-order route.
