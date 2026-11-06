@@ -39,7 +39,7 @@ function imageFor(id:string,finish:string):string {
   const p=products.find(p=>p.id===id);
   if(!p)return 'studio/dryer-pearl-product.webp';
   const chosen=p.finishes.includes(finish)?finish:p.finish;
-  if(id==='dryer-premium')return chosen==='Champagne'?'studio/dryer-signature-champagne.webp':'campaign/travel-case.webp';
+  if(id==='dryer-premium')return ({'Porcelain White':'retail/product-porcelain.png','Stone':'retail/product-stone.png','Graphite':'retail/product-graphite.png','Champagne':'studio/dryer-signature-champagne.webp'} as Record<string,string>)[chosen]??'retail/product-porcelain.png';
   return `studio/${p.studioFamily}-${chosen.toLowerCase()}-product.webp`;
 }
 
