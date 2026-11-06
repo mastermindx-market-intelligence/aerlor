@@ -1,28 +1,32 @@
 # AERLOR
 
-**The art of a better stay.** An editorial hospitality website for hairdryers, illuminated makeup mirrors and curling tools, each in Lite and Premium expressions.
+**The essentials. Reimagined.** Premium product design for the modern hotel room. Hairdryers, illuminated mirrors and styling tools in Lite and Premium ranges.
 
-[Storefront](https://aerlor.vercel.app/) · [Native Paper foundation](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0) · [Commerce operations](docs/commerce/OPERATIONS.md) · [Commercial launch gates](LAUNCH.md)
+[Website](https://aerlor.vercel.app/) · [R5 editable Paper design](https://app.paper.design/file/01M6JNN71ZN4867VJZ83PPXQZ0/p-6-0) · [Design handoff](design/precision-r5/README.md) · [Commerce operations](docs/commerce/OPERATIONS.md)
 
-## R3 implementation
+## R5: premium technology, built around the hotel buyer
 
-- **33 semantic HTML routes**: collection/family pages, six complete product pages, comparison, hospitality, wholesale, groups, designers, pricing, resources, journal, company, support, policies, project bag, checkout and order verification.
-- Story-led hotel copy, attributed independent guest anecdotes and a room-level investment calculator. No fabricated testimonials, hotel partnerships or revenue uplift.
-- **Ten downloadable PDFs / 36 pages**: collection lookbook, hotel business-case guide, procurement guide, pilot toolkit and six product briefs. Guides are embedded in dedicated resource pages with direct-download alternatives.
-- Original product concept artwork, progressive Three.js hairdryer, finish selection, responsive navigation and accessible product/brief interactions.
-- Product-only project bag with quantity/finish editing, bundles and local persistence. Personal inquiry and payment details are not saved in browser storage.
-- Genuine user-reviewed business-email drafts and complete local brief downloads. Optional direct inquiry adapter returns success only after its provider accepts delivery.
-- Server-authoritative hosted checkout, provider price corroboration, durable stock reservation/idempotency, verified payment status and signed webhook processing. **Live checkout is disabled until commercial prerequisites are approved.**
+A graphite product stage, white space, Inter typography and restrained metal finishes replace the previous cosmetics/editorial identity. The homepage establishes the product range and guest relevance; the hotel path provides a practical purchasing journey.
 
-## What is not represented
+- **33 semantic HTML routes**, with six full product pages, comparison, hotel buying, wholesale, groups, specifiers, resources and company information.
+- A product-led homepage using the founder's preproduction imagery, a three-family range, Lite/Premium comparison and a direct hotel-project route.
+- Product galleries with selectable views, explicit finish captions, quantity controls, specification access and a project handoff.
+- The optional, keyboard-operable 3D geometry study is secondary on the flagship product page and never blocks the first view. It is not presented as production CAD.
+- **Five new editable R5 Paper artboards / 530 nodes**: home and flagship product on desktop/mobile, plus the hotel-buyer journey. Native JSX, screenshots and IDs are saved in `design/precision-r5/`. Earlier R4 foundations and 25 native tokens remain the shared design lineage.
+- **Ten PDFs / 36 pages**, restyled and refreshed to match the current product and typography direction.
+- Existing project bag, filters, finish selection, bundles, brief downloads, email-draft workflow, budgeting calculator and gated checkout remain functional.
 
-The six products are development concepts, not certified production units or ready-to-ship stock. Product specifications clearly distinguish the design identity, proposed direction and technical fields still requiring evidence. No commercial prices are invented. A project brief is not an order; a payment return URL is not proof of payment; payment is not shipment.
+The exact production revision is exposed by the deployed `build-info.json`; source and deployment verification are separate. GitHub Pages hosts the non-transactional design showcase, not the storefront.
 
-The transaction code is tested with dependency-injected provider fixtures. Real merchant, database, verification, email-delivery and fulfillment acceptance are separate gates. See the operations runbook; do not relabel mocked tests as live paid-order proof.
+## Commercial status
+
+The six products remain development concepts. Technical fields distinguish collection identity, proposed design and evidence still required. No final performance, certification, stock or price is invented. The property form prepares a real email draft when the contact endpoint is configured; the visitor reviews and sends it in their own email application.
+
+Direct inquiry submission and checkout remain disabled until the responsible seller, released models, pricing, inventory, provider configuration and applicable commercial terms are approved. Provider-fixture tests are not live merchant acceptance. See [LAUNCH.md](LAUNCH.md) and the [operations runbook](docs/commerce/OPERATIONS.md).
 
 ## Development
 
-Use Node 26, matching CI and `.nvmrc`.
+Use Node 26, matching `.nvmrc` and CI.
 
 ```sh
 npm ci
@@ -32,54 +36,57 @@ npm run test:contracts
 npm run test:server
 npx playwright install chromium
 npm test
+# Optional Safari-engine suite:
+npx playwright install webkit
+npm run test:webkit
 ```
 
-The isolated local preview runs at `http://127.0.0.1:4188/aerlor/` and includes the same Web Standard API handlers, in fail-closed development mode. `BASE_PATH=/` builds for Vercel; `/aerlor/` is the local/static default. HTML is generated deterministically from `scripts/build-storefront.mjs` and the catalog; do not hand-edit generated inner pages. The original R2 homepage template is retained under `templates/`.
+The isolated preview is `http://127.0.0.1:4194/aerlor/`; the dev server uses port 5194. `BASE_PATH=/` builds for Vercel. The local/static default is `/aerlor/`. All route HTML is authored through `scripts/build-storefront.mjs` and shared components in `scripts/r4/ui.mjs`; do not edit generated pages by hand.
 
 ```sh
+# Read-only runtime configuration inspection:
 node scripts/commerce-readiness.mjs
-# Read-only exact deployment proof:
+# Verify an exact public source revision:
 TEST_URL=https://aerlor.vercel.app/ EXPECTED_COMMIT=<40-character-sha> npm run verify:deployment
 ```
 
-Never put credentials into client variables, source, screenshots, issues or generated documents. `.env.example` contains blank secrets and disabled activation flags.
+## Design and documents
 
-## Documents and evidence
+The current R5 page contains five editable native compositions for the homepage, flagship product and hotel-buyer journey. [The R5 handoff](design/precision-r5/README.md) records the actual board IDs, source-safe JSX references and screenshots. R4 contributes the shared native token foundations; R2/R4 compositions remain historical references rather than the active release direction.
 
 ```sh
+# With the local dev server running, regenerate missing original studio PNGs:
+node scripts/r4/render-products.mjs
+python3 scripts/r4/export-web-assets.py
+# Regenerate and inspect the actual PDFs:
 node scripts/build-marketing-documents.mjs
 python3 scripts/verify-marketing-pdfs.py
 ```
 
-The document generator uses Playwright and authored HTML. PDF QA needs `pdftoppm`, PyMuPDF and Pillow. The repository includes final PDFs, source documents, a page manifest and a visual-review receipt. Generated render scratch files remain under ignored `test-results/`.
+The PDF workflow uses authored HTML, `marketing/print.css`, Playwright, `pdftoppm`, PyMuPDF and Pillow. Rendering is followed by visual review. Browser test output is temporary; durable release evidence belongs under `design/previews/`.
 
-`src/evidence.json` records the attributed sources and limitations. Anecdotes are self-selected public discussions, not AERLOR endorsements or representative surveys. Operator examples are explicitly historical/category context where appropriate.
+## Verification scope
 
-## Design continuity
+R5 local verification is recorded in `design/previews/r5/local-validation.json`. Each browser suite intentionally skips the desktop duplicate of the mobile-only navigation test. Coverage includes all 33 routes, 320-pixel reflow, fonts unavailable, product selection, quote drafts, download integrity, inaccessible services, optional 3D, keyboard controls and automated accessibility rules. Server/domain tests cover payment and inquiry invariants using controlled provider fixtures. Native design review and actual public deployment proof are separate checks.
 
-The R2 native Paper file contains 15 editable artboards, three pages and 28 tokens. Its palette and type exports remain the shared foundation in `src/paper-tokens.css`, guarded by a drift test. R3 expands the production codebase; its 33 routes are not falsely described as 33 newly exported native Paper boards. Native references and screenshots remain in `design/paper/native/`.
+## Deployment
 
-## Deployment architecture
-
-The storefront and same-origin APIs run on Vercel. GitHub Pages publishes only `showcase-dist/`, a non-transactional design/engineering case study with no checkout or inquiry collection. It does not host the commercial application. This respects GitHub's published Pages ecommerce restrictions.
-
-The pinned workflow runs type/build checks, contracts, server/domain tests and desktop/mobile browser checks before publishing the separate Pages showcase. The post-deployment check binds the public build to the exact commit. Vercel releases must also be checked against `build-info.json`, live API configuration, routes, PDFs and actual browser journeys. See `DEPLOYMENT.md`.
+Vercel serves the storefront and same-origin API handlers. GitHub Pages publishes only `showcase-dist/`, a non-transactional design/engineering case study. It does not host checkout or collect buyer data. The pinned workflow builds and verifies the application before publishing the separate showcase. Public verification checks the exact build commit, responsive layout, assets, 3D on request, API configuration, PDFs and custom 404.
 
 ## Source map
 
 ```text
+scripts/r4/ui.mjs                 Shared page components and buyer copy
+scripts/build-storefront.mjs      The 33-route content and structure
+src/precision-tokens.css          Actual native R4 Paper token export
+src/style.css, storefront.css     Precision responsive interface
 src/catalog.json                 Product concepts and specification status
-src/storefront.ts                Product bag, filters, forms and hosted-checkout handoff
-src/storefront.css               Responsive editorial interface
-src/main.ts, src/scene.ts         Existing homepage interactions and progressive 3D
-shared/domain.mjs                Pure rules shared by browser/server/tests
-server/                          Payment, inquiry, validation and durable-ledger adapters
-api/                             Web Standard Vercel entry points
-scripts/build-storefront.mjs      Deterministic multi-page authoring source
-scripts/build-design-showcase.mjs Non-transactional GitHub Pages artifact
-marketing/                       Authored PDF sources, manifest and quality review
-public/documents/                Ten finished PDFs
-public/images/                   Original concept artwork
+src/storefront.ts                 Bag, filters, forms and checkout handoff
+src/main.ts, studio-models.ts     Optional product inspection and original models
+shared/, server/, api/            Existing commerce/inquiry rules and adapters
+design/precision-r5/              Current native designs, JSX, screenshots and decisions
+design/precision-r4/tokens.css    Shared native precision token lineage
+marketing/, public/documents/     Ten versioned guides and product briefs
 ```
 
 Custom visuals and code are reserved to the project owner. Dependencies retain their licenses. No standalone font binaries are distributed. The website remains `noindex` while product release and commercial activation are pending.

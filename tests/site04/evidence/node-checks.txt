@@ -1,0 +1,182 @@
+SITE-04 local verification; synthetic test data only
+Source baseline: 68f0ba1a3ed6746551460d772cb791eb050ee988
+Node: v24.22.1
+
+$ npm ci --no-audit --no-fund
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+added 30 packages in 2s
+
+EXIT 0
+
+$ npm run build
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> aerlor@0.3.0 prebuild
+> node scripts/create-collection-assets.mjs && node scripts/build-storefront.mjs
+
+Created six original mirror and curler design-study assets.
+Generated 33 storefront pages for /aerlor/; 6 product concepts, no invented commercial prices.
+
+> aerlor@0.3.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 48 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/order/index.html                               5.39 kB │ gzip:   1.96 kB
+dist/accessibility/index.html                       5.87 kB │ gzip:   2.20 kB
+dist/resources/pilot-toolkit/index.html             5.96 kB │ gzip:   2.09 kB
+dist/resources/hospitality-collection/index.html    6.02 kB │ gzip:   2.09 kB
+dist/resources/hotel-upgrade-guide/index.html       6.07 kB │ gzip:   2.11 kB
+dist/resources/procurement-guide/index.html         6.08 kB │ gzip:   2.11 kB
+dist/cart/index.html                                6.42 kB │ gzip:   2.30 kB
+dist/shipping-returns/index.html                    6.45 kB │ gzip:   2.42 kB
+dist/checkout/index.html                            6.46 kB │ gzip:   2.35 kB
+dist/terms/index.html                               6.75 kB │ gzip:   2.57 kB
+dist/about/index.html                               7.10 kB │ gzip:   2.71 kB
+dist/privacy/index.html                             7.10 kB │ gzip:   2.71 kB
+dist/support/index.html                             7.53 kB │ gzip:   2.72 kB
+dist/compare/index.html                             8.04 kB │ gzip:   2.68 kB
+dist/hospitality/groups/index.html                  8.37 kB │ gzip:   3.16 kB
+dist/collection/hairdryers/index.html               8.38 kB │ gzip:   2.81 kB
+dist/collection/curlers/index.html                  8.42 kB │ gzip:   2.84 kB
+dist/collection/mirrors/index.html                  8.42 kB │ gzip:   2.85 kB
+dist/hospitality/designers/index.html               8.71 kB │ gzip:   3.14 kB
+dist/resources/index.html                           9.04 kB │ gzip:   2.78 kB
+dist/contact/index.html                             9.18 kB │ gzip:   3.20 kB
+dist/pricing/index.html                             9.39 kB │ gzip:   3.46 kB
+dist/collection/index.html                         11.78 kB │ gzip:   3.08 kB
+dist/journal/the-getting-ready-gap/index.html      12.26 kB │ gzip:   4.39 kB
+dist/hospitality/wholesale/index.html              13.06 kB │ gzip:   4.51 kB
+dist/products/makeup-mirror-lite/index.html        13.19 kB │ gzip:   4.21 kB
+dist/products/hairdryer-lite/index.html            13.23 kB │ gzip:   4.27 kB
+dist/products/curler-lite/index.html               13.33 kB │ gzip:   4.30 kB
+dist/products/curler-premium/index.html            13.37 kB │ gzip:   4.27 kB
+dist/products/hairdryer-premium/index.html         13.39 kB │ gzip:   4.30 kB
+dist/products/makeup-mirror-premium/index.html     13.39 kB │ gzip:   4.28 kB
+dist/hospitality/index.html                        15.11 kB │ gzip:   5.31 kB
+dist/index.html                                    23.65 kB │ gzip:   7.23 kB
+dist/assets/storefront-ButsxCqy.css                69.58 kB │ gzip:  14.65 kB
+dist/assets/index-awrFYOiJ.js                       9.29 kB │ gzip:   3.71 kB
+dist/assets/storefront-CD76fgT2.js                 34.64 kB │ gzip:  12.05 kB
+dist/assets/scene-ZdFCyA_6.js                     568.64 kB │ gzip: 141.80 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 374ms
+
+EXIT 0
+
+$ npm run test:contracts
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> aerlor@0.3.0 test:contracts
+> node --test tests/contracts.test.mjs
+
+✔ brief is a local draft, never a false submission receipt (1.014595ms)
+✔ brief bounds and sanitizes user input (0.210881ms)
+✔ preview is not indexed, has no false trademark registration or live form (0.509531ms)
+✔ all production visuals are local and explicitly conceptual (1.190704ms)
+✔ legacy offline brief controller has no tracking, storage or transmission API (0.404125ms)
+✔ the website uses the actual native Paper token export (0.963249ms)
+✔ native design references are complete and do not expose local machine paths (1.236872ms)
+✔ deployment verification rejects ambiguous or credential-bearing targets before network work (1617.907551ms)
+✔ R3 storefront has all routes, six product pages and actual PDF assets (8.474874ms)
+✔ GitHub Pages deploys only a non-transactional design showcase (0.630178ms)
+✔ client storage and checkout remain separate from personal data and provider secrets (0.40704ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1775.193765
+
+EXIT 0
+
+$ npm run test:server
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> aerlor@0.3.0 test:server
+> node --test tests/domain.test.mjs tests/server.test.mjs
+
+✔ catalog has six coherent products, all commercial claims unreleased (1.462375ms)
+✔ cart canonicalization combines duplicates and strips attacker-supplied pricing (0.281094ms)
+✔ invalid IDs, finishes, quantities and oversized carts are rejected (0.682766ms)
+✔ empty selections are allowed only for a project brief (0.144674ms)
+✔ stored bag accepts only the current schema and product-only data (0.297749ms)
+✔ investment arithmetic keeps per-night cost independent of room count (0.174637ms)
+✔ investment rejects zero occupancy and invalid assumptions (0.447579ms)
+✔ unpriced and mixed-currency selections never fabricate a total (0.236408ms)
+✔ project validation requires explicit contact consent and bounded data (0.697287ms)
+✔ generated brief distinguishes preparation, sending and ordering (0.521258ms)
+✔ money formatting is explicit and never formats invalid values as a price (13.724194ms)
+✔ default production catalog never accepts payment or exposes prices (2.921255ms)
+✔ merchant, privacy, fulfillment, store, destination and key gates fail closed (3.88828ms)
+✔ public configuration excludes secrets, price IDs and internal stock references (0.520888ms)
+✔ valid checkout uses provider price IDs and reserves stock exactly once (7.770772ms)
+✔ checkout rejects unapproved products, invalid quantities and missing consent before charging (2.800037ms)
+✔ server price corroboration stops a changed provider price (1.117126ms)
+✔ insufficient stock prevents session creation (1.130926ms)
+✔ a request ID cannot be reused for a different cart (1.991514ms)
+✔ parallel same-cart requests do not reserve or charge twice (2.390373ms)
+✔ network uncertainty keeps the reservation and reuses provider idempotency on retry (2.390823ms)
+✔ definite provider rejection releases stock; concurrency conflict does not (3.267425ms)
+✔ a non-Stripe checkout URL is rejected even if the provider response is otherwise shaped correctly (0.931643ms)
+✔ verification checks the token action and hostname (1.028536ms)
+✔ unpaid completion never queues fulfillment; paid asynchronous event does (2.733088ms)
+✔ an expired unpaid session restores stock once, never twice (1.235681ms)
+✔ a late stale event cannot regress paid state or release paid stock (1.331542ms)
+✔ unexpected totals or line items cannot become a fulfilled order (4.373685ms)
+✔ webhook signatures validate original bytes, timestamp and every signature candidate (0.561007ms)
+✔ order status exposes no customer data and cannot itself fulfill an order (1.125729ms)
+✔ inquiry email is idempotent, no marketing signup, and no PII in the receipt store (1.602672ms)
+✔ inquiry never returns success when the delivery provider fails (0.749835ms)
+✔ inquiry rejects honeypot, missing consent and malformed input (1.845089ms)
+✔ rate limits fail closed and use pseudonymous keys, not raw IP addresses (1.849806ms)
+✔ HTTP handlers enforce methods, origin, JSON and body limits (4.05775ms)
+✔ HTTP config is no-store and does not expose credential names or values (0.495249ms)
+✔ Web Standard webhook receives exact raw bytes through the deployed handler contract (1.711772ms)
+✔ Stripe API version is explicitly pinned in the integration (0.058637ms)
+✔ an unresolved old checkout is not blindly recreated after the safe retry window (1.210845ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 175.184931
+
+EXIT 0
+
+$ node --test tests/site04/release-boundary.test.mjs tests/site04/source-policy.test.mjs
+✔ unreleased production catalog blocks fully configured test commerce without side effects (5.977949ms)
+ℹ test: 9 product/finish checkout attempts rejected; provider calls=0; transaction-store accesses=0.
+✔ unreleased production catalog blocks fully configured live commerce without side effects (2.42223ms)
+ℹ live: 9 product/finish checkout attempts rejected; provider calls=0; transaction-store accesses=0.
+✔ this assurance branch alone is disabled in Vercel Git deployment configuration (1.389488ms)
+✔ every storefront route declares noindex and nofollow in its HTML head (3.629188ms)
+✔ Vercel config applies noindex headers globally without an indexing override (0.36032ms)
+✔ Vercel CSP blocks native form submission on every configured policy (0.260093ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 126.598623
+
+EXIT 0
+
+$ git diff --check
+
+EXIT 0

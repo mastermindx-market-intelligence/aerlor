@@ -1,22 +1,22 @@
 {
-  "revision": "R3",
-  "generatedAt": "2026-11-04T10:01:09.720Z",
+  "revision": "R5",
+  "generatedAt": "2026-11-05T03:47:41.431Z",
   "documents": [
     {
       "file": "aerlor-hospitality-collection.pdf",
-      "title": "AERLOR — The hospitality collection",
+      "title": "AERLOR — Collection overview",
       "pages": 8,
       "layoutCheck": "passed"
     },
     {
       "file": "aerlor-hotel-upgrade-guide.pdf",
-      "title": "AERLOR — The considered-room business case",
+      "title": "AERLOR — The hotel upgrade guide",
       "pages": 6,
       "layoutCheck": "passed"
     },
     {
       "file": "aerlor-procurement-guide.pdf",
-      "title": "AERLOR — Procurement, without the guesswork",
+      "title": "AERLOR — Procurement checklist",
       "pages": 5,
       "layoutCheck": "passed"
     },
