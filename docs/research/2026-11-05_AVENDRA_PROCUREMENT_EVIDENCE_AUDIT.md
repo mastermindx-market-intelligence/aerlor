@@ -1,6 +1,6 @@
 # AERLOR | Avendra / Guest Supply / AAHOA procurement evidence audit
 
-**As of 2026-11-05 | Public-safe research | No authenticated Avendra price or supplier award observed**
+**Prepared 2026-11-05; public sources rechecked 2026-11-06 | Public-safe research | No authenticated Avendra price or supplier award observed**
 
 ## Executive finding
 
@@ -13,10 +13,10 @@ This paper audits the earlier Avendra price findings against publicly accessible
 | Claim | Evidence status | What can actually be concluded |
 | --- | --- | --- |
 | Avendra has a supplier inquiry route | **Documented** | Public supplier form exists; no approval or open dryer RFP implied [S1]. |
-| March 2026 Avendra sourcing calendar has "Spa - Salon Hair Care" | **Documented, category-limited** | C33327, estimated 2026-07-01 inquiry deadline; not explicitly guestroom hair dryers; the stated date has passed [S2]. |
+| Avendra’s 2026 sourcing calendar lists "SPA - Salon Hair Care Products" | **Documented, category-limited; rechecked 2026-11-06** | The current PDF is updated 2026-10-22 and gives C33327 an estimated 2026-12-01 inquiry deadline. The URL retains "march-2026", but its contents have changed. This is not an explicit guestroom hairdryer RFP [S2]. |
 | AAHOA Marketplace uses Folio technology and Avendra sourcing | **Documented** | 2026-09-14 official announcement; eligible members can onboard, connect suppliers and seek negotiated savings; no guaranteed purchase or AERLOR eligibility [S3]. |
 | Guest Supply sells Conair hotel dryers | **Documented** | Items 0037225/425BKWH and 0020692/247W listed in four-unit case packs; account price requires sign-in [S4–S5]. |
-| Conair hotel dryers can be bought publicly for less than $30/unit | **Observed public offer** | AHS listed 247BW $27.55 and 247W $29.11/unit, with some other compact SKU promotions below $25; not Avendra prices [S7]. |
+| Conair hotel dryers can be bought publicly for less than $30/unit | **Observed public offer** | AHS lists 247BW $27.55 and 247W $29.11/unit; neither is an Avendra price [S7]. |
 | Dyson sells to hotels | **Documented** | Official commercial Supersonic page displays $519.99 and business callback; hotel contract price not public [S8]. |
 | Avendra already contracts Dyson | **Unknown** | No authenticated listing or current category contract was observed. Do not assert either presence or absence. |
 | Conair is a direct Avendra-contracted hairdryer supplier | **Unknown** | Guest Supply's inventory is not proof of a direct Avendra award. A reported Avendra Clubs distribution link needs current documentation. |
@@ -25,7 +25,7 @@ This paper audits the earlier Avendra price findings against publicly accessible
 
 ## 2. Exact public price comparisons
 
-The following are **advertised US distributor offers**, not net prices paid by Avendra members, hotel chains or franchisees. Price checks were performed on 2026-11-05. Pack size matters.
+The following are **advertised US distributor offers**, not net prices paid by Avendra members, hotel chains or franchisees. The quoted public catalog values were rechecked on 2026-11-06 after the original 2026-11-05 draft. Pack size matters; these dated observations are not guaranteed future prices.
 
 | Seller / SKU | Advertised offer | Derived per unit | Limit |
 | --- | ---: | ---: | --- |
@@ -36,11 +36,11 @@ The following are **advertised US distributor offers**, not net prices paid by A
 | Hospitality Supply — Conair 136W direct-wire | $223.68 per case of 4 | **$55.92** | Small-order catalog [S6] |
 | American Hospitality Supply — Conair 247BW | Price per each, case of 4 | **$27.55** | Public listing; freight/terms may vary [S7] |
 | American Hospitality Supply — Conair 247W | Price per each, case of 4 | **$29.11** | Public listing; freight/terms may vary [S7] |
-| American Hospitality Supply — Conair 047W compact | Promotional listing | **$23.99** | Different SKU; promotional, not 247W [S7] |
+| American Hospitality Supply — Conair 047W compact | Price per each, case of 4 | **$27.55** | Rechecked 2026-11-06; different SKU, not 247W [S7] |
 | Guest Supply — Conair 425BKWH / item 0037225 | Case pack 4 | **Not public** | Sign in to see your price [S4] |
 | Dyson — Supersonic commercial/hotel product | Official business page | **$519.99** | Advertised public reference, not hotel contract [S8] |
 
-**Correction to the earlier shorthand:** "$32–$56 for Conair" accurately described one seller's small-order case prices, but **not the cheapest observable hotel-distributor offer**. Conair 247BW at $27.55 and other sub-$30 listings create a more difficult upgrade price anchor. The presence of a promotional 047W offer below $25 does not prove that all Conair SKUs transact at that level.
+**Correction to the earlier shorthand:** "$32–$56 for Conair" accurately described one seller's small-order case prices, but **not the cheapest observable hotel-distributor offer**. Conair 247BW at $27.55 and other sub-$30 listings create a more difficult upgrade price anchor. The original draft reported a promotional 047W price of $23.99; the 2026-11-06 recheck instead shows $27.55 and did not reproduce that promotion. This audit therefore does not establish a current sub-$25 offer.
 
 ## 3. Entity and money-flow map
 
@@ -82,12 +82,12 @@ A hotel buying at a hypothetical $79 versus a $29 public commodity benchmark fac
 ## 7. Source register and boundaries
 
 - **[S1]** Avendra supplier inquiry, official: https://www.avendra.com/en/us/supplier-form (checked 2026-11-05). Inquiry mechanism, not acceptance.
-- **[S2]** Avendra March 2026 sourcing calendar, official PDF: https://www.avendra.com/en/us/assets/sourcing-calendar-march-2026.pdf (indexed document, 2026-03-10 revision). Salon hair care category, not explicit guestroom dryers.
+- **[S2]** Avendra 2026 sourcing calendar, official PDF: https://www.avendra.com/en/us/assets/sourcing-calendar-march-2026.pdf (current contents updated 2026-10-22; rechecked visually and as text 2026-11-06). The March-named URL now lists C33327 with an estimated 2026-12-01 inquiry deadline. Salon hair care category, not explicit guestroom dryers.
 - **[S3]** AAHOA/Folio/Avendra launch announcement, 2026-09-14: https://www.aahoa.com/news-details/aahoa-officially-launches-new-folio-powered-marketplace-to-simplify-purchasing-for-members-1 . Press release, not commercial contract.
 - **[S4]** Guest Supply Conair 425BKWH item 0037225: https://www.guestsupply.com/product/0037225-Conair-Ionic-Hair-Dryer-1875W-Black (checked 2026-11-05). Gated price.
 - **[S5]** Guest Supply Conair 247W item 0020692: https://www.guestsupply.com/product/0020692-Conair-Hair-Dryer-1875W-White (checked 2026-11-05). Gated price.
 - **[S6]** Hospitality Supply public four-pack Conair catalog: https://www.hospitalitysupply.com/bathroom-products/hair-dryers.html (checked 2026-11-05). Public small-order pricing.
-- **[S7]** American Hospitality Supply Conair catalog: https://www.ahscompany.com/Conair-Hospitality_c_8742.html (checked 2026-11-05). Public offers and promotions.
+- **[S7]** American Hospitality Supply Conair catalog: https://www.ahscompany.com/Conair-Hospitality_c_8742.html (rechecked 2026-11-06). Public dated offers; the earlier reported 047W promotion was not reproduced.
 - **[S8]** Dyson US business Supersonic: https://www.dyson.com/commercial/hair-care/supersonic (checked 2026-11-05). Public reference price, not trade quote.
 - **[S9]** CPSC hand-supported hairdryer safety FAQ: https://www.cpsc.gov/FAQ/Hand-Supported-Hair-Dryers . Regulatory context, not SKU certification.
 - **[S10]** Existing AERLOR operating model: https://github.com/mastermindx-market-intelligence/aerlor/blob/main/docs/business/OPERATING_MODEL.md .

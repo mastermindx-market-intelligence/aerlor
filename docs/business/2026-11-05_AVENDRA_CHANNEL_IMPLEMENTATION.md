@@ -25,7 +25,7 @@ This plan complements [Execution Charter](EXECUTION_CHARTER.md), [Operating Mode
 
 **Purpose:** determine whether Avendra/Guest Supply/AAHOA offers an economically viable, actually activatable path for AERLOR's first approved guestroom dryer SKU.
 
-**Decision gate A — category:** named category owner; legal contracting party; guestroom electrical/room-operations category confirmed; live bid or documented off-cycle route; country/flag eligibility. The March 2026 "Spa - Salon Hair Care" entry is **not** evidence of an open guestroom hairdryer RFP.
+**Decision gate A — category:** named category owner; legal contracting party; guestroom electrical/room-operations category confirmed; live bid or documented off-cycle route; country/flag eligibility. The current official calendar, updated 2026-10-22 and rechecked 2026-11-06 at its March-named URL, lists C33327 "SPA - Salon Hair Care Products" with an estimated 2026-12-01 inquiry deadline. This is **not** evidence of an open guestroom hairdryer RFP; confirm category fit and the current cycle before relying on it.
 
 **Decision gate B — economics:** exact hotel price or price tier from authorized sources; distributor sell-in and sellout distinguished; written GPO/program fee basis and timing; freight, tax, returns, warranty, stock, payment, chargebacks and price protection. The private finance owner must stress-test 100, 500, 2,000 and 10,000 units; unknown fees are not zero.
 
