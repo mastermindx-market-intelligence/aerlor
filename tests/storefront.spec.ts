@@ -17,7 +17,7 @@ async function fillProject(page:Page){
 }
 test.beforeEach(async({page})=>{await page.emulateMedia({reducedMotion:'reduce'});await page.route('**/api/config',route=>route.fulfill({json:config}));});
 
-test('all 33 routes have real content, correct titles and no runtime errors',async({page})=>{
+test('all 42 routes have real content, correct titles and no runtime errors',async({page})=>{
  test.setTimeout(180000);const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
  for(const file of pagesManifest.pages){const path=file==='index.html'?'':file.replace(/index\.html$/,'');await navigate(page,path);await expect(page.locator('h1')).toHaveCount(1);await expect(page.locator('main')).toBeVisible();await expect(page.locator('h1')).not.toBeEmpty();await expect(page).toHaveTitle(/AERLOR/);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),path).toBe(true);}
  expect(errors).toEqual([]);

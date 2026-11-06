@@ -1,5 +1,5 @@
 {
-  "revision": "premium-tech-r5",
+  "revision": "premium-tech-r8-solutions",
   "base": "/aerlor/",
   "pages": [
     "index.html",
@@ -15,6 +15,15 @@
     "products/curler-premium/index.html",
     "compare/index.html",
     "hospitality/index.html",
+    "solutions/index.html",
+    "solutions/salons/index.html",
+    "solutions/spas/index.html",
+    "solutions/fitness/index.html",
+    "solutions/residences/index.html",
+    "solutions/travel/index.html",
+    "solutions/academies/index.html",
+    "solutions/studios/index.html",
+    "solutions/brief/index.html",
     "hospitality/wholesale/index.html",
     "hospitality/groups/index.html",
     "hospitality/designers/index.html",

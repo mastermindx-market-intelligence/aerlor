@@ -87,9 +87,10 @@ if(document.body.dataset.legacy!=='true'){
   window.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu&&!menu.hidden)close(true);});
   window.matchMedia('(min-width: 961px)').addEventListener('change',event=>{if(event.matches)close();});
 }
-const navDisclosure=$<HTMLDetailsElement>('.nav-disclosure');
-document.addEventListener('click',event=>{if(navDisclosure?.open&&event.target instanceof Node&&!navDisclosure.contains(event.target))navDisclosure.open=false;});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navDisclosure?.open){navDisclosure.open=false;navDisclosure.querySelector('summary')?.focus();}});
+const navDisclosures=[...document.querySelectorAll<HTMLDetailsElement>('.nav-disclosure')];
+navDisclosures.forEach(disclosure=>disclosure.addEventListener('toggle',()=>{if(disclosure.open)navDisclosures.forEach(other=>{if(other!==disclosure)other.open=false;});}));
+document.addEventListener('click',event=>{const target=event.target;if(target instanceof Node)navDisclosures.forEach(disclosure=>{if(disclosure.open&&!disclosure.contains(target))disclosure.open=false;});});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){for(const disclosure of navDisclosures){if(disclosure.open){disclosure.open=false;disclosure.querySelector('summary')?.focus();break;}}}});
 
 function updateFilters():void {
   const family=$<HTMLButtonElement>('[data-family-filter][aria-pressed=true]')?.dataset.familyFilter??'all';

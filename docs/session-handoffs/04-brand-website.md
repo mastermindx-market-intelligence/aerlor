@@ -47,3 +47,13 @@ The founder requested a substantial departure from the beauty/editorial identity
 The 33-route site now has the product-led homepage, a separate hotel-buyer journey, improved product galleries, direct project calls to action and a neutral premium-tech design system. The ten PDFs have been refreshed in that system. Local Chromium and WebKit runs each passed 59 tests with one intentional mobile-only duplicate skipped; the server/domain fixture suite passed 39 tests. Live release identity must be checked against `build-info.json`, not inferred from this handoff.
 
 PR #23 imagery was integrated from exact source `4d80d3d781a9e992c7922e3f66c38adc18fa486b`; its conflicting legacy CSS/generator changes were not. Do not merge the old visual direction over this rebuild. Preserve independent assurance, sourcing and finance work. Commercial activation remains a separate prerequisite: no paid orders, production claims or automated email delivery were enabled by this design release.
+
+
+## R8 business-solutions expansion / 4 November 2026
+
+Branch `work/site/solutions-r8-hardening-20261104` extends the R5 premium technology site with a cross-industry Solutions menu, seven additional sector detail pages, industry-specific navigation and a local-only business brief. All original 33 routes and gated payment/inquiry paths remain. Paper R6 Solutions page `p-7-0` was corrected to reflect the non-transmitting project brief. Exact design captures, test results and implementation pointers are in `design/previews/r8/README.md`. Site is not deployed or merged by this work alone. The unmerged campaign asset PR #23 is a separate lane.
+
+
+## R9 editorial business solutions / 4 November 2026
+
+The founder requested a stronger, more premium cross-industry experience. The R8 implementation is extended into an editorial R9 while preserving all 42 routes, commerce and document paths, and disabled live payment/lead gates. R9 adds editable Paper page `p-9-1` with five boards, distinct buyer narratives, technical FAQs, an original salon workstation illustration, product-concept galleries, and a private live-preview brief with download/copy. Work stays on the existing review branch and PR #25; exact web screenshots and QA are in `design/previews/r9/README.md`. Concurrent PR #23 is independent, and this work does not indicate production deployment.
