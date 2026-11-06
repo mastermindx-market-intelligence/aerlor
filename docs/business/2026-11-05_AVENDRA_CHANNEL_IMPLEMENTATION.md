@@ -41,7 +41,7 @@ This plan complements [Execution Charter](EXECUTION_CHARTER.md), [Operating Mode
 | --- | --- | --- |
 | MARKET-01 | Buyer/flag authority, exact incumbent, funded project windows, potential program buyer, category discovery | [Buyer authority](../research/2026-11-04_BUYER_AUTHORITY.md), existing market workstream |
 | SOURCE-02 | Exact ODM SKU, US/Canada safety, FTO, factory QA, warranty and import evidence | [ODM qualification RFQ](ODM_QUALIFICATION_RFQ.md), sourcing workstream |
-| FINANCE-05 | Restricted supplier costs, channel fees, cash, break-even and downside analysis | Existing private finance workbook and [public model contract](../workstreams/finance/MODEL_VALIDATION_CONTRACT.md) |
+| FINANCE-05 | Restricted supplier costs, channel fees, cash, break-even and downside analysis | Existing private finance workbook and [FINANCE-05 draft model contract (PR #18)](https://github.com/mastermindx-market-intelligence/aerlor/pull/18) |
 | REVIEW-06 | Source-to-claim audit and corrections, price pack/eligibility validation | Existing review lane |
 | INTEGRATOR | Cross-lane gates, private decision memo, public-safe PR, Chairman decisions | [Execution Charter](EXECUTION_CHARTER.md) |
 | SITE-04 / DESIGN-03 | Consume independently supported claims only; no automatic product/launch edits | Existing site/design lanes |
